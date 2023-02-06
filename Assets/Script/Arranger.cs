@@ -58,7 +58,7 @@ public class Arranger : MonoBehaviour
         UpdateChildren();
     }
 
-    // Update is called once per frame
+    // Update is called once per frame 1
     void Update()
     {
         

@@ -86,6 +86,7 @@ public class Central : MonoBehaviour
     void EndDrag(Transform card)
     {
         //Debug.Log("EndDrag : " + card.name);
+        //1
 
         SwapCardsinHierarchy(invisibleCard, card);
     }
