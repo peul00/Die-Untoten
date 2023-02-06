@@ -9,7 +9,6 @@ public class Item
     public GameObject item;
 }
 
-
 public class ItemManager : MonoBehaviour
 {
     public List<Item> itemdata = new List<Item>();

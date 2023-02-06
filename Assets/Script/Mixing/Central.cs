@@ -72,7 +72,7 @@ public class Central : MonoBehaviour
         }
         else
         {
-            Debug.Log(whichArrangerCard.GetIndexByPosition(card, invisibleCard.GetSiblingIndex()));
+            //Debug.Log(whichArrangerCard.GetIndexByPosition(card, invisibleCard.GetSiblingIndex()));
             int invisibleCardIndex = invisibleCard.GetSiblingIndex();
             int targetIndex = whichArrangerCard.GetIndexByPosition(card, invisibleCardIndex);
 
