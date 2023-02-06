@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - card
-  - card1
+  - Alcohol
+  - Spicy
+  - Sweet
+  - Bitter
+  - Sour
   layers:
   - Default
   - TransparentFX
