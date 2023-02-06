@@ -29,7 +29,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         root.BroadcastMessage("Drag", transform, SendMessageOptions.DontRequireReceiver);
     }
-
+    //1
     public void OnEndDrag(PointerEventData eventData)
     {
         root.BroadcastMessage("EndDrag", transform, SendMessageOptions.DontRequireReceiver);
