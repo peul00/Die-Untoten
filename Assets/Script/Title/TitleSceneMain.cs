@@ -9,7 +9,7 @@ public class TitleSceneMain : BaseSceneMain
         Debug.Log("OnstartButton");
 
         SceneController.Instance.LoadScene(SceneNameConstants.LoadingScene);
-        SceneController.Instance.LoadScene(SceneNameConstants.Scene1);
+        SceneController.Instance.LoadScene(SceneNameConstants.Customer);
     }
 
 }
