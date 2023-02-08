@@ -1,29 +1,24 @@
-using JetBrains.Annotations;
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
-
 
 [System.Serializable]
 public class Dialogue
 {
     [TextArea]
-    public string dialogue;
-    public Sprite npc;
+    public string dialogu;
+    public Sprite Npc;
 
 }
-public class Test : MonoBehaviour
+
+public class CreateNPC : MonoBehaviour
 {
-    public UnityEvent onInputSpace;
     [SerializeField] private SpriteRenderer sprite_Npc1;
     [SerializeField] private Image sprite_DialogueBox;
     [SerializeField] private Text txt_Dialogue;
 
-
-    private bool isDialogue = false;
-    
     private int count = 0;
 
     [SerializeField] private Dialogue[] dialogue;
@@ -34,9 +29,10 @@ public class Test : MonoBehaviour
         OnOff(true);
         count = 0;
         NextDialogue();
-        
+
 
     }
+
     private void OnOff(bool _flag)
     {
         sprite_DialogueBox.gameObject.SetActive(_flag);
@@ -46,36 +42,28 @@ public class Test : MonoBehaviour
 
     private void NextDialogue()
     {
-        txt_Dialogue.text = dialogue[count].dialogue;
-        sprite_Npc1.sprite = dialogue[count].npc;
+        txt_Dialogue.text = dialogue[count].dialogu;
+        sprite_Npc1.sprite = dialogue[count].Npc;
         count++;
     }
-    
-
-
-    
 
     void Update()
     {
-        if (isDialogue)
-        { 
-            if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (count < dialogue.Length)
             {
-                onInputSpace.Invoke();
-                if (count < dialogue.Length)
-                {
-                    NextDialogue();
-                }
-                else
-                {
-                    OnOff(false);
-                    //isDialogue = false;
-                }
+                NextDialogue();
+            }
+            else
+            {
+                OnOff(false);
             }
         }
     }
+    
 
 }
-   
 
-    
+*/
+

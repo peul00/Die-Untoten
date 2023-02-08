@@ -948,8 +948,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64663b25a6f35e45aa15758fa593617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onInputSpace:
+    m_PersistentCalls:
+      m_Calls: []
   sprite_Npc1: {fileID: 505511997}
-  sprite_DialogueBox: {fileID: 0}
+  sprite_DialogueBox: {fileID: 1698724997}
   txt_Dialogue: {fileID: 963235638}
   dialogue:
   - dialogue: "\uC548\uB155\uD558\uC138\uC694? \r\n\uBAA8\uD5D8\uAC00\uAE38\uB4DC
@@ -959,10 +962,10 @@ MonoBehaviour:
       \uC8FC\uC778\uC774 \uB420\uAC83\uC785\uB2C8\uB2E4."
     npc: {fileID: -1315736333, guid: 742eb47d970939f4b96af1e5e1f51685, type: 3}
   - dialogue: "\uBB3C\uB860 \uACF5\uC9DC\uB85C \uB418\uB294\uAC74 \uC544\uB2C8\uC8E0\n\uB2F9\uC2E0\uC740
-      \uC800\uC5D0\uAC8C \uBE5A\uC744\uC84C\uACE0 \uADF8\uAC83\uC744 \uAC1A\uC73C\uBA74\uB418"
+      \uC800\uC5D0\uAC8C \uBE5A\uC744\uC84C\uACE0 \uADF8\uAC83\uC744 \uAC1A\uC73C\uC2DC\uBA74\uB429\uB2C8\uB2E4."
     npc: {fileID: -1315736333, guid: 742eb47d970939f4b96af1e5e1f51685, type: 3}
   - dialogue: "\uAC71\uC815\uB9C8\uC138\uC694.\n\uCC9C\uCC9C\uD788 \uAC1A\uC544\uB3C4\uB418\uC694.
-      \uBB3C\uB860 \uC774\uC790\uAC00 \uBD99\uAE34\uD558\uC9C0\uB9CC"
+      \uBB3C\uB860 \uC774\uC790\uAC00 \uBD99\uAE34\uD558\uC9C0\uB9CC\uC694"
     npc: {fileID: -1315736333, guid: 742eb47d970939f4b96af1e5e1f51685, type: 3}
   - dialogue: "\uB2F9\uC2E0\uC740 \uC774 \uC8FC\uC810\uC744 \uC6B4\uC601\uD558\uBA74\uC11C
       \uB2E4\uC591\uD55C\uC0AC\uB78C\uB4E4\uC744 \uB9CC\uB4E4\uAC83\uC774\uACE0,\n\uC774\uACF3\uC5D0\uC11C
