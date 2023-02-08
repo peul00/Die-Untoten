@@ -14,7 +14,7 @@ public class Dialogue
     public Sprite npc;
 
 }
-public class Test : MonoBehaviour
+public class test : MonoBehaviour
 {
     public UnityEvent onInputSpace;
     [SerializeField] private SpriteRenderer sprite_Npc1;
@@ -89,6 +89,3 @@ public class Test : MonoBehaviour
     }
 
 }
-   
-
-    
