@@ -75,7 +75,7 @@ public class Test : MonoBehaviour
         if (isDialogue)
         {
             Debug.Log("1");
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Debug.Log("2");
                 onInputSpace.Invoke();
