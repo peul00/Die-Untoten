@@ -23,7 +23,6 @@ public class Test : MonoBehaviour
 
     public void ShowDialogue()
     {
-        
         OnOff(true);
         count = 0;
         NextDialogue();
@@ -51,13 +50,6 @@ public class Test : MonoBehaviour
         txt_Dialogue.gameObject.SetActive(_flag);
     }
 
-    /* void NextDialogue()
-    {
-        Debug.Log("count : " + count );
-        txt_Dialogue.text = dialogue[count].dialogue;
-        sprite_Npc1.sprite = dialogue[count].npc;
-        count++;
-    }*/
     void NextDialogue()
     {
         Debug.Log("count : " + count);
