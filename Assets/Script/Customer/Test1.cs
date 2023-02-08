@@ -6,64 +6,55 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 
 
-[System.Serializable]
+/*[System.Serializable]
 public class Dialogue
 {
     [TextArea]
     public string dialogue;
     public Sprite npc;
 
-}
-public class Test : MonoBehaviour
+}*/
+public class Test1 : MonoBehaviour
 {
-    public UnityEvent onInputSpace;
-    [SerializeField] private SpriteRenderer sprite_Npc1;
-    [SerializeField] private Image sprite_DialogueBox;
-    [SerializeField] private Text txt_Dialogue;
-
-    public void ShowDialogue()
+    public void OnClickExit()
     {
-        
-        OnOff(true);
-        count = 0;
-        NextDialogue();
-    }
-
-    public void OnClickExit() {
         Application.Quit();
         Debug.Log("Exit");
     }
 
+    /*public UnityEvent onInputSpace;
+    [SerializeField] private SpriteRenderer sprite_Npc1;
+    [SerializeField] private Image sprite_DialogueBox;
+    [SerializeField] private Text txt_Dialogue;
 
-    
+
     private bool isDialogue = false;
     
     private int count = 0;
 
     [SerializeField] private Dialogue[] dialogue;
 
-    
+    public void ShowDialogue()
+    {
+
+        OnOff(true);
+        count = 0;
+        NextDialogue();
+        
+
+    }
     private void OnOff(bool _flag)
     {
-        isDialogue = _flag;
         sprite_DialogueBox.gameObject.SetActive(_flag);
         sprite_Npc1.gameObject.SetActive(_flag);
         txt_Dialogue.gameObject.SetActive(_flag);
     }
 
-    /* void NextDialogue()
+    private void NextDialogue()
     {
-        Debug.Log("count : " + count );
         txt_Dialogue.text = dialogue[count].dialogue;
         sprite_Npc1.sprite = dialogue[count].npc;
         count++;
-    }*/
-    void NextDialogue()
-    {
-        Debug.Log("count : " + count);
-        txt_Dialogue.text = dialogue[count].dialogue;
-        sprite_Npc1.sprite = dialogue[count].npc;
-        count += 1;
     }
     
 
@@ -73,28 +64,22 @@ public class Test : MonoBehaviour
     void Update()
     {
         if (isDialogue)
-        {
-            Debug.Log("1");
-            if (Input.GetKeyUp(KeyCode.Space))
+        { 
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("2");
                 onInputSpace.Invoke();
                 if (count < dialogue.Length)
                 {
-                    Debug.Log("3");
                     NextDialogue();
-                    
                 }
                 else
                 {
-                    Debug.Log("4");
                     OnOff(false);
                     //isDialogue = false;
                 }
             }
         }
-        
-    }
+    }*/
 
 }
    
