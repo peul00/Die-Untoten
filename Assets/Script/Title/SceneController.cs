@@ -8,7 +8,7 @@ public class SceneNameConstants
     public static string TitleScene = "TitleScene";
     public static string LoadingScene = "LoadingScene";
     public static string InGame = "InGame";
-    public static string Scene1 = "Scene1";
+    public static string Customer = "Customer";
 }
 
 public class SceneController : MonoBehaviour
