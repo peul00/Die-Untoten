@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemMix : MonoBehaviour
 {
@@ -114,9 +115,17 @@ public class ItemMix : MonoBehaviour
         Instantiate(ice);
     }
 
-    public void orange()
+    public void orange(bool isOn)
     {
-        Orange = true;
-        Debug.Log("Orange");
+        if (isOn)
+        {
+            Orange = true;
+            Debug.Log("Orange true");
+        }
+        else
+        {
+            Orange = false;
+            Debug.Log("Orange false");
+        }
     }
 }
