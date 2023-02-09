@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ItemMix : MonoBehaviour
 {
-
     private void OnMouseDown()
     {
         
@@ -19,10 +18,24 @@ public class ItemMix : MonoBehaviour
     public int Sweet = 0;
     public int Bitter = 0;
     public int Sour = 0;
+    public bool cool = false;
+    public bool Orange = false;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
 
+    }
+
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ice")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                cool = true;
+                Debug.Log("Ice: IsTrue");
+            }
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -77,7 +90,7 @@ public class ItemMix : MonoBehaviour
     [SerializeField] GameObject cocktail;
     [SerializeField] GameObject another;
     [SerializeField] GameObject fail;
-
+    [SerializeField] GameObject ice;
     public void Makingcocktail()
     {
         if (Alcohol == 1 && Spicy == 0 && Sweet == 1 && Bitter == 0 && Sour == 0)
@@ -95,5 +108,15 @@ public class ItemMix : MonoBehaviour
             Destroy(obj);
             Instantiate(fail);
         }
+    }
+    public void cold()
+    {
+        Instantiate(ice);
+    }
+
+    public void orange()
+    {
+        Orange = true;
+        Debug.Log("Orange");
     }
 }
