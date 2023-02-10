@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class OnDrag : MonoBehaviour
 {
-    float distance = 10;
 
     private void OnMouseDrag()
     {
@@ -13,4 +12,8 @@ public class OnDrag : MonoBehaviour
         transform.position = objPosition;
     }
 
+    private void OnMouseUp()
+    {
+        transform.position = new Vector2(0, -2);
+    }
 }

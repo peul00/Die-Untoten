@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ItemMix : MonoBehaviour
 {
+    public GameObject Firstgauge;
     private void OnMouseDown()
     {
         
@@ -14,17 +15,19 @@ public class ItemMix : MonoBehaviour
     {
        
     }
-    public int Alcohol = 0;
-    public int Spicy = 0;
-    public int Sweet = 0;
-    public int Bitter = 0;
-    public int Sour = 0;
+    public static int Alcohol;
+    public static int Spicy;
+    public static int Sweet;
+    public static int Bitter;
+    public static int Sour;
     public bool cool = false;
     public bool Orange = false;
+    public bool Liqueur = false;
+    public int Plus;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-
+        
     }
 
     public void OnTriggerStay2D(Collider2D collision)
@@ -46,7 +49,6 @@ public class ItemMix : MonoBehaviour
             {
                 Alcohol += 1;
                 Debug.Log("Alchohol: " + Alcohol);
-
             }
         }
 
@@ -85,6 +87,26 @@ public class ItemMix : MonoBehaviour
                 Debug.Log("Sour: " + Sour);
             }
         }
+
+        if (collision.gameObject.tag == "Liqueur")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                Liqueur = true;
+                Debug.Log("Liqueur: true");
+            }
+        }
+
+        if (0 < Sweet || 0 < Spicy || 0 < Bitter || 0 < Sour || 0 < Alcohol)
+        {
+            Plus = Alcohol + Spicy + Sweet + Bitter + Sour;
+            Debug.Log("Total: " + Plus);
+            Firstgauge.gameObject.SetActive(true);
+            if (10 < Plus)
+            {
+                gameObject.GetComponent<ItemMix>().enabled = false;
+            }
+        }
     }
 
     [SerializeField] GameObject obj;
@@ -94,12 +116,12 @@ public class ItemMix : MonoBehaviour
     [SerializeField] GameObject ice;
     public void Makingcocktail()
     {
-        if (Alcohol == 1 && Spicy == 0 && Sweet == 1 && Bitter == 0 && Sour == 0)
+        if (Alcohol == 1 && Spicy == 0 && Sweet == 1 && Bitter == 0 && Sour == 0 && Liqueur && Orange)
         {
             Destroy(obj);
             Instantiate(cocktail);
         }
-        else if (Alcohol == 1 && Spicy == 1 && Sweet ==0 && Bitter == 1 && Sour ==0)
+        else if (Alcohol == 1 && Spicy == 1 && Sweet ==0 && Bitter == 1 && Sour ==0 && cool)
         {
             Destroy(obj);
             Instantiate(another);
