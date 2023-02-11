@@ -15,4 +15,9 @@ public class Gauage : MonoBehaviour
             nextgauge.gameObject.SetActive(true);
         }        
     }
+
+    public void ReSet()
+    {
+        nextgauge.gameObject.SetActive(false);
+    }
 }

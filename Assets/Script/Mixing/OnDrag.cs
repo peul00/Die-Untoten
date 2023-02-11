@@ -11,22 +11,31 @@ public class OnDrag : MonoBehaviour
         Vector2 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
         transform.position = objPosition;
     }
-
-    private void OnMouseUp()
+    public GameObject location1;
+    public GameObject location2;
+    public void OnMouseUp()
     {
-        //transform.position = new Vector2(0, -2);
+        if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+        {
+            transform.position = location1.transform.position;
+
+        }
+        else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+        {
+            if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+            {
+                transform.position = location2.transform.position;
+            }
+        }
     }
-    public void OnTriggerStay2D(Collider2D collision)
+    public void OnTriggerExit2D(Collider2D collision)
     {
-
-        if (collision.gameObject.tag == "Serving")
+        if (collision.gameObject.tag == "Costomer")
         {
-            transform.position = new Vector2(0, 0);
+            if (Input.GetMouseButton(0) == false)
+            {
+                Destroy(gameObject);
+            }
         }
-        else
-        {
-            transform.position = new Vector2(0, -2);
-        }
-
     }
 }

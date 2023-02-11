@@ -7,15 +7,8 @@ public class ItemMix : MonoBehaviour
 {
     public GameObject Firstgauge;
     public GameObject liqueur;
-    private void OnMouseDown()
-    {
-        
-    }
-
-    private void OnMouseUp()
-    {
-       
-    }
+    public GameObject IcePoint;
+    public GameObject ice;
     public static int Alcohol;
     public static int Spicy;
     public static int Sweet;
@@ -26,9 +19,23 @@ public class ItemMix : MonoBehaviour
     public bool Liqueur = false;
     public int Plus;
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void cold()
     {
-        
+        Instantiate(ice);
+    }
+
+    public void orange(bool isOn)
+    {
+        if (isOn)
+        {
+            Orange = true;
+            Debug.Log("Orange true");
+        }
+        else
+        {
+            Orange = false;
+            Debug.Log("Orange false");
+        }
     }
 
     public void OnTriggerStay2D(Collider2D collision)
@@ -39,6 +46,7 @@ public class ItemMix : MonoBehaviour
             {
                 cool = true;
                 Debug.Log("Ice: IsTrue");
+                IcePoint.gameObject.SetActive(true);
             }
         }
     }
@@ -48,7 +56,8 @@ public class ItemMix : MonoBehaviour
         {
             if (Input.GetMouseButton(0) == false)
             {
-                Alcohol += 1;
+                if (Plus != 10)
+                    Alcohol += 1;
                 Debug.Log("Alchohol: " + Alcohol);
             }
         }
@@ -57,7 +66,8 @@ public class ItemMix : MonoBehaviour
         {
             if (Input.GetMouseButton(0) == false)
             {
-                Spicy += 1;
+                if (Plus != 10)
+                    Spicy += 1;
                 Debug.Log("Spicy: " + Spicy);
             }
         }
@@ -66,7 +76,8 @@ public class ItemMix : MonoBehaviour
         {
             if (Input.GetMouseButton(0) == false)
             {
-                Sweet += 1;
+                if (Plus != 10)
+                    Sweet += 1;
                 Debug.Log("Sweet: " + Sweet);
             }
         }
@@ -75,7 +86,8 @@ public class ItemMix : MonoBehaviour
         {
             if (Input.GetMouseButton(0) == false)
             {
-                Bitter += 1;
+                if (Plus != 10)
+                    Bitter += 1;
                 Debug.Log("Bitter: " + Bitter);
             }
         }
@@ -84,7 +96,8 @@ public class ItemMix : MonoBehaviour
         {
             if (Input.GetMouseButton(0) == false)
             {
-                Sour += 1;
+                if(Plus != 10)
+                    Sour += 1;
                 Debug.Log("Sour: " + Sour);
             }
         }
@@ -107,45 +120,78 @@ public class ItemMix : MonoBehaviour
         }
     }
 
-    [SerializeField] GameObject obj;
     [SerializeField] GameObject cocktail;
     [SerializeField] GameObject another;
     [SerializeField] GameObject fail;
-    [SerializeField] GameObject ice;
+    public Transform location1;
+    public Transform location2;
     public void Makingcocktail()
     {
         if (Alcohol == 1 && Spicy == 0 && Sweet == 1 && Bitter == 0 && Sour == 0 && Liqueur && Orange)
         {
-            Destroy(obj);
-            Instantiate(cocktail);
+            if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+            {
+                Instantiate(cocktail, location1.position, location1.rotation);
+
+            }
+            else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+            {
+                if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(cocktail, location2.position, location2.rotation);
+                }
+                else
+                    Debug.Log("no");
+            }
         }
         else if (Alcohol == 1 && Spicy == 1 && Sweet ==0 && Bitter == 1 && Sour ==0 && cool)
         {
-            Destroy(obj);
-            Instantiate(another);
-        }
-        else
-        {
-            Destroy(obj);
-            Instantiate(fail);
-        }
-    }
-    public void cold()
-    {
-        Instantiate(ice);
-    }
+            if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+            {
+                Instantiate(another, location1.position, location1.rotation);
 
-    public void orange(bool isOn)
-    {
-        if (isOn)
-        {
-            Orange = true;
-            Debug.Log("Orange true");
+            }
+            else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+            {
+                if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(another, location2.position, location2.rotation);
+                }
+                else
+                    Debug.Log("no");
+            }
         }
         else
         {
-            Orange = false;
-            Debug.Log("Orange false");
+            if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+            {
+                Instantiate(fail, location1.position, location1.rotation);
+
+            }
+            else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+            {
+                if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(fail, location2.position, location2.rotation);
+                }
+                else
+                    Debug.Log("no");
+            }
         }
+    }
+    public void Rerecipt()
+    {
+        Firstgauge.gameObject.SetActive(false);
+        liqueur.gameObject.SetActive(false);
+        IcePoint.gameObject.SetActive(false);
+        GameObject.Find("Orange").GetComponent<Toggle>().isOn = false;
+        Alcohol = 0;
+        Spicy = 0;
+        Sweet = 0;
+        Bitter = 0;
+        Sour = 0;
+        Liqueur = false;
+        cool = false;
+        Orange = false;
     }
 }
