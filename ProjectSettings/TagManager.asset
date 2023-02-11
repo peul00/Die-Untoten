@@ -12,6 +12,7 @@ TagManager:
   - Ice
   - Mix
   - Liqueur
+  - Serving
   layers:
   - Default
   - TransparentFX

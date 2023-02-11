@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ItemMix : MonoBehaviour
 {
     public GameObject Firstgauge;
+    public GameObject liqueur;
     private void OnMouseDown()
     {
         
@@ -93,6 +94,7 @@ public class ItemMix : MonoBehaviour
             if (Input.GetMouseButton(0) == false)
             {
                 Liqueur = true;
+                liqueur.gameObject.SetActive(true);
                 Debug.Log("Liqueur: true");
             }
         }
@@ -102,10 +104,6 @@ public class ItemMix : MonoBehaviour
             Plus = Alcohol + Spicy + Sweet + Bitter + Sour;
             Debug.Log("Total: " + Plus);
             Firstgauge.gameObject.SetActive(true);
-            if (10 < Plus)
-            {
-                gameObject.GetComponent<ItemMix>().enabled = false;
-            }
         }
     }
 

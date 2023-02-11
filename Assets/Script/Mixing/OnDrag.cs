@@ -14,6 +14,19 @@ public class OnDrag : MonoBehaviour
 
     private void OnMouseUp()
     {
-        transform.position = new Vector2(0, -2);
+        //transform.position = new Vector2(0, -2);
+    }
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "Serving")
+        {
+            transform.position = new Vector2(0, 0);
+        }
+        else
+        {
+            transform.position = new Vector2(0, -2);
+        }
+
     }
 }
