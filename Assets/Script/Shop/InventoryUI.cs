@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
@@ -10,15 +11,17 @@ public class InventoryUI : MonoBehaviour
     private void Start()
     {
         inventoryPanel.SetActive(activeInventory);
+        Debug.Log("start");
     }
 
-    public void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.I))
+        Debug.Log("update");
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("1");
+            Debug.Log("2");
             activeInventory = !activeInventory;
             inventoryPanel.SetActive(activeInventory);
         }
-    }
+    } 
 }
