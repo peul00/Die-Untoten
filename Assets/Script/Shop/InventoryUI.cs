@@ -14,7 +14,7 @@ public class InventoryUI : MonoBehaviour
         Debug.Log("start");
     }
 
-    void FixedUpdate()
+    void Update()
     {
         Debug.Log("update");
         if (Input.GetKeyDown(KeyCode.Space))
