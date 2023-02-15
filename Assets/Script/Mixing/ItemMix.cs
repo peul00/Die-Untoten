@@ -120,42 +120,204 @@ public class ItemMix : MonoBehaviour
         }
     }
 
-    [SerializeField] GameObject cocktail;
-    [SerializeField] GameObject another;
+    [SerializeField] GameObject Seogyang;
+    [SerializeField] GameObject RoyalMorning;
+    [SerializeField] GameObject KattCock;
+    [SerializeField] GameObject AurumCock;
+    [SerializeField] GameObject RoyalCock;
+    [SerializeField] GameObject AirenCock;
+    [SerializeField] GameObject BrgikyCock;
+    [SerializeField] GameObject K2C;
+    [SerializeField] GameObject Souren;
+    [SerializeField] GameObject BrgikyFloat;
+    [SerializeField] GameObject BeeRoyal;
     [SerializeField] GameObject fail;
     public Transform location1;
     public Transform location2;
     public void Makingcocktail()
     {
-        if (Alcohol == 1 && Spicy == 0 && Sweet == 1 && Bitter == 0 && Sour == 0 && Liqueur && Orange)
+        if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 1 && Sour == 0 && Liqueur)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
-                Instantiate(cocktail, location1.position, location1.rotation);
+                Instantiate(Seogyang, location1.position, location1.rotation);
 
             }
             else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
             {
                 if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
                 {
-                    Instantiate(cocktail, location2.position, location2.rotation);
+                    Instantiate(Seogyang, location2.position, location2.rotation);
                 }
                 else
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 1 && Spicy == 1 && Sweet ==0 && Bitter == 1 && Sour ==0 && cool)
+        else if (Alcohol == 0 && Spicy == 2 && Sweet ==0 && Bitter == 0 && Sour ==1 && Liqueur)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
-                Instantiate(another, location1.position, location1.rotation);
+                Instantiate(RoyalMorning, location1.position, location1.rotation);
 
             }
             else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
             {
                 if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
                 {
-                    Instantiate(another, location2.position, location2.rotation);
+                    Instantiate(RoyalMorning, location2.position, location2.rotation);
+                }
+                else
+                    Debug.Log("no");
+            }
+        }
+        else if (Alcohol == 2 && Spicy == 0 && Sweet == 0 && Bitter == 0 && Sour == 0 && cool)
+        {
+            if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+            {
+                Instantiate(KattCock, location1.position, location1.rotation);
+
+            }
+            else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+            {
+                if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(KattCock, location2.position, location2.rotation);
+                }
+                else
+                    Debug.Log("no");
+            }
+        }
+        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        {
+            if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+            {
+                Instantiate(AurumCock, location1.position, location1.rotation);
+
+            }
+            else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+            {
+                if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(AurumCock, location2.position, location2.rotation);
+                }
+                else
+                    Debug.Log("no");
+            }
+        }
+        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        {
+            if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+            {
+                Instantiate(RoyalCock, location1.position, location1.rotation);
+
+            }
+            else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+            {
+                if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(RoyalCock, location2.position, location2.rotation);
+                }
+                else
+                    Debug.Log("no");
+            }
+        }
+        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        {
+            if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+            {
+                Instantiate(AirenCock, location1.position, location1.rotation);
+
+            }
+            else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+            {
+                if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(AirenCock, location2.position, location2.rotation);
+                }
+                else
+                    Debug.Log("no");
+            }
+        }
+        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        {
+            if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+            {
+                Instantiate(BrgikyCock, location1.position, location1.rotation);
+
+            }
+            else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+            {
+                if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(BrgikyCock, location2.position, location2.rotation);
+                }
+                else
+                    Debug.Log("no");
+            }
+        }
+        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        {
+            if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+            {
+                Instantiate(K2C, location1.position, location1.rotation);
+
+            }
+            else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+            {
+                if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(K2C, location2.position, location2.rotation);
+                }
+                else
+                    Debug.Log("no");
+            }
+        }
+        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        {
+            if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+            {
+                Instantiate(Souren, location1.position, location1.rotation);
+
+            }
+            else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+            {
+                if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(Souren, location2.position, location2.rotation);
+                }
+                else
+                    Debug.Log("no");
+            }
+        }
+        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        {
+            if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+            {
+                Instantiate(BrgikyFloat, location1.position, location1.rotation);
+
+            }
+            else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+            {
+                if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(BrgikyFloat, location2.position, location2.rotation);
+                }
+                else
+                    Debug.Log("no");
+            }
+        }
+        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        {
+            if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+            {
+                Instantiate(BeeRoyal, location1.position, location1.rotation);
+
+            }
+            else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+            {
+                if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(BeeRoyal, location2.position, location2.rotation);
                 }
                 else
                     Debug.Log("no");
