@@ -827,12 +827,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590851552}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0367709, y: -0.8251294, z: 152.66225}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 111.97126, y: -89.113976, z: 6767.5225}
+  m_LocalScale: {x: 108, y: 108, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 719964791}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &645694297
@@ -915,6 +915,7 @@ GameObject:
   - component: {fileID: 719964790}
   - component: {fileID: 719964789}
   - component: {fileID: 719964788}
+  - component: {fileID: 719964792}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -998,6 +999,7 @@ RectTransform:
   - {fileID: 317313959}
   - {fileID: 1801350886}
   - {fileID: 1345930153}
+  - {fileID: 590851554}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1006,6 +1008,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &719964792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719964787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73aacbc4a0162145a68143c8aab7a6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryPanel: {fileID: 1345930152}
 --- !u!1 &736744788
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,7 +2434,6 @@ GameObject:
   - component: {fileID: 1345930157}
   - component: {fileID: 1345930156}
   - component: {fileID: 1345930155}
-  - component: {fileID: 1345930154}
   m_Layer: 5
   m_Name: Inventory UI
   m_TagString: Untagged
@@ -2449,19 +2463,6 @@ RectTransform:
   m_AnchoredPosition: {x: 450, y: 0}
   m_SizeDelta: {x: 780, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1345930154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1345930152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73aacbc4a0162145a68143c8aab7a6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryPanel: {fileID: 1345930152}
 --- !u!114 &1345930155
 MonoBehaviour:
   m_ObjectHideFlags: 0
