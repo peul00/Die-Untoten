@@ -64,6 +64,7 @@ public class test : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("update");
         if (isDialogue)
         {
             Debug.Log("1");
