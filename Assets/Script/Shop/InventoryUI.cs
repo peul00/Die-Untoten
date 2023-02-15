@@ -19,7 +19,7 @@ public class InventoryUI : MonoBehaviour
     void Update()
     {
         Debug.Log("update");
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             Debug.Log("2");
             activeInventory = !activeInventory;
