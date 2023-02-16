@@ -17,6 +17,7 @@ public class Item
 {
     public ItemType ItemType;
     public string itmeName;
+    public int ItemCost;
     public Sprite itemImage;
     
     public bool Use()

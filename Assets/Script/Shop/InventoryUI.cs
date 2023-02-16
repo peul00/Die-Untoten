@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using System;
+//using UnityEngine.UIElements;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class InventoryUI : MonoBehaviour
         inven = Inventory.instance;
         slots = slotHolder.GetComponentsInChildren<Slot>();
         inven.onSlotCountChange += SlotChange;
+        inven.onChangeItem += RedrawSlotUI;
+        RedrawSlotUI();
         inventoryPanel.SetActive(activeInventory);
         Debug.Log("start");
         shop.SetActive(false);
@@ -65,6 +68,18 @@ public class InventoryUI : MonoBehaviour
     {
         inven.SlotCnt++;
     }
+    void RedrawSlotUI()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].RemoveSlot();
+        }
+        for (int i = 0; i < inven.items.Count; i++)
+        {
+            slots[i].item = inven.items[i];
+            slots[i].UpdateSlotUI();
+        }
+    }
 
     public GameObject shop;
     public Button openShop;
@@ -100,6 +115,10 @@ public class InventoryUI : MonoBehaviour
             isShopActive = isOpen;
             shop.SetActive(isOpen);
             inventoryPanel.SetActive(isOpen);
+            for(int i = 0; i < slots.Length; i++)
+            {
+                slots[i].isShopMode = isOpen;
+            }
         }
     }
 
@@ -110,5 +129,13 @@ public class InventoryUI : MonoBehaviour
     public void DeActivateShop()
     {
         ActiveShopst(false);
+    }
+
+    public void SellBtn()
+    {
+        for(int i = slots.Length; i> 0; i--)
+        {
+            slots[i-1].SellItem();
+        }
     }
 }
