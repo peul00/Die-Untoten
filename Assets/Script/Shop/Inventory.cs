@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -55,12 +56,5 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    public GameObject shop;
-
-    public void RayShop()
-    {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = -10;
-        Debug.DrawRay(mousePos, transform.forward, Color.red, 0.5f);
-    }
+    
 }

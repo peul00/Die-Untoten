@@ -14,6 +14,7 @@ TagManager:
   - Liqueur
   - Serving
   - Costomer
+  - Shop
   layers:
   - Default
   - TransparentFX

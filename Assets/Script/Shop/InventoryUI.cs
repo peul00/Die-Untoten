@@ -9,6 +9,7 @@ using System;
 public class InventoryUI : MonoBehaviour
 {
     Inventory inven;
+
     
     public GameObject inventoryPanel;
     bool activeInventory = false;
@@ -23,6 +24,9 @@ public class InventoryUI : MonoBehaviour
         inven.onSlotCountChange += SlotChange;
         inventoryPanel.SetActive(activeInventory);
         Debug.Log("start");
+        shop.SetActive(false);
+        openShop.onClick.AddListener(ActiveShop);
+        closeShop.onClick.AddListener(DeActivateShop);
     }
 
     private void SlotChange(int val)
@@ -43,12 +47,16 @@ public class InventoryUI : MonoBehaviour
     void Update()
     {
         Debug.Log("update");
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) && isShopActive) 
         {
             Debug.Log("2");
             activeInventory = !activeInventory;
             inventoryPanel.SetActive(activeInventory);
         }
+        /*if (Input.GetMouseButtonUp(0))
+        {
+            RayShop();
+        }*/
     }
     
 
@@ -56,5 +64,51 @@ public class InventoryUI : MonoBehaviour
     public void AddSlot()
     {
         inven.SlotCnt++;
+    }
+
+    public GameObject shop;
+    public Button openShop;
+    public Button closeShop;
+    public bool isShopActive;
+
+
+    /*public void RayShop()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = -10;
+        if(!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject(-1))
+        RaycastHit2D hit2D = Physics2D.Raycast(mousePos, transform.forward, 30);
+        if (hit2D.collider != null)
+        {
+            if (hit2D.collider.CompareTag("Shop"))
+            {
+                if (!isShopActive)
+                {
+                    ActiveShopst(true);
+                }
+                
+            }
+        }
+    }*/
+
+
+
+    public void ActiveShopst(bool isOpen)
+    {
+        if (!activeInventory)
+        {
+            isShopActive = isOpen;
+            shop.SetActive(isOpen);
+            inventoryPanel.SetActive(isOpen);
+        }
+    }
+
+    public void ActiveShop()
+    {
+        ActiveShopst(true);
+    }
+    public void DeActivateShop()
+    {
+        ActiveShopst(false);
     }
 }

@@ -18,5 +18,5 @@ public class ItemDatabase : MonoBehaviour
     public GameObject fieldItemPrefab;
     public Vector3[] pos;
 
-    private void Start
+    
 }
