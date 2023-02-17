@@ -14,11 +14,12 @@ TagManager:
   - Liqueur
   - Serving
   - Costomer
+  - Shop
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Shop
   - Water
   - UI
   - 
@@ -53,4 +54,7 @@ TagManager:
     locked: 0
   - name: BackGround
     uniqueID: 1153596813
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 4199518587
     locked: 0
