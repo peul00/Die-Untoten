@@ -24,7 +24,7 @@ public class DestroyIce : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject, 5f);
+            Destroy(gameObject, 1f);
         }
     }
 }
