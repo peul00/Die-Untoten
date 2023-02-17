@@ -20,12 +20,7 @@ public class Slot : MonoBehaviour, IPointerUpHandler
     }
     public void RemoveSlot()
     {
-        if (item != null)
-        {
-            itemIcon.sprite = null;
-            itemIcon.gameObject.SetActive(false);
-            item = null;
-        }
+        itemIcon.gameObject.SetActive(false);
     }
 
     public void OnPointerUp(PointerEventData eventData)

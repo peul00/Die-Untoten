@@ -19,18 +19,21 @@ public class InventoryUI : MonoBehaviour
     public Transform slotHolder;
     public ShopSlot[] shopSlots;
     public Transform shopHolder;
-    
-    private void Start()
+
+    public void Awake()
     {
-        Debug.Log("start");
         inven = Inventory.instance;
         slots = slotHolder.GetComponentsInChildren<Slot>();
         shopSlots = shopHolder.GetComponentsInChildren<ShopSlot>();
         inven.onSlotCountChange += SlotChange;
         inven.onChangeItem += RedrawSlotUI;
-        RedrawSlotUI();
+    }
+
+    public void Start()
+    {
+        shop.gameObject.SetActive(false);
         inventoryPanel.SetActive(activeInventory);
-        shop.SetActive(false);
+        RedrawSlotUI();
         openShop.onClick.AddListener(ActiveShop);
         closeShop.onClick.AddListener(DeActivateShop);
     }
@@ -52,8 +55,8 @@ public class InventoryUI : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("update");
-        if (Input.GetKeyDown(KeyCode.I) && isShopActive) 
+        //Debug.Log("update");
+        if (Input.GetKeyDown(KeyCode.I))//&& isShopActive) 
         {
             Debug.Log("2");
             activeInventory = !activeInventory;
@@ -154,5 +157,17 @@ public class InventoryUI : MonoBehaviour
         {
             slots[i-1].SellItem();
         }
+    }
+
+
+    //»óÁ¡ ²°´Ù Ä×´Ù Ãß°¡ÇÔ
+    public void ShopOpen()
+    {
+        shop.gameObject.SetActive(true);
+    }
+
+    public void ShopClose()
+    {
+        shop.gameObject.SetActive(false);
     }
 }
