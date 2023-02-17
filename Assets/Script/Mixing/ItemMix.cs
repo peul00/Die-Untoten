@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class ItemMix : MonoBehaviour
 {
     public GameObject Firstgauge;
-    public GameObject liqueur;
+    public GameObject liqueurPoint;
     public GameObject IcePoint;
+    public GameObject OrangePoint;
     public GameObject ice;
     public static int Alcohol;
     public static int Spicy;
@@ -30,11 +31,13 @@ public class ItemMix : MonoBehaviour
         {
             Orange = true;
             Debug.Log("Orange true");
+            OrangePoint.gameObject.SetActive(true);
         }
         else
         {
             Orange = false;
             Debug.Log("Orange false");
+            OrangePoint.gameObject.SetActive(false);
         }
     }
 
@@ -107,7 +110,7 @@ public class ItemMix : MonoBehaviour
             if (Input.GetMouseButton(0) == false)
             {
                 Liqueur = true;
-                liqueur.gameObject.SetActive(true);
+                liqueurPoint.gameObject.SetActive(true);
                 Debug.Log("Liqueur: true");
             }
         }
@@ -136,7 +139,7 @@ public class ItemMix : MonoBehaviour
     public Transform location2;
     public void Makingcocktail()
     {
-        if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 1 && Sour == 0 && Liqueur)
+        if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 1 && Sour == 0 && Liqueur && Orange)//오렌지 제거
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -153,7 +156,7 @@ public class ItemMix : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 0 && Spicy == 2 && Sweet ==0 && Bitter == 0 && Sour ==1 && Liqueur)
+        else if (Alcohol == 0 && Spicy == 2 && Sweet ==0 && Bitter == 0 && Sour ==1 && Liqueur && cool)//얼음 제거
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -344,8 +347,9 @@ public class ItemMix : MonoBehaviour
     public void Rerecipt()
     {
         Firstgauge.gameObject.SetActive(false);
-        liqueur.gameObject.SetActive(false);
+        liqueurPoint.gameObject.SetActive(false);
         IcePoint.gameObject.SetActive(false);
+        OrangePoint.gameObject.SetActive(false);
         GameObject.Find("Orange").GetComponent<Toggle>().isOn = false;
         Alcohol = 0;
         Spicy = 0;

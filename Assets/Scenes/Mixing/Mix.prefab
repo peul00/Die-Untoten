@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893686018868447548}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: -0}
+  m_LocalPosition: {x: 3.5, y: -2, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -123,16 +123,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Firstgauge: {fileID: 0}
   liqueur: {fileID: 0}
+  IcePoint: {fileID: 0}
+  ice: {fileID: 6128725023661510964, guid: c4d8773108521c9458cb011553d0abbb, type: 3}
   cool: 0
   Orange: 0
   Liqueur: 0
   Plus: 0
-  IcePoint: {fileID: 0}
-  obj: {fileID: 893686018868447548}
-  cocktail: {fileID: 2948980936779559678, guid: 6946ca1e397f3a744a579ca68845d12c, type: 3}
-  another: {fileID: 5971246021322026838, guid: dfefb55c296e77c4181ef467ca68318f, type: 3}
+  Seogyang: {fileID: 0}
+  RoyalMorning: {fileID: 0}
+  KattCock: {fileID: 0}
+  AurumCock: {fileID: 0}
+  RoyalCock: {fileID: 0}
+  AirenCock: {fileID: 0}
+  BrgikyCock: {fileID: 0}
+  K2C: {fileID: 0}
+  Souren: {fileID: 0}
+  BrgikyFloat: {fileID: 0}
+  BeeRoyal: {fileID: 0}
   fail: {fileID: 533436023940076270, guid: 04d00e30846732642b159d010420743c, type: 3}
-  ice: {fileID: 6128725023661510964, guid: c4d8773108521c9458cb011553d0abbb, type: 3}
+  location1: {fileID: 0}
+  location2: {fileID: 0}
 --- !u!61 &893686018868447546
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,3 +181,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0166cab3f0e1aeb41b43afb69f677451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  location1: {fileID: 0}
+  location2: {fileID: 0}
