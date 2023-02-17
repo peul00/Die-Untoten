@@ -19,9 +19,10 @@ public class InventoryUI : MonoBehaviour
     public Transform slotHolder;
     public ShopSlot[] shopSlots;
     public Transform shopHolder;
-
+    
     private void Start()
     {
+        Debug.Log("start");
         inven = Inventory.instance;
         slots = slotHolder.GetComponentsInChildren<Slot>();
         shopSlots = shopHolder.GetComponentsInChildren<ShopSlot>();
@@ -29,7 +30,6 @@ public class InventoryUI : MonoBehaviour
         inven.onChangeItem += RedrawSlotUI;
         RedrawSlotUI();
         inventoryPanel.SetActive(activeInventory);
-        Debug.Log("start");
         shop.SetActive(false);
         openShop.onClick.AddListener(ActiveShop);
         closeShop.onClick.AddListener(DeActivateShop);
