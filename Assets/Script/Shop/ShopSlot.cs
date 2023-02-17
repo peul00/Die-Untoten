@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Slot : MonoBehaviour, IPointerUpHandler
+public class ShopSlot : MonoBehaviour, IPointerUpHandler
 {
     public int slotnum;
     public Item item;
     public Image itemIcon;
-    public bool soldOut;
+    public bool soldOut = false;
 
 
     public void UpdateSlotUI()
@@ -27,9 +27,9 @@ public class Slot : MonoBehaviour, IPointerUpHandler
     {
         if (item != null)
         {
-            if(ItemDatabase.instance.Money >= item.itemCost && soldOut)
+            if(ItemDatabase.instance.Money >= item.ItemCost && !soldOut)
             {
-                ItemDatabase.instance.Money -= item.itemCost;
+                ItemDatabase.instance.Money -= item.ItemCost;
                 Inventory.instance.AddItem(item);
             }
         

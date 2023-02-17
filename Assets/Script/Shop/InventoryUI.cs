@@ -17,11 +17,14 @@ public class InventoryUI : MonoBehaviour
 
     public Slot[] slots;
     public Transform slotHolder;
-    
+    public ShopSlot[] shopSlots;
+    public Transform shopHolder;
+
     private void Start()
     {
         inven = Inventory.instance;
         slots = slotHolder.GetComponentsInChildren<Slot>();
+        shopSlots = shopHolder.GetComponentsInChildren<ShopSlot>();
         inven.onSlotCountChange += SlotChange;
         inven.onChangeItem += RedrawSlotUI;
         RedrawSlotUI();
@@ -86,6 +89,8 @@ public class InventoryUI : MonoBehaviour
     public Button closeShop;
     public bool isShopActive;
 
+    public ShopData shopData;
+
 
     /*public void RayShop()
     {
@@ -100,6 +105,12 @@ public class InventoryUI : MonoBehaviour
                 if (!isShopActive)
                 {
                     ActiveShopst(true);
+                    shopData hit2D.collider.GetComponent<ShopData>();
+                    for(int i = 0;i <shopData.stocks.Count;i++)
+                    {
+                        
+                    }
+    
                 }
                 
             }
@@ -125,6 +136,12 @@ public class InventoryUI : MonoBehaviour
     public void ActiveShop()
     {
         ActiveShopst(true);
+        shopData = GetComponent<ShopData>();
+        for (int i = 0; i < shopData.stocks.Count; i++)
+        {
+            shopSlots[i].item = shopData.stocks[i];
+            shopSlots[i].UpdateSlotUI();
+        }
     }
     public void DeActivateShop()
     {
