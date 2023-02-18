@@ -15,6 +15,9 @@ TagManager:
   - Serving
   - Costomer
   - Shop
+  - Fail
+  - Cock
+  - Another
   layers:
   - Default
   - TransparentFX

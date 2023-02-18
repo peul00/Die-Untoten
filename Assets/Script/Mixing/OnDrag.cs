@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OnDrag : MonoBehaviour
 {
-    public int Price;
+    public string Tag;
     private void OnMouseDrag()
     {
         Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -28,6 +28,14 @@ public class OnDrag : MonoBehaviour
             }
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Costomer")
+        {
+            gameObject.tag = Tag;
+        }
+    }
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Costomer")
@@ -35,7 +43,6 @@ public class OnDrag : MonoBehaviour
             if (Input.GetMouseButton(0) == false)
             {
                 Destroy(gameObject);
-                ItemDatabase.instance.Money += Price;
             }
         }
     }
