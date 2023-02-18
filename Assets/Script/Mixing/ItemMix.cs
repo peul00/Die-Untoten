@@ -10,11 +10,13 @@ public class ItemMix : MonoBehaviour
     public GameObject IcePoint;
     public GameObject OrangePoint;
     public GameObject ice;
-    public static int Alcohol;
-    public static int Spicy;
-    public static int Sweet;
-    public static int Bitter;
-    public static int Sour;
+    public int Alcohol;
+    public int Spicy;
+    public int Sweet;
+    public int Bitter;
+    public int Sour;
+    public int OrangePice;
+    public int LiqueurPice;
     public bool cool = false;
     public bool Orange = false;
     public bool Liqueur = false;
@@ -32,6 +34,7 @@ public class ItemMix : MonoBehaviour
             Orange = true;
             Debug.Log("Orange true");
             OrangePoint.gameObject.SetActive(true);
+            ItemDatabase.instance.Money -= OrangePice;
         }
         else
         {
@@ -111,6 +114,7 @@ public class ItemMix : MonoBehaviour
             {
                 Liqueur = true;
                 liqueurPoint.gameObject.SetActive(true);
+                ItemDatabase.instance.Money -= LiqueurPice;
                 Debug.Log("Liqueur: true");
             }
         }

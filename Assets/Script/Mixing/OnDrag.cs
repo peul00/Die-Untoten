@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OnDrag : MonoBehaviour
 {
-
+    public int Price;
     private void OnMouseDrag()
     {
         Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -35,6 +35,7 @@ public class OnDrag : MonoBehaviour
             if (Input.GetMouseButton(0) == false)
             {
                 Destroy(gameObject);
+                ItemDatabase.instance.Money += Price;
             }
         }
     }

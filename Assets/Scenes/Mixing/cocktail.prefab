@@ -146,5 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0166cab3f0e1aeb41b43afb69f677451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Price: 500
   location1: {fileID: 2566014160504454529, guid: b6f16fbe5e5613244b2594186938e723, type: 3}
   location2: {fileID: 5553472645918760907, guid: 22b5e2de900bc524491a61ff9b2aa453, type: 3}

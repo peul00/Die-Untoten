@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.49056602, g: 0.26148093, b: 0.26148093, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1155,7 +1155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4740292643495857905, guid: f26319afa813dbb47be5398bc18257f4, type: 3}
       propertyPath: m_Name
-      value: Liqueur (1)
+      value: Liqueur
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f26319afa813dbb47be5398bc18257f4, type: 3}
@@ -1831,6 +1831,7 @@ GameObject:
   - component: {fileID: 468903455}
   - component: {fileID: 468903454}
   - component: {fileID: 468903456}
+  - component: {fileID: 468903457}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1991,6 +1992,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invisibleCard: {fileID: 4079008576296099140}
+--- !u!114 &468903457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468903449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb863d3df1c46c4ab191b98f119f675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Money: 0
+  itemDB: []
+  fieldItemPrefab: {fileID: 0}
+  pos: []
 --- !u!1 &482057986
 GameObject:
   m_ObjectHideFlags: 0
@@ -4745,7 +4762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.3207547, g: 0.022694904, b: 0.022694904, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5371,7 +5388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.24528301, g: 0.22098611, b: 0.22098611, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7209,7 +7226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1928938853}
   - component: {fileID: 1928938855}
-  - component: {fileID: 1928938854}
+  - component: {fileID: 1928938856}
   m_Layer: 5
   m_Name: Money
   m_TagString: Untagged
@@ -7234,39 +7251,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 840, y: 495}
-  m_SizeDelta: {x: 220, y: 72}
+  m_AnchoredPosition: {x: 795.97, y: 512.2}
+  m_SizeDelta: {x: 288.05, y: 34.4}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1928938854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1928938852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1928938855
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7275,6 +7262,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928938852}
   m_CullTransparentMesh: 1
+--- !u!114 &1928938856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928938852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 100
+    m_Alignment: 2
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\uB3C8"
 --- !u!1001 &1940893337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8115,7 +8136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.9019608}
+  m_Color: {r: 0.8207547, g: 0.4219918, b: 0.4219918, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8249,6 +8270,14 @@ PrefabInstance:
       propertyPath: Firstgauge
       value: 
       objectReference: {fileID: 9411732}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: OrangePice
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: LiqueurPice
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: OrangePoint
       value: 
