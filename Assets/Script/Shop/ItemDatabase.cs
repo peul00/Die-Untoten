@@ -10,7 +10,7 @@ public class ItemDatabase : MonoBehaviour
     public static ItemDatabase instance;
 
     public int Money = 0;
-    private Text MoneyPoint;
+    private Text MoneyPoint; // µ∑ ∫∏¿Ã∞‘«‘
     private void Awake()
     {
         instance = this;
@@ -38,4 +38,9 @@ public class ItemDatabase : MonoBehaviour
         MoneyPoint.text = Money.ToString("c"); //N0 \«•Ω√ ªÁ∂Û¡¸
     }
 
+    public GameObject Custom; // º’¥‘πﬁ±‚
+    public void Cus()
+    {
+        Custom.gameObject.SetActive(true);
+    }
 }
