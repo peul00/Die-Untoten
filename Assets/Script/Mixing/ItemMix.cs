@@ -22,6 +22,16 @@ public class ItemMix : MonoBehaviour
     public bool Liqueur = false;
     public static int Plus;
 
+    int buff = 0; //버프 추가
+    public void Update()
+    {
+        while (buff < Plus)
+        {
+            Drag.MaxRank += 1;
+            Debug.Log("Buff + 1");
+            buff++;
+        }
+    }
     public void cold()
     {
         Instantiate(ice);
@@ -43,7 +53,6 @@ public class ItemMix : MonoBehaviour
             OrangePoint.gameObject.SetActive(false);
         }
     }
-
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ice")
@@ -355,11 +364,14 @@ public class ItemMix : MonoBehaviour
         IcePoint.gameObject.SetActive(false);
         OrangePoint.gameObject.SetActive(false);
         GameObject.Find("Orange").GetComponent<Toggle>().isOn = false;
+        Drag.MaxRank = 0;
         Alcohol = 0;
         Spicy = 0;
         Sweet = 0;
         Bitter = 0;
         Sour = 0;
+        Plus = 0;
+        buff = 0;
         Liqueur = false;
         cool = false;
         Orange = false;

@@ -285,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6893545205772531257, guid: 7e84ff13f81c7ba44b7690e723fa978a, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6893545205772531257, guid: 7e84ff13f81c7ba44b7690e723fa978a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -965,7 +965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71cdf13eacabb7f41a0201ed4365cab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rank: 0
+  Rank: 2
 --- !u!1 &122959587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2667,7 +2667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71cdf13eacabb7f41a0201ed4365cab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rank: 0
+  Rank: 3
 --- !u!1 &648291287
 GameObject:
   m_ObjectHideFlags: 0
@@ -3920,7 +3920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71cdf13eacabb7f41a0201ed4365cab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rank: 0
+  Rank: 5
 --- !u!1 &1107122066
 GameObject:
   m_ObjectHideFlags: 0
@@ -7586,7 +7586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71cdf13eacabb7f41a0201ed4365cab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rank: 0
+  Rank: 4
 --- !u!1 &1928938852
 GameObject:
   m_ObjectHideFlags: 0
@@ -7952,7 +7952,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Order: 0
-  Tip: 0
   FailPrice: 100
   Price: 500
   Another: 700

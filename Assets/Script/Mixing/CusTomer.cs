@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class CusTomer : MonoBehaviour
 {
-    int Average = OnDrag.Average;
     public int Order;
-    public int Tip;
     public int FailPrice;
     public int Price;
     public int Another;
@@ -25,23 +23,7 @@ public class CusTomer : MonoBehaviour
         Invoke("Wanted", 2.0f);
     }
     public void Update()
-    {
-        if(Average <= 1)
-        {
-            Tip = Random.Range(1, 10);
-        }
-        else if(Average <= 2)
-        {
-            Tip = Random.Range(11, 50);
-        }
-        else if (Average <= 3)
-        {
-            Tip = Random.Range(51, 100);
-        }
-        else
-        {
-            Tip = Random.Range(101, 200);
-        }
+    { 
     }
     public void Wanted()
     {
@@ -54,13 +36,17 @@ public class CusTomer : MonoBehaviour
             SetOrder2();
         }
     }
-    public void OnTriggerExit2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+
+    }
+    public void OnTriggerStay2D(Collider2D collision)
     {
         if(Order == 1)
         {
             if (collision.gameObject.tag == "Cock")
             {
-                ItemDatabase.instance.Money += Price + Tip;
+                ItemDatabase.instance.Money += Price + OnDrag.Tip;
                 SetTalk2();
                 Order = Random.Range(1, 3);
                 Invoke("Wanted", 2.0f);
@@ -76,7 +62,7 @@ public class CusTomer : MonoBehaviour
         {
             if (collision.gameObject.tag == "Another")
             {
-                ItemDatabase.instance.Money += Another + Tip;
+                ItemDatabase.instance.Money += Another + OnDrag.Tip;
                 SetTalk2();
                 Order = Random.Range(1, 3);
                 Invoke("Wanted", 2.0f);

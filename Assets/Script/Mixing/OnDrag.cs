@@ -8,11 +8,16 @@ public class OnDrag : MonoBehaviour
     int Rank = Drag.MaxRank;
     int Plus = ItemMix.Plus;
     public static int Average;
+    public static int Tip;
+    public void Start()
+    {
+        Average = Rank / Plus;
+        Debug.Log("Level: " + Average);
+    }
 
     public void Update()
     {
-        Average = Rank / Plus;
-        Debug.Log(Average);
+        //Average = Rank / Plus;
     }
 
     private void OnMouseDrag()
@@ -21,6 +26,7 @@ public class OnDrag : MonoBehaviour
         Vector2 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
         transform.position = objPosition;
     }
+
     public GameObject location1;
     public GameObject location2;
     public void OnMouseUp()
@@ -44,13 +50,30 @@ public class OnDrag : MonoBehaviour
         if (collision.gameObject.tag == "Costomer")
         {
             gameObject.tag = Tag;
+            if (Average <= 1)
+            {
+                Tip = Random.Range(1, 11);
+            }
+            else if (Average <= 2)
+            {
+                Tip = Random.Range(11, 51);
+            }
+            else if (Average <= 3)
+            {
+                Tip = Random.Range(51, 101);
+            }
+            else
+            {
+                Tip = Random.Range(101, 201);
+            }
+            Debug.Log("Tip = " + Tip);
         }
     }
-    public void OnTriggerExit2D(Collider2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Costomer")
         {
-            if (Input.GetMouseButton(0) == false)
+            if (Input.GetMouseButton(0) == true)
             {
                 Destroy(gameObject);
             }
