@@ -5,17 +5,13 @@ using UnityEngine.EventSystems;
 
 public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public int Rank;
+    public static int MaxRank;
     Transform root;
 
     void Start()
     {
         root = transform.root;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -32,5 +28,17 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     public void OnEndDrag(PointerEventData eventData)
     {
         root.BroadcastMessage("EndDrag", transform, SendMessageOptions.DontRequireReceiver);
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Mix")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                MaxRank += Rank;
+                Debug.Log("Rank: " + MaxRank);
+            }
+        }
     }
 }

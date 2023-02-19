@@ -20,7 +20,7 @@ public class ItemMix : MonoBehaviour
     public bool cool = false;
     public bool Orange = false;
     public bool Liqueur = false;
-    public int Plus;
+    public static int Plus;
 
     public void cold()
     {

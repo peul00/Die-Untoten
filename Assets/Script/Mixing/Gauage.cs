@@ -9,7 +9,7 @@ public class Gauage : MonoBehaviour
 
     private void Update()
     {
-        int Count = GameObject.Find("Mix").GetComponent<ItemMix>().Plus;
+        int Count = ItemMix.Plus;
         if (Num + 1 == Count)
         {
             nextgauge.gameObject.SetActive(true);

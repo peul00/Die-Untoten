@@ -5,6 +5,16 @@ using UnityEngine;
 public class OnDrag : MonoBehaviour
 {
     public string Tag;
+    int Rank = Drag.MaxRank;
+    int Plus = ItemMix.Plus;
+    public static int Average;
+
+    public void Update()
+    {
+        Average = Rank / Plus;
+        Debug.Log(Average);
+    }
+
     private void OnMouseDrag()
     {
         Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
