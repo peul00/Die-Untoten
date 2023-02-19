@@ -17,7 +17,6 @@ public class OnDrag : MonoBehaviour
 
     public void Update()
     {
-        //Average = Rank / Plus;
     }
 
     private void OnMouseDrag()
