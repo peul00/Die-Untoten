@@ -22,6 +22,7 @@ public class TitleSceneMain : BaseSceneMain
     public void OnExitBtn()
     {
         Debug.Log("Exit");
+        Application.Quit();
     }
 
 }
