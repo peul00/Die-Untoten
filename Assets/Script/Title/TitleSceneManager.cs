@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class TitleSceneMain : BaseSceneMain
+public class TitleSceneManager : MonoBehaviour
 {
     public void OnNewGameBtn()
     {
         Debug.Log("New Game");
-
-        SceneController.Instance.LoadScene(SceneNameConstants.LoadingScene);
-        SceneController.Instance.LoadScene(SceneNameConstants.Customer);
+        SceneManager.LoadScene("LoadingScene");
     }
     public void OnContinueBtn()
     {
