@@ -56,7 +56,7 @@ public class InventoryUI : MonoBehaviour
     void Update()
     {
         //Debug.Log("update");
-        if (Input.GetKeyDown(KeyCode.I))//&& isShopActive) 
+        if (Input.GetKeyDown(KeyCode.I)) //&& isShopActive) 
         {
             Debug.Log("2");
             activeInventory = !activeInventory;

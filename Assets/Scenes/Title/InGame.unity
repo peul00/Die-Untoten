@@ -6169,7 +6169,6 @@ GameObject:
   - component: {fileID: 739761055}
   - component: {fileID: 739761057}
   - component: {fileID: 739761056}
-  - component: {fileID: 739761058}
   m_Layer: 5
   m_Name: Recip
   m_TagString: Untagged
@@ -6235,27 +6234,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739761054}
   m_CullTransparentMesh: 1
---- !u!50 &739761058
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739761054}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &762261951
 GameObject:
   m_ObjectHideFlags: 0
@@ -6592,7 +6570,6 @@ GameObject:
   - component: {fileID: 857882702}
   - component: {fileID: 857882701}
   - component: {fileID: 857882700}
-  - component: {fileID: 857882703}
   m_Layer: 5
   m_Name: Recipe
   m_TagString: Untagged
@@ -6675,27 +6652,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857882698}
   m_CullTransparentMesh: 1
---- !u!50 &857882703
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857882698}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &866532311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5553472645918760907, guid: 22b5e2de900bc524491a61ff9b2aa453, type: 3}
