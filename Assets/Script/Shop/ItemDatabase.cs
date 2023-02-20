@@ -18,8 +18,8 @@ public class ItemDatabase : MonoBehaviour
     }
 
     public List<Item> itemDB = new List<Item>();
-    //public GameObject fieldItemPrefab;
-    //public Vector3[] pos;
+    public GameObject fieldItemPrefab;
+    public Vector3[] pos;
 
     public void Start()
     {
@@ -28,7 +28,7 @@ public class ItemDatabase : MonoBehaviour
         MoneyPoint = GameObject.Find("Money").GetComponent<Text>();
     }
 
-    /*public void Update()
+    public void Update()
     {
         SetMoneyText();
     }
@@ -36,7 +36,7 @@ public class ItemDatabase : MonoBehaviour
     void SetMoneyText()
     {
         MoneyPoint.text = Money.ToString("c"); //N0 \Ç¥½Ã »ç¶óÁü
-    }*/
+    }
 
     public GameObject Custom; // ¼Õ´Ô¹Þ±â
     public void Cus()

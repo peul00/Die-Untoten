@@ -4468,6 +4468,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Money: 0
   itemDB: []
+  fieldItemPrefab: {fileID: 0}
+  pos: []
   Custom: {fileID: 1979922371}
 --- !u!1 &482057986
 GameObject:
