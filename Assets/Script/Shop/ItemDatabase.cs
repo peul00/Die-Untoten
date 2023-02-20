@@ -18,8 +18,8 @@ public class ItemDatabase : MonoBehaviour
     }
 
     public List<Item> itemDB = new List<Item>();
-    public GameObject fieldItemPrefab;
-    public Vector3[] pos;
+    //public GameObject fieldItemPrefab;
+    //public Vector3[] pos;
 
     public void Start()
     {
