@@ -5,7 +5,7 @@ using System.IO;
 
 public class PlayerData
 {
-    public string Username;
+    public string name;
     public string NPCname;
     public int item;
 }
@@ -15,10 +15,10 @@ public class DataManager : MonoBehaviour
     // ΩÃ±€≈Ê
     public static DataManager instance;
 
-    PlayerData nowplayer = new PlayerData();
+    public PlayerData nowplayer = new PlayerData();
 
-    string path;
-    string filename = "save";
+    public string path;
+    public int nowSlot;
 
     private void Awake()
     {
@@ -32,7 +32,7 @@ public class DataManager : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
 
-        path = Application.persistentDataPath + "/";
+        path = Application.persistentDataPath + "/save";
     }
 
     // Start is called before the first frame update
@@ -43,11 +43,16 @@ public class DataManager : MonoBehaviour
     public void SaveData()
     {
         string data = JsonUtility.ToJson(nowplayer);
-        File.WriteAllText(path + filename, data);
+        File.WriteAllText(path + nowSlot.ToString(), data);
     }
     public void LoadData()
     {
-        string data = File.ReadAllText(path + filename);
+        string data = File.ReadAllText(path + nowSlot.ToString());
         nowplayer = JsonUtility.FromJson<PlayerData>(data);
+    }
+    public void DataClear()
+    {
+        nowSlot = -1;
+        nowplayer = new PlayerData();
     }
 }
