@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 
 [System.Serializable]
@@ -82,6 +83,7 @@ public class test : MonoBehaviour
                 {
                     Debug.Log("4");
                     OnOff(false);
+                    SceneManager.LoadScene("InGame");
                     //isDialogue = false;
                 }
             }
