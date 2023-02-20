@@ -21,10 +21,10 @@ public class CusTomer : MonoBehaviour
     public void Awake()
     {
         Talk = GameObject.Find("Talk").GetComponent<Text>();
+        Talk.text = "시작해 볼까요?";
     }
     public void OnEnable()
     {
-        Talk.text = "시작해 볼까요?";
         Order = Random.Range(1, 3);
         Invoke("Wanted", 2.0f);
         HP = Random.Range(500, 1001);
@@ -63,7 +63,7 @@ public class CusTomer : MonoBehaviour
                 Order = Random.Range(1, 3);
                 if (CurrentHP > OnDrag.Tip)
                 {
-                    CurrentHP -= OnDrag.Tip;
+                    CurrentHP -= OnDrag.Tip + (100 * Refill);
                     CurrentEndu += OnDrag.Tip / 10;
                     ItemDatabase.instance.Money += Price + OnDrag.Tip + (100*Refill);
                     Refill++;
@@ -74,7 +74,7 @@ public class CusTomer : MonoBehaviour
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
                     ItemDatabase.instance.Money += Price + (int)CurrentHP;
-                    Talk.text = "잘했어요";
+                    Talk.text = "좋아요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
                 }
@@ -105,7 +105,7 @@ public class CusTomer : MonoBehaviour
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
                     ItemDatabase.instance.Money += Another + (int)CurrentHP;
-                    Talk.text = "잘했어요";
+                    Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
                 }
