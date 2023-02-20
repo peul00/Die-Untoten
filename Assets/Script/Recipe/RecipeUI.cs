@@ -1,18 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RecipeUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject RecipePanel;
+    bool activeRecipe = false;
+    public Button closeRecipe;
+
+    private void Start()
     {
-        
+        RecipePanel.SetActive(activeRecipe);
+        closeRecipe.onClick.AddListener(RecipeBookClose);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ActiveRecipeBook(bool isOpen)
     {
-        
+        activeRecipe = isOpen;
+        RecipePanel.SetActive(activeRecipe);
     }
+    public void RecipeBookOpen()
+    {
+        ActiveRecipeBook(true);
+    }
+
+    public void RecipeBookClose()
+    {
+        ActiveRecipeBook(false);
+    }
+
+
+
 }
