@@ -145,6 +145,7 @@ public class InventoryUI : MonoBehaviour
             shopSlots[i].item = shopData.stocks[i];
             shopSlots[i].UpdateSlotUI();
         }
+        
     }
     public void DeActivateShop()
     {
