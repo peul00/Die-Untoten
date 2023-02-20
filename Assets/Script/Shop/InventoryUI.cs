@@ -78,7 +78,7 @@ public class InventoryUI : MonoBehaviour
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            slots[i].RemoveSlot();
+            //slots[i].RemoveSlot();
         }
         for (int i = 0; i < inven.items.Count; i++)
         {
@@ -145,6 +145,7 @@ public class InventoryUI : MonoBehaviour
             shopSlots[i].item = shopData.stocks[i];
             shopSlots[i].UpdateSlotUI();
         }
+        
     }
     public void DeActivateShop()
     {
