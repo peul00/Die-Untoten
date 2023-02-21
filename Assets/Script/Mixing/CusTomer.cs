@@ -27,7 +27,7 @@ public class CusTomer : MonoBehaviour
         Talk.text = "æ»≥Á«œººø‰";
         Order = Random.Range(1, 12);
         Invoke("Wanted", 2.0f);
-        HP = Random.Range(500, 1001);
+        HP = Random.Range(200, 501);
         CurrentHP = HP;
         Endu = Random.Range(60, 121);
         CurrentEndu = Random.Range(30, Endu);
@@ -39,7 +39,8 @@ public class CusTomer : MonoBehaviour
         CurrentEndu -= Time.deltaTime;
         if (CurrentEndu <= 0)
         {
-            gameObject.SetActive(false);
+            Out();
+            Invoke("In", 2f);
         }
     }
     public void Wanted()
@@ -96,7 +97,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "a")
             {
                 SetTalk2();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip + (100 * Refill);
@@ -118,7 +119,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -127,7 +128,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "b")
             {
                 SetTalk2();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -149,7 +150,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -158,7 +159,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "c")
             {
                 SetTalk2();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -180,7 +181,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -189,7 +190,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "d")
             {
                 SetTalk2();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -211,7 +212,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -220,7 +221,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "e")
             {
                 SetTalk2();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -242,7 +243,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -251,7 +252,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "f")
             {
                 SetTalk2();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -273,7 +274,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -282,7 +283,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "g")
             {
                 SetTalk2();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -304,7 +305,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -313,7 +314,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "h")
             {
                 SetTalk2();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -335,7 +336,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -344,7 +345,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "i")
             {
                 SetTalk2();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -366,7 +367,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -375,7 +376,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "j")
             {
                 SetTalk2();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -397,7 +398,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -406,7 +407,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "k")
             {
                 SetTalk2();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -428,7 +429,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 3);
+                Order = Random.Range(1, 12);
                 Invoke("Wanted", 2.0f);
             }
         }

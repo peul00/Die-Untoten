@@ -15,8 +15,6 @@ TagManager:
   - Costomer
   - Shop
   - Fail
-  - Cock
-  - Another
   - Cocoliqueur
   - Cranliqueur
   - Melonliqueur
@@ -30,6 +28,17 @@ TagManager:
   - ChocoJuice
   - Salt
   - Sugar
+  - a
+  - b
+  - c
+  - d
+  - e
+  - f
+  - g
+  - h
+  - i
+  - j
+  - k
   layers:
   - Default
   - TransparentFX

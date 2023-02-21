@@ -382,7 +382,7 @@ public class ItemMix : MonoBehaviour
     // ¾ÆÀÌ·» = ´Ü¸À ¾Æ¿ì·ë = ¾´¸À
     public void Makingcocktail()
     {
-        if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 1 && Sour == 0 && 0 == Soda && CherryJuice == 0 && LiemJuice == 1 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt && Sugar == false && cool == false && Orangeliqueur)
+        if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 1 && Sour == 0 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 1 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool == false && Cranliqueur)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -399,7 +399,7 @@ public class ItemMix : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 0 && Spicy == 2 && Sweet == 0 && Bitter == 0 && Sour == 1 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 3 && Salt == false && Sugar == false && cool == false)
+        else if (Alcohol == 0 && Spicy == 2 && Sweet == 0 && Bitter == 0 && Sour == 1 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 3 && Salt && Sugar == false && cool == false)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -600,6 +600,12 @@ public class ItemMix : MonoBehaviour
         Sweet = 0;
         Bitter = 0;
         Sour = 0;
+        Soda = 0;
+        CherryJuice = 0;
+        LiemJuice = 0;
+        CoCoJuice = 0;
+        ChocoJuice = 0;
+        TomatoJuice = 0;
         Plus = 0;
         AlcoPlus = 0;
         buff = 0;
