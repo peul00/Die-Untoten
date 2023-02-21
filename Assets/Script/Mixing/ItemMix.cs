@@ -356,7 +356,7 @@ public class ItemMix : MonoBehaviour
             }
         }
 
-        if (0 < Sweet || 0 < Spicy || 0 < Bitter || 0 < Sour || 0 < Soda || 0 < CherryJuice || 0 < LiemJuice || 0 < CoCoJuice || 0 < ChocoJuice || 0 < TomatoJuice)
+        if (0 < Alcohol || 0 < Sweet || 0 < Spicy || 0 < Bitter || 0 < Sour || 0 < Soda || 0 < CherryJuice || 0 < LiemJuice || 0 < CoCoJuice || 0 < ChocoJuice || 0 < TomatoJuice)
         {
             Plus = Alcohol + Spicy + Sweet + Bitter + Sour + Soda + CherryJuice + LiemJuice + CoCoJuice + ChocoJuice + TomatoJuice;
             AlcoPlus = Alcohol + Spicy + Sweet + Bitter + Sour;
@@ -379,9 +379,10 @@ public class ItemMix : MonoBehaviour
     [SerializeField] GameObject fail;
     public Transform location1;
     public Transform location2;
+    // ¾ÆÀÌ·» = ´Ü¸À ¾Æ¿ì·ë = ¾´¸À
     public void Makingcocktail()
     {
-        if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 1 && Sour == 0 && Cocoliqueur && Orange)//¿À·»Áö Á¦°Å
+        if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 1 && Sour == 0 && 0 == Soda && CherryJuice == 0 && LiemJuice == 1 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt && Sugar == false && cool == false && Orangeliqueur)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -398,7 +399,7 @@ public class ItemMix : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 0 && Spicy == 2 && Sweet ==0 && Bitter == 0 && Sour ==1 && Cranliqueur && cool)//¾óÀ½ Á¦°Å
+        else if (Alcohol == 0 && Spicy == 2 && Sweet == 0 && Bitter == 0 && Sour == 1 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 3 && Salt == false && Sugar == false && cool == false)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -415,7 +416,7 @@ public class ItemMix : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 2 && Spicy == 0 && Sweet == 0 && Bitter == 0 && Sour == 0 && cool)
+        else if (Alcohol == 2 && Spicy == 0 && Sweet == 0 && Bitter == 0 && Sour == 0 && 4 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -432,7 +433,7 @@ public class ItemMix : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        else if (Alcohol == 0 && Spicy == 0 && Sweet == 0 && Bitter == 2 && Sour == 0 && 4 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -449,7 +450,7 @@ public class ItemMix : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        else if (Alcohol == 0 && Spicy == 0 && Sweet == 0 && Bitter == 0 && Sour == 2 && 4 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -466,7 +467,7 @@ public class ItemMix : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        else if (Alcohol == 0 && Spicy == 0 && Sweet == 2 && Bitter == 0 && Sour == 0 && 4 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -483,7 +484,7 @@ public class ItemMix : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        else if (Alcohol == 0 && Spicy == 2 && Sweet == 0 && Bitter == 0 && Sour == 0 && 4 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -500,7 +501,7 @@ public class ItemMix : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        else if (Alcohol == 0 && Spicy == 4 && Sweet == 0 && Bitter == 0 && Sour == 5 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool == false)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -517,7 +518,7 @@ public class ItemMix : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        else if (Alcohol == 0 && Spicy == 0 && Sweet == 2 && Bitter == 0 && Sour == 4 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool && Orangeliqueur)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -534,7 +535,7 @@ public class ItemMix : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        else if (Alcohol == 1 && Spicy == 3 && Sweet == 0 && Bitter == 0 && Sour == 0 && 1 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar && cool)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -551,7 +552,7 @@ public class ItemMix : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 0 && cool)
+        else if (Alcohol == 0 && Spicy == 2 && Sweet == 0 && Bitter == 1 && Sour == 2 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar && cool)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {

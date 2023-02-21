@@ -21,11 +21,11 @@ public class CusTomer : MonoBehaviour
     public void Awake()
     {
         Talk = GameObject.Find("Talk").GetComponent<Text>();
-        Talk.text = "시작해 볼까요?";
     }
     public void OnEnable()
     {
-        Order = Random.Range(1, 3);
+        Talk.text = "안녕하세요";
+        Order = Random.Range(1, 12);
         Invoke("Wanted", 2.0f);
         HP = Random.Range(500, 1001);
         CurrentHP = HP;
@@ -46,18 +46,54 @@ public class CusTomer : MonoBehaviour
     {
         if (Order == 1)
         {
-            SetOrder();
+            Talk.text = "석양 주세요";
         }
         else if (Order == 2)
         {
-            SetOrder2();
+            Talk.text = "로얄 모닝 주세요";
+        }
+        else if (Order == 3)
+        {
+            Talk.text = "캬트콕 주세요";
+        }
+        else if (Order == 4)
+        {
+            Talk.text = "아우룸콕 주세요";
+        }
+        else if (Order == 5)
+        {
+            Talk.text = "로열콕 주세요";
+        }
+        else if (Order == 6)
+        {
+            Talk.text = "아이렌콕 주세요";
+        }
+        else if (Order == 7)
+        {
+            Talk.text = "브르기키콕 주세요";
+        }
+        else if (Order == 8)
+        {
+            Talk.text = "K2C 주세요";
+        }
+        else if (Order == 9)
+        {
+            Talk.text = "샤워렌 주세요";
+        }
+        else if (Order == 10)
+        {
+            Talk.text = "브르기키 플룻 주세요";
+        }
+        else if (Order == 11)
+        {
+            Talk.text = "비 로열 주세요";
         }
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
         if(Order == 1)
         {
-            if (collision.gameObject.tag == "Cock")
+            if (collision.gameObject.tag == "a")
             {
                 SetTalk2();
                 Order = Random.Range(1, 3);
@@ -88,7 +124,286 @@ public class CusTomer : MonoBehaviour
         }
         else if(Order == 2)
         {
-            if (collision.gameObject.tag == "Another")
+            if (collision.gameObject.tag == "b")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 3);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 3);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 3)
+        {
+            if (collision.gameObject.tag == "c")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 3);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 3);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 4)
+        {
+            if (collision.gameObject.tag == "d")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 3);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 3);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 5)
+        {
+            if (collision.gameObject.tag == "e")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 3);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 3);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 6)
+        {
+            if (collision.gameObject.tag == "f")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 3);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 3);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 7)
+        {
+            if (collision.gameObject.tag == "g")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 3);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 3);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 8)
+        {
+            if (collision.gameObject.tag == "h")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 3);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 3);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 9)
+        {
+            if (collision.gameObject.tag == "i")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 3);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 3);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 10)
+        {
+            if (collision.gameObject.tag == "j")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 3);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 3);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 11)
+        {
+            if (collision.gameObject.tag == "k")
             {
                 SetTalk2();
                 Order = Random.Range(1, 3);
@@ -132,15 +447,6 @@ public class CusTomer : MonoBehaviour
     {
         Talk.text = "수고했어요";
         Invoke("Out", 1.0f);
-    }
-    void SetOrder()
-    {
-        Talk.text = "파란색 주세요";
-    }
-
-    void SetOrder2()
-    {
-        Talk.text = "주황색 주세요";
     }
     void SetTalk()
     {

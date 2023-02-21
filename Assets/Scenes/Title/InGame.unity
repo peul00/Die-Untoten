@@ -6104,7 +6104,7 @@ RectTransform:
   m_GameObject: {fileID: 780308973}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -9720}
-  m_LocalScale: {x: 216, y: 216, z: 108}
+  m_LocalScale: {x: 108, y: 108, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 468903453}
@@ -6112,7 +6112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 600, y: -300}
+  m_AnchoredPosition: {x: 140, y: -100}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &780308975
@@ -6314,7 +6314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500, y: 141}
+  m_AnchoredPosition: {x: 475, y: 140}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &793512246
@@ -10147,7 +10147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 141}
+  m_AnchoredPosition: {x: 325, y: 140}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1307216564
@@ -10502,7 +10502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 700, y: 141}
+  m_AnchoredPosition: {x: 650, y: 140}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1334737332
@@ -15350,6 +15350,9 @@ MonoBehaviour:
   - {fileID: -1315736333, guid: 742eb47d970939f4b96af1e5e1f51685, type: 3}
   - {fileID: 128143686, guid: 23693330482d4554bb2cec819b41805a, type: 3}
   - {fileID: 1809759416, guid: 23693330482d4554bb2cec819b41805a, type: 3}
+  - {fileID: 1753445586, guid: 23693330482d4554bb2cec819b41805a, type: 3}
+  - {fileID: -290713733, guid: 00973854e26e0bb4383b817433f4a45c, type: 3}
+  - {fileID: -1533117459, guid: 00973854e26e0bb4383b817433f4a45c, type: 3}
   Img_Renderer: {fileID: 1979922372}
   RandomFigur: 0
 --- !u!1 &1997572746
@@ -15937,9 +15940,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: K2C
+      value: 
+      objectReference: {fileID: 827694793059405518, guid: a14fcfbd98ddb95448302958886f39a9, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: Souren
+      value: 
+      objectReference: {fileID: 4686725856864370131, guid: e596f49e95cfafb4f9bfa95996f10632, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: BeeRoyal
+      value: 
+      objectReference: {fileID: 2948980936779559678, guid: 6946ca1e397f3a744a579ca68845d12c, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: IcePoint
       value: 
       objectReference: {fileID: 2063802108}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: KattCock
+      value: 
+      objectReference: {fileID: 1752914058352223563, guid: 2038405ac1efdc34987cdce13ac982e7, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: Seogyang
+      value: 
+      objectReference: {fileID: 3396028419250704156, guid: cbb5b408b276e7947bcc61e9f0b0db48, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: AirenCock
+      value: 
+      objectReference: {fileID: 6339823861835652517, guid: 9ed4cd20495705e49853a1ef2d7d03d1, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: AurumCock
+      value: 
+      objectReference: {fileID: 7635440389928030066, guid: 203413a5607828f4b828fbddec38d5a4, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: RoyalCock
+      value: 
+      objectReference: {fileID: 5012654397643970475, guid: a735efb7409e96249b9e6ee9e592f515, type: 3}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: location1
       value: 
@@ -15949,6 +15984,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 60847506}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: BrgikyCock
+      value: 
+      objectReference: {fileID: 3846100264982438231, guid: bef9443df4560694898c691e9a2d4664, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: Firstgauge
       value: 
       objectReference: {fileID: 9411732}
@@ -15957,6 +15996,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: BrgikyFloat
+      value: 
+      objectReference: {fileID: 5971246021322026838, guid: dfefb55c296e77c4181ef467ca68318f, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: LiqueurPice
       value: 200
       objectReference: {fileID: 0}
@@ -15964,6 +16007,10 @@ PrefabInstance:
       propertyPath: OrangePoint
       value: 
       objectReference: {fileID: 648291287}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: RoyalMorning
+      value: 
+      objectReference: {fileID: 3816262299852909377, guid: d38a08d8ea0e1a4499c93b13b417e760, type: 3}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: liqueurPoint
       value: 
@@ -16269,7 +16316,7 @@ GameObject:
   - component: {fileID: 4740292643394925669}
   - component: {fileID: 4740292643394925692}
   m_Layer: 5
-  m_Name: CocoLiqueur
+  m_Name: ChocoLiqueur
   m_TagString: Cocoliqueur
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16292,7 +16339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 208, y: -117}
+  m_AnchoredPosition: {x: 150, y: 140}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4740292643394925692
