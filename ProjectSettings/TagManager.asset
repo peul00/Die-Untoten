@@ -11,13 +11,25 @@ TagManager:
   - Sour
   - Ice
   - Mix
-  - Liqueur
   - Serving
   - Costomer
   - Shop
   - Fail
   - Cock
   - Another
+  - Cocoliqueur
+  - Cranliqueur
+  - Melonliqueur
+  - Orangeliqueur
+  - Honey
+  - Soda
+  - CherryJuice
+  - LiemJuice
+  - CoCoJuice
+  - TomatoJuice
+  - ChocoJuice
+  - Salt
+  - Sugar
   layers:
   - Default
   - TransparentFX

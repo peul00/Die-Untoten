@@ -15,17 +15,35 @@ public class ItemMix : MonoBehaviour
     public int Sweet;
     public int Bitter;
     public int Sour;
-    public int OrangePice;
-    public int LiqueurPice;
+    public int Soda;
+    public int CherryJuice;
+    public int LiemJuice;
+    public int CoCoJuice;
+    public int ChocoJuice;
+    public int TomatoJuice;
+    public int OrangePrice;
+    public int LiqueurPrice;
     public bool cool = false;
     public bool Orange = false;
-    public bool Liqueur = false;
+    public bool Strewbarry = false;
+    public bool Kiwi = false;
+    public bool Apple = false;
+    public bool Grape = false;
+    public bool Liem = false;
+    public bool Cocoliqueur = false;
+    public bool Cranliqueur = false;
+    public bool Melonliqueur = false;
+    public bool Orangeliqueur = false;
+    public bool Honey = false;
+    public bool Salt = false;
+    public bool Sugar = false;
     public static int Plus;
+    public static int AlcoPlus;
 
     int buff = 0; //버프 추가
     public void Update()
     {
-        while (buff < Plus)
+        while (buff < AlcoPlus)
         {
             Drag.MaxRank += 1;
             Debug.Log("Buff + 1");
@@ -44,7 +62,7 @@ public class ItemMix : MonoBehaviour
             Orange = true;
             Debug.Log("Orange true");
             OrangePoint.gameObject.SetActive(true);
-            ItemDatabase.instance.Money -= OrangePice;
+            ItemDatabase.instance.Money -= OrangePrice;
         }
         else
         {
@@ -53,6 +71,92 @@ public class ItemMix : MonoBehaviour
             OrangePoint.gameObject.SetActive(false);
         }
     }
+
+    public void strewbarry(bool isOn)
+    {
+        if (isOn)
+        {
+            Strewbarry = true;
+            Debug.Log("Strewbarry true");
+            OrangePoint.gameObject.SetActive(true);
+            ItemDatabase.instance.Money -= OrangePrice;
+        }
+        else
+        {
+            Strewbarry = false;
+            Debug.Log("Strewbarry false");
+            OrangePoint.gameObject.SetActive(false);
+        }
+    }
+
+    public void kiwi(bool isOn)
+    {
+        if (isOn)
+        {
+            Kiwi = true;
+            Debug.Log("Kiwi true");
+            OrangePoint.gameObject.SetActive(true);
+            ItemDatabase.instance.Money -= OrangePrice;
+        }
+        else
+        {
+            Kiwi = false;
+            Debug.Log("Kiwi false");
+            OrangePoint.gameObject.SetActive(false);
+        }
+    }
+
+    public void apple(bool isOn)
+    {
+        if (isOn)
+        {
+            Apple = true;
+            Debug.Log("Apple true");
+            OrangePoint.gameObject.SetActive(true);
+            ItemDatabase.instance.Money -= OrangePrice;
+        }
+        else
+        {
+            Apple = false;
+            Debug.Log("Apple false");
+            OrangePoint.gameObject.SetActive(false);
+        }
+    }
+
+    public void liem(bool isOn)
+    {
+        if (isOn)
+        {
+            Liem = true;
+            Debug.Log("Liem true");
+            OrangePoint.gameObject.SetActive(true);
+            ItemDatabase.instance.Money -= OrangePrice;
+        }
+        else
+        {
+            Liem = false;
+            Debug.Log("Liem false");
+            OrangePoint.gameObject.SetActive(false);
+        }
+    }
+
+    public void grape(bool isOn)
+    {
+        if (isOn)
+        {
+            Grape = true;
+            Debug.Log("Grape true");
+            OrangePoint.gameObject.SetActive(true);
+            ItemDatabase.instance.Money -= OrangePrice;
+        }
+        else
+        {
+            Grape = false;
+            Debug.Log("Grape false");
+            OrangePoint.gameObject.SetActive(false);
+        }
+    }
+
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ice")
@@ -117,20 +221,145 @@ public class ItemMix : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Liqueur")
+        if (collision.gameObject.tag == "Soda")
         {
             if (Input.GetMouseButton(0) == false)
             {
-                Liqueur = true;
-                liqueurPoint.gameObject.SetActive(true);
-                ItemDatabase.instance.Money -= LiqueurPice;
-                Debug.Log("Liqueur: true");
+                if (Plus != 10)
+                    Soda += 1;
+                Debug.Log("Soda: " + Soda);
             }
         }
 
-        if (0 < Sweet || 0 < Spicy || 0 < Bitter || 0 < Sour || 0 < Alcohol)
+        if (collision.gameObject.tag == "CherryJuice")
         {
-            Plus = Alcohol + Spicy + Sweet + Bitter + Sour;
+            if (Input.GetMouseButton(0) == false)
+            {
+                if (Plus != 10)
+                    CherryJuice += 1;
+                Debug.Log("CherryJuice " + CherryJuice);
+            }
+        }
+
+        if (collision.gameObject.tag == "LiemJuice")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                if (Plus != 10)
+                    LiemJuice += 1;
+                Debug.Log("LiemJuice: " + LiemJuice);
+            }
+        }
+
+        if (collision.gameObject.tag == "CoCoJuice")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                if (Plus != 10)
+                    CoCoJuice += 1;
+                Debug.Log("CoCoJuice: " + CoCoJuice);
+            }
+        }
+
+        if (collision.gameObject.tag == "ChocoJuice")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                if (Plus != 10)
+                    ChocoJuice += 1;
+                Debug.Log("ChocoJuice: " + ChocoJuice);
+            }
+        }
+
+        if (collision.gameObject.tag == "TomatoJuice")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                if (Plus != 10)
+                    TomatoJuice += 1;
+                Debug.Log("TomatoJuice: " + TomatoJuice);
+            }
+        }
+
+        if (collision.gameObject.tag == "Cocoliqueur")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                Cocoliqueur = true;
+                liqueurPoint.gameObject.SetActive(true);
+                ItemDatabase.instance.Money -= LiqueurPrice;
+                Debug.Log("Choco: true");
+            }
+        }
+
+        if (collision.gameObject.tag == "Cranliqueur")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                Cranliqueur = true;
+                liqueurPoint.gameObject.SetActive(true);
+                ItemDatabase.instance.Money -= LiqueurPrice;
+                Debug.Log("Cran: true");
+            }
+        }
+
+        if (collision.gameObject.tag == "Melonliqueur")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                Melonliqueur = true;
+                liqueurPoint.gameObject.SetActive(true);
+                ItemDatabase.instance.Money -= LiqueurPrice;
+                Debug.Log("Melon: true");
+            }
+        }
+
+        if (collision.gameObject.tag == "Orangeliqueur")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                Orangeliqueur = true;
+                liqueurPoint.gameObject.SetActive(true);
+                ItemDatabase.instance.Money -= LiqueurPrice;
+                Debug.Log("Orange: true");
+            }
+        }
+
+        if (collision.gameObject.tag == "Honey")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                Honey = true;
+                liqueurPoint.gameObject.SetActive(true);
+                ItemDatabase.instance.Money -= LiqueurPrice;
+                Debug.Log("Honey: true");
+            }
+        }
+
+        if (collision.gameObject.tag == "Salt")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                Salt = true;
+                liqueurPoint.gameObject.SetActive(true);
+                Debug.Log("Salt: true");
+            }
+        }
+
+        if (collision.gameObject.tag == "Sugar")
+        {
+            if (Input.GetMouseButton(0) == false)
+            {
+                Sugar = true;
+                liqueurPoint.gameObject.SetActive(true);
+                Debug.Log("Sugar: true");
+            }
+        }
+
+        if (0 < Sweet || 0 < Spicy || 0 < Bitter || 0 < Sour || 0 < Soda || 0 < CherryJuice || 0 < LiemJuice || 0 < CoCoJuice || 0 < ChocoJuice || 0 < TomatoJuice)
+        {
+            Plus = Alcohol + Spicy + Sweet + Bitter + Sour + Soda + CherryJuice + LiemJuice + CoCoJuice + ChocoJuice + TomatoJuice;
+            AlcoPlus = Alcohol + Spicy + Sweet + Bitter + Sour;
             Debug.Log("Total: " + Plus);
             Firstgauge.gameObject.SetActive(true);
         }
@@ -152,7 +381,7 @@ public class ItemMix : MonoBehaviour
     public Transform location2;
     public void Makingcocktail()
     {
-        if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 1 && Sour == 0 && Liqueur && Orange)//오렌지 제거
+        if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 1 && Sour == 0 && Cocoliqueur && Orange)//오렌지 제거
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -169,7 +398,7 @@ public class ItemMix : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 0 && Spicy == 2 && Sweet ==0 && Bitter == 0 && Sour ==1 && Liqueur && cool)//얼음 제거
+        else if (Alcohol == 0 && Spicy == 2 && Sweet ==0 && Bitter == 0 && Sour ==1 && Cranliqueur && cool)//얼음 제거
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -371,9 +600,21 @@ public class ItemMix : MonoBehaviour
         Bitter = 0;
         Sour = 0;
         Plus = 0;
+        AlcoPlus = 0;
         buff = 0;
-        Liqueur = false;
+        Cocoliqueur = false;
+        Cranliqueur = false;
+        Melonliqueur = false;
+        Orangeliqueur = false;
+        Honey = false;
         cool = false;
         Orange = false;
+        Strewbarry = false;
+        Kiwi = false;
+        Apple = false;
+        Grape = false;
+        Liem = false;
+        Salt = false;
+        Sugar = false;
     }
 }

@@ -6,7 +6,7 @@ public class OnDrag : MonoBehaviour
 {
     public string Tag;
     int Rank = Drag.MaxRank;
-    int Plus = ItemMix.Plus;
+    int Plus = ItemMix.AlcoPlus;
     public static int Average;
     public static int Tip;
     public void Start()
