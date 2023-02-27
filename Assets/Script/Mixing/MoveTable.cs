@@ -5,7 +5,6 @@ using UnityEngine;
 public class MoveTable : MonoBehaviour
 {
     public float Range;
-    public float Range2;
     public float Time;
     public GameObject Mixer;
     public GameObject Shaker;
