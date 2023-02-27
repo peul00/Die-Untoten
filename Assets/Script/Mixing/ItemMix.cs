@@ -436,6 +436,163 @@ public class ItemMix : MonoBehaviour
             }
         }
 
+        if (collision.gameObject.tag == "Stirring")
+        {
+            if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 1 && Sour == 2 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool == false)
+            {
+                if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(Witch, location1.position, location1.rotation);
+
+                }
+                else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+                {
+                    if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                    {
+                        Instantiate(Witch, location2.position, location2.rotation);
+                    }
+                    else
+                        Debug.Log("no");
+                }
+            }
+            else if (Alcohol == 1 && Spicy == 0 && Sweet == 3 && Bitter == 2 && Sour == 0 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar && cool == false && Honey)
+            {
+                if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(Imoogi, location1.position, location1.rotation);
+
+                }
+                else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+                {
+                    if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                    {
+                        Instantiate(Imoogi, location2.position, location2.rotation);
+                    }
+                    else
+                        Debug.Log("no");
+                }
+            }
+            else if (Alcohol == 1 && Spicy == 1 && Sweet == 0 && Bitter == 1 && Sour == 1 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool == false)
+            {
+                if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(Peace, location1.position, location1.rotation);
+
+                }
+                else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+                {
+                    if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                    {
+                        Instantiate(Peace, location2.position, location2.rotation);
+                    }
+                    else
+                        Debug.Log("no");
+                }
+            }
+            else if (Alcohol == 2 && Spicy == 0 && Sweet == 1 && Bitter == 0 && Sour == 1 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 1 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool == false)
+            {
+                if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(Killer, location1.position, location1.rotation);
+
+                }
+                else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+                {
+                    if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                    {
+                        Instantiate(Killer, location2.position, location2.rotation);
+                    }
+                    else
+                        Debug.Log("no");
+                }
+            }
+            else if (Alcohol == 4 && Spicy == 0 && Sweet == 3 && Bitter == 0 && Sour == 0 && 1 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool == false)
+            {
+                if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(RuMilk, location1.position, location1.rotation);
+
+                }
+                else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+                {
+                    if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                    {
+                        Instantiate(RuMilk, location2.position, location2.rotation);
+                    }
+                    else
+                        Debug.Log("no");
+                }
+            }
+            else if (Alcohol == 0 && Spicy == 0 && Sweet == 2 && Bitter == 0 && Sour == 0 && 0 == Soda && CherryJuice == 0 && LiemJuice == 1 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar && cool == false && Honey)
+            {
+                if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(RoyalJelly, location1.position, location1.rotation);
+
+                }
+                else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+                {
+                    if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                    {
+                        Instantiate(RoyalJelly, location2.position, location2.rotation);
+                    }
+                    else
+                        Debug.Log("no");
+                }
+            }
+            else if (Alcohol == 1 && Spicy == 0 && Sweet == 2 && Bitter == 0 && Sour == 4 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar && cool == false && Orangeliqueur)
+            {
+                if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(RoyalOrange, location1.position, location1.rotation);
+
+                }
+                else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+                {
+                    if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                    {
+                        Instantiate(RoyalOrange, location2.position, location2.rotation);
+                    }
+                    else
+                        Debug.Log("no");
+                }
+            }
+            else if (Alcohol == 0 && Spicy == 1 && Sweet == 0 && Bitter == 0 && Sour == 4 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool == false && Cocoliqueur)
+            {
+                if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(KiKi, location1.position, location1.rotation);
+
+                }
+                else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+                {
+                    if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                    {
+                        Instantiate(KiKi, location2.position, location2.rotation);
+                    }
+                    else
+                        Debug.Log("no");
+                }
+            }
+            else
+            {
+                if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
+                {
+                    Instantiate(fail, location1.position, location1.rotation);
+
+                }
+                else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
+                {
+                    if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
+                    {
+                        Instantiate(fail, location2.position, location2.rotation);
+                    }
+                    else
+                        Debug.Log("no");
+                }
+            }
+        }
+
         if (0 < Alcohol || 0 < Sweet || 0 < Spicy || 0 < Bitter || 0 < Sour || 0 < Soda || 0 < CherryJuice || 0 < LiemJuice || 0 < CoCoJuice || 0 < ChocoJuice || 0 < TomatoJuice)
         {
             Plus = Alcohol + Spicy + Sweet + Bitter + Sour + Soda + CherryJuice + LiemJuice + CoCoJuice + ChocoJuice + TomatoJuice;
@@ -472,6 +629,14 @@ public class ItemMix : MonoBehaviour
     [SerializeField] GameObject Lost;
     [SerializeField] GameObject Harmony;
     [SerializeField] GameObject HerbBuble;
+    [SerializeField] GameObject Witch;
+    [SerializeField] GameObject Imoogi;
+    [SerializeField] GameObject Peace;
+    [SerializeField] GameObject Killer;
+    [SerializeField] GameObject RuMilk;
+    [SerializeField] GameObject RoyalJelly;
+    [SerializeField] GameObject RoyalOrange;
+    [SerializeField] GameObject KiKi;
     [SerializeField] GameObject fail;
     public Transform location1;
     public Transform location2;

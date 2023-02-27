@@ -8,6 +8,7 @@ public class MoveTable : MonoBehaviour
     public float Time;
     public GameObject Mixer;
     public GameObject Shaker;
+    public GameObject Stirring;
     public GameObject Choco;
     public GameObject Cran;
     public GameObject Melon;
@@ -20,6 +21,10 @@ public class MoveTable : MonoBehaviour
     public void shaker()
     {
         iTween.MoveTo(Shaker, iTween.Hash("x", Range, "time", Time));
+    }
+    public void stirring()
+    {
+        iTween.MoveTo(Stirring, iTween.Hash("x", Range, "time", Time));
     }
     public void choco()
     {
