@@ -3642,7 +3642,7 @@ GameObject:
   - component: {fileID: 367265648}
   - component: {fileID: 367265647}
   m_Layer: 5
-  m_Name: ChocoJuice
+  m_Name: AppleJuice
   m_TagString: ChocoJuice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3778,7 +3778,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: b0f4969e5706f64428b9bb2e0ec46158, type: 3}
-  m_Color: {r: 0.5943396, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.8982105, b: 0.3726415, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15381,7 +15381,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uCD08\uCF5C\uB9BF"
+  m_Text: "\uC0AC\uACFC"
 --- !u!222 &1393746924
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21988,6 +21988,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1176802088705833377, guid: 68ff51d7afe6e34439d6192b54c17fae, type: 3}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: KiKi
+      value: 
+      objectReference: {fileID: 8380950787720565429, guid: 65b27917664af064aab1e115ea91066d, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: Lost
       value: 
       objectReference: {fileID: 9104187542796666766, guid: 8b75bce30adbdd54ca86ce9870ea5faa, type: 3}
@@ -22007,6 +22011,26 @@ PrefabInstance:
       propertyPath: NoDog
       value: 
       objectReference: {fileID: 3359132004243244294, guid: b7ab0cc36bcd3db46b98c5b442646dc5, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: Peace
+      value: 
+      objectReference: {fileID: 9166683977606495985, guid: a729aea767d4d6748bc0c44c12c19308, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: Witch
+      value: 
+      objectReference: {fileID: 1165358499754019940, guid: 9aa42005db37cd14dbd37a18d7e4ceac, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: Imoogi
+      value: 
+      objectReference: {fileID: 371179896274512383, guid: 55868da801098c049a4150b3fd9ae1c1, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: Killer
+      value: 
+      objectReference: {fileID: 6203711499536892212, guid: 5a132489a7275de488d5ad5a23f4bfcc, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: RuMilk
+      value: 
+      objectReference: {fileID: 3882137145993179003, guid: f260cbcdbbeca934aaa7aafd95772539, type: 3}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: Souren
       value: 
@@ -22096,6 +22120,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: RoyalJelly
+      value: 
+      objectReference: {fileID: 2159442157765266437, guid: d3555850427683c49a0097b0e4ac877e, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: BrgikyFloat
       value: 
       objectReference: {fileID: 8309501237752506815, guid: dcdc9e466db735f418cd8d531ce121b1, type: 3}
@@ -22107,6 +22135,10 @@ PrefabInstance:
       propertyPath: OrangePoint
       value: 
       objectReference: {fileID: 648291287}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: RoyalOrange
+      value: 
+      objectReference: {fileID: 7130014756145425262, guid: bcc4261c8a9c4ef489e259b0ed0b8679, type: 3}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: EmeraldBeach
       value: 

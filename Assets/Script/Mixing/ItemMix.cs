@@ -438,7 +438,7 @@ public class ItemMix : MonoBehaviour
 
         if (collision.gameObject.tag == "Stirring")
         {
-            if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 1 && Sour == 2 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool == false)
+            if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 1 && Sour == 2 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 1 && TomatoJuice == 0 && Salt == false && Sugar == false && cool == false)
             {
                 if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
                 {

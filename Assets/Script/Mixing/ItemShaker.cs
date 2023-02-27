@@ -285,7 +285,7 @@ public class ItemShaker : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 2 && Spicy == 1 && Sweet == 1 && Bitter == 1 && Sour == 1 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && cool == false && Honey)
+        else if (Alcohol == 2 && Spicy == 1 && Sweet == 1 && Bitter == 1 && Sour == 1 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 2 && TomatoJuice == 0 && cool == false && Honey)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
