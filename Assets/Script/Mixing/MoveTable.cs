@@ -23,7 +23,7 @@ public class MoveTable : MonoBehaviour
     }
     public void choco()
     {
-        iTween.MoveTo(Choco, iTween.Hash("y", 1, "time", Time));
+        iTween.MoveTo(Choco, iTween.Hash("y", 1.5, "time", Time));
         Choco.gameObject.SetActive(true);
         iTween.MoveTo(Cran, iTween.Hash("y", 3.5, "time", Time));
         Invoke("Cra", 2f);
@@ -38,7 +38,7 @@ public class MoveTable : MonoBehaviour
     {
         iTween.MoveTo(Choco, iTween.Hash("y", 3.5, "time", Time));
         Invoke("Cho", 2f);
-        iTween.MoveTo(Cran, iTween.Hash("y", 1, "time", Time));
+        iTween.MoveTo(Cran, iTween.Hash("y", 1.5, "time", Time));
         Cran.gameObject.SetActive(true);
         iTween.MoveTo(Melon, iTween.Hash("y", 3.5, "time", Time));
         Invoke("Mel", 2f);
@@ -53,7 +53,7 @@ public class MoveTable : MonoBehaviour
         Invoke("Cho", 2f);
         iTween.MoveTo(Cran, iTween.Hash("y", 3.5, "time", Time));
         Invoke("Cra", 2f);
-        iTween.MoveTo(Melon, iTween.Hash("y", 1, "time", Time));
+        iTween.MoveTo(Melon, iTween.Hash("y", 1.5, "time", Time));
         Melon.gameObject.SetActive(true);
         iTween.MoveTo(Orange, iTween.Hash("y", 3.5, "time", Time));
         Invoke("Ora", 2f);
@@ -69,7 +69,7 @@ public class MoveTable : MonoBehaviour
         Invoke("Cra", 2f);
         iTween.MoveTo(Melon, iTween.Hash("y", 3.5, "time", Time));
         Invoke("Mel", 2f);
-        iTween.MoveTo(Orange, iTween.Hash("y", 1, "time", Time));
+        iTween.MoveTo(Orange, iTween.Hash("y", 1.5, "time", Time));
         Orange.gameObject.SetActive(true);
         iTween.MoveTo(Honey, iTween.Hash("y", 3.5, "time", Time));
         Invoke("Hon", 2f);
@@ -84,7 +84,7 @@ public class MoveTable : MonoBehaviour
         Invoke("Mel", 2f);
         iTween.MoveTo(Orange, iTween.Hash("y", 3.5, "time", Time));
         Invoke("Ora", 2f);
-        iTween.MoveTo(Honey, iTween.Hash("y", 1, "time", Time));
+        iTween.MoveTo(Honey, iTween.Hash("y", 1.5, "time", Time));
         Honey.gameObject.SetActive(true);
     }
     void Cho()

@@ -28,17 +28,49 @@ TagManager:
   - ChocoJuice
   - Salt
   - Sugar
-  - a
-  - b
-  - c
-  - d
-  - e
-  - f
-  - g
-  - h
-  - i
-  - j
-  - k
+  - fruitBoobs
+  - thePool
+  - black
+  - sapphire
+  - ruby
+  - cantabile
+  - deepKatt
+  - alcohoRaid
+  - noDog
+  - freya
+  - scorchingSun
+  - heatWave
+  - emeraldBeach
+  - lost
+  - harmony
+  - herbBuble
+  - Seogyang
+  - RoyalMorning
+  - KattCock
+  - AurumCock
+  - RoyalCock
+  - AirenCock
+  - BrgikyCock
+  - K2C
+  - Souren
+  - BrgikyFloat
+  - BeeRoyal
+  - FruitBoobs
+  - ThePool
+  - Black
+  - Sapphire
+  - Ruby
+  - Cantabile
+  - DeepKatt
+  - AlcohoRaid
+  - NoDog
+  - Freya
+  - ScorchingSun
+  - HeatWave
+  - EmeraldBeach
+  - Lost
+  - Harmony
+  - HerbBuble
   layers:
   - Default
   - TransparentFX
