@@ -25,19 +25,11 @@ public class ItemShaker : MonoBehaviour
     public int OrangePrice;
     public int LiqueurPrice;
     public bool cool = false;
-    public bool Orange = false;
-    public bool Strewbarry = false;
-    public bool Kiwi = false;
-    public bool Apple = false;
-    public bool Grape = false;
-    public bool Liem = false;
     public bool Cocoliqueur = false;
     public bool Cranliqueur = false;
     public bool Melonliqueur = false;
     public bool Orangeliqueur = false;
     public bool Honey = false;
-    public bool Salt = false;
-    public bool Sugar = false;
     public static int Plus;
     public static int AlcoPlus;
 
@@ -54,108 +46,6 @@ public class ItemShaker : MonoBehaviour
     public void cold()
     {
         Instantiate(ice);
-    }
-
-    public void orange(bool isOn)
-    {
-        if (isOn)
-        {
-            Orange = true;
-            Debug.Log("Orange true");
-            OrangePoint.gameObject.SetActive(true);
-            ItemDatabase.instance.Money -= OrangePrice;
-        }
-        else
-        {
-            Orange = false;
-            Debug.Log("Orange false");
-            OrangePoint.gameObject.SetActive(false);
-        }
-    }
-
-    public void strewbarry(bool isOn)
-    {
-        if (isOn)
-        {
-            Strewbarry = true;
-            Debug.Log("Strewbarry true");
-            OrangePoint.gameObject.SetActive(true);
-            ItemDatabase.instance.Money -= OrangePrice;
-        }
-        else
-        {
-            Strewbarry = false;
-            Debug.Log("Strewbarry false");
-            OrangePoint.gameObject.SetActive(false);
-        }
-    }
-
-    public void kiwi(bool isOn)
-    {
-        if (isOn)
-        {
-            Kiwi = true;
-            Debug.Log("Kiwi true");
-            OrangePoint.gameObject.SetActive(true);
-            ItemDatabase.instance.Money -= OrangePrice;
-        }
-        else
-        {
-            Kiwi = false;
-            Debug.Log("Kiwi false");
-            OrangePoint.gameObject.SetActive(false);
-        }
-    }
-
-    public void apple(bool isOn)
-    {
-        if (isOn)
-        {
-            Apple = true;
-            Debug.Log("Apple true");
-            OrangePoint.gameObject.SetActive(true);
-            ItemDatabase.instance.Money -= OrangePrice;
-        }
-        else
-        {
-            Apple = false;
-            Debug.Log("Apple false");
-            OrangePoint.gameObject.SetActive(false);
-        }
-    }
-
-    public void liem(bool isOn)
-    {
-        if (isOn)
-        {
-            Liem = true;
-            Debug.Log("Liem true");
-            OrangePoint.gameObject.SetActive(true);
-            ItemDatabase.instance.Money -= OrangePrice;
-        }
-        else
-        {
-            Liem = false;
-            Debug.Log("Liem false");
-            OrangePoint.gameObject.SetActive(false);
-        }
-    }
-
-    public void grape(bool isOn)
-    {
-        if (isOn)
-        {
-            Grape = true;
-            Debug.Log("Grape true");
-            OrangePoint.gameObject.SetActive(true);
-            ItemDatabase.instance.Money -= OrangePrice;
-        }
-        else
-        {
-            Grape = false;
-            Debug.Log("Grape false");
-            OrangePoint.gameObject.SetActive(false);
-        }
     }
 
     public void OnTriggerStay2D(Collider2D collision)
@@ -337,26 +227,6 @@ public class ItemShaker : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Salt")
-        {
-            if (Input.GetMouseButton(0) == false)
-            {
-                Salt = true;
-                liqueurPoint.gameObject.SetActive(true);
-                Debug.Log("Salt: true");
-            }
-        }
-
-        if (collision.gameObject.tag == "Sugar")
-        {
-            if (Input.GetMouseButton(0) == false)
-            {
-                Sugar = true;
-                liqueurPoint.gameObject.SetActive(true);
-                Debug.Log("Sugar: true");
-            }
-        }
-
         if (0 < Alcohol || 0 < Sweet || 0 < Spicy || 0 < Bitter || 0 < Sour || 0 < Soda || 0 < CherryJuice || 0 < LiemJuice || 0 < CoCoJuice || 0 < ChocoJuice || 0 < TomatoJuice)
         {
             Plus = Alcohol + Spicy + Sweet + Bitter + Sour + Soda + CherryJuice + LiemJuice + CoCoJuice + ChocoJuice + TomatoJuice;
@@ -381,7 +251,7 @@ public class ItemShaker : MonoBehaviour
     // ¾ÆÀÌ·» = ´Ü¸À ¾Æ¿ì·ë = ¾´¸À
     public void Makingcocktail()
     {
-        if (Alcohol == 3 && Spicy == 0 && Sweet == 1 && Bitter == 0 && Sour == 1 && 0 == Soda && CherryJuice == 0 && LiemJuice == 1 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt && Sugar == false && cool == false && Orangeliqueur)
+        if (Alcohol == 3 && Spicy == 0 && Sweet == 1 && Bitter == 0 && Sour == 1 && 0 == Soda && CherryJuice == 0 && LiemJuice == 1 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && cool == false && Orangeliqueur)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -398,7 +268,7 @@ public class ItemShaker : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 1 && Spicy == 0 && Sweet == 4 && Bitter == 0 && Sour == 1 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 3 && Salt == false && Sugar && cool == false && Cocoliqueur)
+        else if (Alcohol == 1 && Spicy == 0 && Sweet == 4 && Bitter == 0 && Sour == 1 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 3 && cool == false && Cocoliqueur)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -415,7 +285,7 @@ public class ItemShaker : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 2 && Spicy == 1 && Sweet == 1 && Bitter == 1 && Sour == 1 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar && cool == false && Honey)
+        else if (Alcohol == 2 && Spicy == 1 && Sweet == 1 && Bitter == 1 && Sour == 1 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && cool == false && Honey)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -432,7 +302,7 @@ public class ItemShaker : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 3 && Spicy == 2 && Sweet == 0 && Bitter == 0 && Sour == 0 && 1 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt && Sugar == false && cool == false)
+        else if (Alcohol == 3 && Spicy == 2 && Sweet == 0 && Bitter == 0 && Sour == 0 && 1 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && cool == false)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -449,7 +319,7 @@ public class ItemShaker : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 3 && Spicy == 4 && Sweet == 0 && Bitter == 0 && Sour == 0 && 1 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt && Sugar == false && cool == false)
+        else if (Alcohol == 3 && Spicy == 4 && Sweet == 0 && Bitter == 0 && Sour == 0 && 1 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && cool == false)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -466,7 +336,7 @@ public class ItemShaker : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 0 && Sour == 3 && 0 == Soda && CherryJuice == 0 && LiemJuice == 1 && CoCoJuice == 1 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool == false && Melonliqueur)
+        else if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 0 && Sour == 3 && 0 == Soda && CherryJuice == 0 && LiemJuice == 1 && CoCoJuice == 1 && ChocoJuice == 0 && TomatoJuice == 0 && cool == false && Melonliqueur)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -483,7 +353,7 @@ public class ItemShaker : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 0 && Spicy == 3 && Sweet == 1 && Bitter == 4 && Sour == 0 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool)
+        else if (Alcohol == 0 && Spicy == 3 && Sweet == 1 && Bitter == 4 && Sour == 0 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && cool)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -500,7 +370,7 @@ public class ItemShaker : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 3 && Spicy == 0 && Sweet == 2 && Bitter == 1 && Sour == 0 && 0 == Soda && CherryJuice == 1 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool == false)
+        else if (Alcohol == 3 && Spicy == 0 && Sweet == 2 && Bitter == 1 && Sour == 0 && 0 == Soda && CherryJuice == 1 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && cool == false)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -517,7 +387,7 @@ public class ItemShaker : MonoBehaviour
                     Debug.Log("no");
             }
         }
-        else if (Alcohol == 1 && Spicy == 0 && Sweet == 1 && Bitter == 5 && Sour == 4 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool)
+        else if (Alcohol == 1 && Spicy == 0 && Sweet == 1 && Bitter == 5 && Sour == 4 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 0 && ChocoJuice == 0 && TomatoJuice == 0 && cool)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
             {
@@ -580,14 +450,6 @@ public class ItemShaker : MonoBehaviour
         Orangeliqueur = false;
         Honey = false;
         cool = false;
-        Orange = false;
-        Strewbarry = false;
-        Kiwi = false;
-        Apple = false;
-        Grape = false;
-        Liem = false;
-        Salt = false;
-        Sugar = false;
         iTween.MoveTo(Panel, iTween.Hash("x", 12, "time", 2));
     }
 }

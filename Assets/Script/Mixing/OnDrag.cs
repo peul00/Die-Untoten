@@ -67,10 +67,21 @@ public class OnDrag : MonoBehaviour
             }
             Debug.Log("Tip = " + Tip);
         }
+        else if(collision.gameObject.tag == "Mix")
+        {
+            gameObject.tag = Tag;
+        }
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Costomer")
+        {
+            if (Input.GetMouseButton(0) == true)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if (collision.gameObject.tag == "Mix")
         {
             if (Input.GetMouseButton(0) == true)
             {
