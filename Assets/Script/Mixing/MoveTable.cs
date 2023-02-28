@@ -14,6 +14,12 @@ public class MoveTable : MonoBehaviour
     public GameObject Melon;
     public GameObject Orange;
     public GameObject Honey;
+
+    public void Start()
+    {
+        iTween.MoveTo(Mixer, iTween.Hash("y", 0, "time", Time));
+    }
+
     public void mixer()
     {
         iTween.MoveTo(Mixer, iTween.Hash("x", Range, "time", Time));
