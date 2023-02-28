@@ -6,6 +6,8 @@ public class MoveTable : MonoBehaviour
 {
     public float Range;
     public float Time;
+    public GameObject Serving;
+    public GameObject Customer;
     public GameObject Mixer;
     public GameObject Shaker;
     public GameObject Stirring;
@@ -17,9 +19,21 @@ public class MoveTable : MonoBehaviour
 
     public void Start()
     {
-        iTween.MoveTo(Mixer, iTween.Hash("y", 0, "time", Time));
+
     }
 
+    public void Open()
+    {
+        iTween.MoveTo(gameObject, iTween.Hash("x", 3.5, "time", 5));
+        iTween.MoveTo(Serving, iTween.Hash("x", -11, "time", 3));
+        iTween.MoveTo(Customer, iTween.Hash("x", -5, "time", 3));
+    }
+    public void Close()
+    {
+        iTween.MoveTo(gameObject, iTween.Hash("x", 18, "time", 4));
+        iTween.MoveTo(Serving, iTween.Hash("x", 0, "time", 2));
+        iTween.MoveTo(Customer, iTween.Hash("x", 0, "time", 2));
+    }
     public void mixer()
     {
         iTween.MoveTo(Mixer, iTween.Hash("x", Range, "time", Time));

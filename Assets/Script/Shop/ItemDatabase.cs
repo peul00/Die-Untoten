@@ -43,5 +43,4 @@ public class ItemDatabase : MonoBehaviour
     {
         Custom.gameObject.SetActive(true);
     }
-    //
 }
