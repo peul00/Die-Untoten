@@ -6,6 +6,14 @@ using UnityEngine.UI;
 public class ItemMix : MonoBehaviour
 {
     public GameObject Firstgauge;
+    public GameObject G1;
+    public GameObject G2;
+    public GameObject G3;
+    public GameObject G4;
+    public GameObject G5;
+    public GameObject G6;
+    public GameObject G7;
+    public GameObject G8;
     public GameObject liqueurPoint;
     public GameObject IcePoint;
     public GameObject OrangePoint;
@@ -458,6 +466,15 @@ public class ItemMix : MonoBehaviour
                 {
                     Instantiate(Witch, location1.position, location1.rotation);
                     Rerecipt();
+                    Firstgauge.GetComponent<Gauage>().ReSet();
+                    G1.GetComponent<Gauage>().ReSet();
+                    G2.GetComponent<Gauage>().ReSet();
+                    G3.GetComponent<Gauage>().ReSet();
+                    G4.GetComponent<Gauage>().ReSet();
+                    G5.GetComponent<Gauage>().ReSet();
+                    G6.GetComponent<Gauage>().ReSet();
+                    G7.GetComponent<Gauage>().ReSet();
+                    G8.GetComponent<Gauage>().ReSet();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -466,6 +483,15 @@ public class ItemMix : MonoBehaviour
                     {
                         Instantiate(Witch, location2.position, location2.rotation);
                         Rerecipt();
+                        Firstgauge.GetComponent<Gauage>().ReSet();
+                        G1.GetComponent<Gauage>().ReSet();
+                        G2.GetComponent<Gauage>().ReSet();
+                        G3.GetComponent<Gauage>().ReSet();
+                        G4.GetComponent<Gauage>().ReSet();
+                        G5.GetComponent<Gauage>().ReSet();
+                        G6.GetComponent<Gauage>().ReSet();
+                        G7.GetComponent<Gauage>().ReSet();
+                        G8.GetComponent<Gauage>().ReSet();
                     }
                     else
                         Debug.Log("no");
@@ -477,6 +503,15 @@ public class ItemMix : MonoBehaviour
                 {
                     Instantiate(Imoogi, location1.position, location1.rotation);
                     Rerecipt();
+                    Firstgauge.GetComponent<Gauage>().ReSet();
+                    G1.GetComponent<Gauage>().ReSet();
+                    G2.GetComponent<Gauage>().ReSet();
+                    G3.GetComponent<Gauage>().ReSet();
+                    G4.GetComponent<Gauage>().ReSet();
+                    G5.GetComponent<Gauage>().ReSet();
+                    G6.GetComponent<Gauage>().ReSet();
+                    G7.GetComponent<Gauage>().ReSet();
+                    G8.GetComponent<Gauage>().ReSet();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -485,6 +520,15 @@ public class ItemMix : MonoBehaviour
                     {
                         Instantiate(Imoogi, location2.position, location2.rotation);
                         Rerecipt();
+                        Firstgauge.GetComponent<Gauage>().ReSet();
+                        G1.GetComponent<Gauage>().ReSet();
+                        G2.GetComponent<Gauage>().ReSet();
+                        G3.GetComponent<Gauage>().ReSet();
+                        G4.GetComponent<Gauage>().ReSet();
+                        G5.GetComponent<Gauage>().ReSet();
+                        G6.GetComponent<Gauage>().ReSet();
+                        G7.GetComponent<Gauage>().ReSet();
+                        G8.GetComponent<Gauage>().ReSet();
                     }
                     else
                         Debug.Log("no");
@@ -496,6 +540,15 @@ public class ItemMix : MonoBehaviour
                 {
                     Instantiate(Peace, location1.position, location1.rotation);
                     Rerecipt();
+                    Firstgauge.GetComponent<Gauage>().ReSet();
+                    G1.GetComponent<Gauage>().ReSet();
+                    G2.GetComponent<Gauage>().ReSet();
+                    G3.GetComponent<Gauage>().ReSet();
+                    G4.GetComponent<Gauage>().ReSet();
+                    G5.GetComponent<Gauage>().ReSet();
+                    G6.GetComponent<Gauage>().ReSet();
+                    G7.GetComponent<Gauage>().ReSet();
+                    G8.GetComponent<Gauage>().ReSet();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -504,6 +557,15 @@ public class ItemMix : MonoBehaviour
                     {
                         Instantiate(Peace, location2.position, location2.rotation);
                         Rerecipt();
+                        Firstgauge.GetComponent<Gauage>().ReSet();
+                        G1.GetComponent<Gauage>().ReSet();
+                        G2.GetComponent<Gauage>().ReSet();
+                        G3.GetComponent<Gauage>().ReSet();
+                        G4.GetComponent<Gauage>().ReSet();
+                        G5.GetComponent<Gauage>().ReSet();
+                        G6.GetComponent<Gauage>().ReSet();
+                        G7.GetComponent<Gauage>().ReSet();
+                        G8.GetComponent<Gauage>().ReSet();
                     }
                     else
                         Debug.Log("no");
@@ -515,6 +577,15 @@ public class ItemMix : MonoBehaviour
                 {
                     Instantiate(Killer, location1.position, location1.rotation);
                     Rerecipt();
+                    Firstgauge.GetComponent<Gauage>().ReSet();
+                    G1.GetComponent<Gauage>().ReSet();
+                    G2.GetComponent<Gauage>().ReSet();
+                    G3.GetComponent<Gauage>().ReSet();
+                    G4.GetComponent<Gauage>().ReSet();
+                    G5.GetComponent<Gauage>().ReSet();
+                    G6.GetComponent<Gauage>().ReSet();
+                    G7.GetComponent<Gauage>().ReSet();
+                    G8.GetComponent<Gauage>().ReSet();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -523,6 +594,15 @@ public class ItemMix : MonoBehaviour
                     {
                         Instantiate(Killer, location2.position, location2.rotation);
                         Rerecipt();
+                        Firstgauge.GetComponent<Gauage>().ReSet();
+                        G1.GetComponent<Gauage>().ReSet();
+                        G2.GetComponent<Gauage>().ReSet();
+                        G3.GetComponent<Gauage>().ReSet();
+                        G4.GetComponent<Gauage>().ReSet();
+                        G5.GetComponent<Gauage>().ReSet();
+                        G6.GetComponent<Gauage>().ReSet();
+                        G7.GetComponent<Gauage>().ReSet();
+                        G8.GetComponent<Gauage>().ReSet();
                     }
                     else
                         Debug.Log("no");
@@ -534,6 +614,15 @@ public class ItemMix : MonoBehaviour
                 {
                     Instantiate(RuMilk, location1.position, location1.rotation);
                     Rerecipt();
+                    Firstgauge.GetComponent<Gauage>().ReSet();
+                    G1.GetComponent<Gauage>().ReSet();
+                    G2.GetComponent<Gauage>().ReSet();
+                    G3.GetComponent<Gauage>().ReSet();
+                    G4.GetComponent<Gauage>().ReSet();
+                    G5.GetComponent<Gauage>().ReSet();
+                    G6.GetComponent<Gauage>().ReSet();
+                    G7.GetComponent<Gauage>().ReSet();
+                    G8.GetComponent<Gauage>().ReSet();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -542,6 +631,15 @@ public class ItemMix : MonoBehaviour
                     {
                         Instantiate(RuMilk, location2.position, location2.rotation);
                         Rerecipt();
+                        Firstgauge.GetComponent<Gauage>().ReSet();
+                        G1.GetComponent<Gauage>().ReSet();
+                        G2.GetComponent<Gauage>().ReSet();
+                        G3.GetComponent<Gauage>().ReSet();
+                        G4.GetComponent<Gauage>().ReSet();
+                        G5.GetComponent<Gauage>().ReSet();
+                        G6.GetComponent<Gauage>().ReSet();
+                        G7.GetComponent<Gauage>().ReSet();
+                        G8.GetComponent<Gauage>().ReSet();
                     }
                     else
                         Debug.Log("no");
@@ -553,6 +651,15 @@ public class ItemMix : MonoBehaviour
                 {
                     Instantiate(RoyalJelly, location1.position, location1.rotation);
                     Rerecipt();
+                    Firstgauge.GetComponent<Gauage>().ReSet();
+                    G1.GetComponent<Gauage>().ReSet();
+                    G2.GetComponent<Gauage>().ReSet();
+                    G3.GetComponent<Gauage>().ReSet();
+                    G4.GetComponent<Gauage>().ReSet();
+                    G5.GetComponent<Gauage>().ReSet();
+                    G6.GetComponent<Gauage>().ReSet();
+                    G7.GetComponent<Gauage>().ReSet();
+                    G8.GetComponent<Gauage>().ReSet();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -561,6 +668,15 @@ public class ItemMix : MonoBehaviour
                     {
                         Instantiate(RoyalJelly, location2.position, location2.rotation);
                         Rerecipt();
+                        Firstgauge.GetComponent<Gauage>().ReSet();
+                        G1.GetComponent<Gauage>().ReSet();
+                        G2.GetComponent<Gauage>().ReSet();
+                        G3.GetComponent<Gauage>().ReSet();
+                        G4.GetComponent<Gauage>().ReSet();
+                        G5.GetComponent<Gauage>().ReSet();
+                        G6.GetComponent<Gauage>().ReSet();
+                        G7.GetComponent<Gauage>().ReSet();
+                        G8.GetComponent<Gauage>().ReSet();
                     }
                     else
                         Debug.Log("no");
@@ -572,6 +688,15 @@ public class ItemMix : MonoBehaviour
                 {
                     Instantiate(RoyalOrange, location1.position, location1.rotation);
                     Rerecipt();
+                    Firstgauge.GetComponent<Gauage>().ReSet();
+                    G1.GetComponent<Gauage>().ReSet();
+                    G2.GetComponent<Gauage>().ReSet();
+                    G3.GetComponent<Gauage>().ReSet();
+                    G4.GetComponent<Gauage>().ReSet();
+                    G5.GetComponent<Gauage>().ReSet();
+                    G6.GetComponent<Gauage>().ReSet();
+                    G7.GetComponent<Gauage>().ReSet();
+                    G8.GetComponent<Gauage>().ReSet();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -580,6 +705,15 @@ public class ItemMix : MonoBehaviour
                     {
                         Instantiate(RoyalOrange, location2.position, location2.rotation);
                         Rerecipt();
+                        Firstgauge.GetComponent<Gauage>().ReSet();
+                        G1.GetComponent<Gauage>().ReSet();
+                        G2.GetComponent<Gauage>().ReSet();
+                        G3.GetComponent<Gauage>().ReSet();
+                        G4.GetComponent<Gauage>().ReSet();
+                        G5.GetComponent<Gauage>().ReSet();
+                        G6.GetComponent<Gauage>().ReSet();
+                        G7.GetComponent<Gauage>().ReSet();
+                        G8.GetComponent<Gauage>().ReSet();
                     }
                     else
                         Debug.Log("no");
@@ -591,6 +725,15 @@ public class ItemMix : MonoBehaviour
                 {
                     Instantiate(KiKi, location1.position, location1.rotation);
                     Rerecipt();
+                    Firstgauge.GetComponent<Gauage>().ReSet();
+                    G1.GetComponent<Gauage>().ReSet();
+                    G2.GetComponent<Gauage>().ReSet();
+                    G3.GetComponent<Gauage>().ReSet();
+                    G4.GetComponent<Gauage>().ReSet();
+                    G5.GetComponent<Gauage>().ReSet();
+                    G6.GetComponent<Gauage>().ReSet();
+                    G7.GetComponent<Gauage>().ReSet();
+                    G8.GetComponent<Gauage>().ReSet();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -599,6 +742,15 @@ public class ItemMix : MonoBehaviour
                     {
                         Instantiate(KiKi, location2.position, location2.rotation);
                         Rerecipt();
+                        Firstgauge.GetComponent<Gauage>().ReSet();
+                        G1.GetComponent<Gauage>().ReSet();
+                        G2.GetComponent<Gauage>().ReSet();
+                        G3.GetComponent<Gauage>().ReSet();
+                        G4.GetComponent<Gauage>().ReSet();
+                        G5.GetComponent<Gauage>().ReSet();
+                        G6.GetComponent<Gauage>().ReSet();
+                        G7.GetComponent<Gauage>().ReSet();
+                        G8.GetComponent<Gauage>().ReSet();
                     }
                     else
                         Debug.Log("no");
@@ -610,6 +762,15 @@ public class ItemMix : MonoBehaviour
                 {
                     Instantiate(fail, location1.position, location1.rotation);
                     Rerecipt();
+                    Firstgauge.GetComponent<Gauage>().ReSet();
+                    G1.GetComponent<Gauage>().ReSet();
+                    G2.GetComponent<Gauage>().ReSet();
+                    G3.GetComponent<Gauage>().ReSet();
+                    G4.GetComponent<Gauage>().ReSet();
+                    G5.GetComponent<Gauage>().ReSet();
+                    G6.GetComponent<Gauage>().ReSet();
+                    G7.GetComponent<Gauage>().ReSet();
+                    G8.GetComponent<Gauage>().ReSet();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -618,6 +779,15 @@ public class ItemMix : MonoBehaviour
                     {
                         Instantiate(fail, location2.position, location2.rotation);
                         Rerecipt();
+                        Firstgauge.GetComponent<Gauage>().ReSet();
+                        G1.GetComponent<Gauage>().ReSet();
+                        G2.GetComponent<Gauage>().ReSet();
+                        G3.GetComponent<Gauage>().ReSet();
+                        G4.GetComponent<Gauage>().ReSet();
+                        G5.GetComponent<Gauage>().ReSet();
+                        G6.GetComponent<Gauage>().ReSet();
+                        G7.GetComponent<Gauage>().ReSet();
+                        G8.GetComponent<Gauage>().ReSet();
                     }
                     else
                         Debug.Log("no");

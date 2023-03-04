@@ -25,7 +25,7 @@ public class CusTomer : MonoBehaviour
     public void OnEnable()
     {
         Talk.text = "안녕하세요";
-        Order = Random.Range(1, 12);
+        Order = Random.Range(1, 36);
         Invoke("Wanted", 2.0f);
         HP = Random.Range(200, 501);
         CurrentHP = HP;
@@ -42,6 +42,29 @@ public class CusTomer : MonoBehaviour
             Out();
             Invoke("In", 2f);
         }
+    }
+    void In()
+    {
+        Talk.text = "반가워요";
+        gameObject.SetActive(true);
+    }
+    void Out()
+    {
+        gameObject.SetActive(false);
+        Refill = 0;
+    }
+    public void CusOut()
+    {
+        Talk.text = "수고했어요";
+        Invoke("Out", 1.0f);
+    }
+    void SetTalk()
+    {
+        Talk.text = "이건 제가 시킨게 아니군요";
+    }
+    void SetTalk2()
+    {
+        Talk.text = "나쁘지 않은 걸요?";
     }
     public void Wanted()
     {
@@ -89,6 +112,102 @@ public class CusTomer : MonoBehaviour
         {
             Talk.text = "비 로열 주세요";
         }
+        else if (Order == 12)
+        {
+            Talk.text = "후르츠 밤 주세요";
+        }
+        else if (Order == 13)
+        {
+            Talk.text = "더 풀 주세요";
+        }
+        else if (Order == 14)
+        {
+            Talk.text = "흑 주세요";
+        }
+        else if (Order == 15)
+        {
+            Talk.text = "사파이어 블라스트 주세요";
+        }
+        else if (Order == 16)
+        {
+            Talk.text = "루비 블라스트 주세요";
+        }
+        else if (Order == 17)
+        {
+            Talk.text = "칸타빌레 주세요";
+        }
+        else if (Order == 18)
+        {
+            Talk.text = "딥 캬트 주세요";
+        }
+        else if (Order == 19)
+        {
+            Talk.text = "알콜레이드 주세요";
+        }
+        else if (Order == 20)
+        {
+            Talk.text = "노도그 주세요";
+        }
+        else if (Order == 21)
+        {
+            Talk.text = "프레이야 주세요";
+        }
+        else if (Order == 22)
+        {
+            Talk.text = "스콜칭 썬 주세요";
+        }
+        else if (Order == 23)
+        {
+            Talk.text = "폭염 주세요";
+        }
+        else if (Order == 24)
+        {
+            Talk.text = "에메랄드 비치 주세요";
+        }
+        else if (Order == 25)
+        {
+            Talk.text = "로스트 주세요";
+        }
+        else if (Order == 26)
+        {
+            Talk.text = "하모니 주세요";
+        }
+        else if (Order == 27)
+        {
+            Talk.text = "허브버블 주세요";
+        }
+        else if (Order == 28)
+        {
+            Talk.text = "위치 주세요";
+        }
+        else if (Order == 29)
+        {
+            Talk.text = "이무기 주세요";
+        }
+        else if (Order == 30)
+        {
+            Talk.text = "피스 주세요";
+        }
+        else if (Order == 31)
+        {
+            Talk.text = "킬러 주세요";
+        }
+        else if (Order == 32)
+        {
+            Talk.text = "루밀크 주세요";
+        }
+        else if (Order == 33)
+        {
+            Talk.text = "로열젤리 주세요";
+        }
+        else if (Order == 34)
+        {
+            Talk.text = "로열 오렌지 주세요";
+        }
+        else if (Order == 35)
+        {
+            Talk.text = "키키 주세요";
+        }
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
@@ -97,7 +216,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "Seogyang")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip + (100 * Refill);
@@ -119,7 +238,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -128,7 +247,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "RoyalMoring")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -150,7 +269,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -159,7 +278,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "KattCock")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -181,7 +300,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -190,7 +309,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "AurumCock")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -212,7 +331,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -221,7 +340,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "RoyalCock")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -243,7 +362,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -252,7 +371,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "AirenCock")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -274,7 +393,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -283,7 +402,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "BrgikyCock")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -305,7 +424,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -314,7 +433,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "K2C")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -336,7 +455,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -345,7 +464,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "Souren")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -367,7 +486,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -376,7 +495,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "BrgikyFloat")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -398,7 +517,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -407,7 +526,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "BeeRoyal")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -429,7 +548,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -438,7 +557,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "FruiteBoobs")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -460,7 +579,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -469,7 +588,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "ThePool")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -491,7 +610,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -500,7 +619,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "Black")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -522,7 +641,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -531,7 +650,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "Sapphire")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -553,7 +672,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -562,7 +681,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "Ruby")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -584,7 +703,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -593,7 +712,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "Cantabile")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -615,7 +734,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -624,7 +743,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "DeepKatt")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -646,7 +765,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -655,7 +774,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "AlcohoRaid")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -677,7 +796,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -686,7 +805,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "NoDog")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -708,7 +827,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -717,7 +836,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "Freya")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -739,7 +858,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -748,7 +867,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "ScorchingSun")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -770,7 +889,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -779,7 +898,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "HeatWave")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -801,7 +920,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -810,7 +929,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "EmeraldBeach")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -832,7 +951,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -841,7 +960,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "Lost")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -863,7 +982,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -872,7 +991,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "Harmony")
             {
                 SetTalk2();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -894,13 +1013,75 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
         else if (Order == 27)
         {
             if (collision.gameObject.tag == "HerbBuble")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 36);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 36);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 28)
+        {
+            if (collision.gameObject.tag == "Witch")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 36);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 36);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 29)
+        {
+            if (collision.gameObject.tag == "Imoogi")
             {
                 SetTalk2();
                 Order = Random.Range(1, 12);
@@ -925,32 +1106,195 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 12);
+                Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
         }
-    }
-    void In()
-    {
-        Talk.text = "반가워요";
-        gameObject.SetActive(true);
-    }
-    void Out()
-    {
-        gameObject.SetActive(false);
-        Refill = 0;
-    }
-    public void CusOut()
-    {
-        Talk.text = "수고했어요";
-        Invoke("Out", 1.0f);
-    }
-    void SetTalk()
-    {
-        Talk.text = "이건 제가 시킨게 아니군요";
-    }
-    void SetTalk2()
-    {
-        Talk.text = "나쁘지 않은 걸요?";
+        else if (Order == 30)
+        {
+            if (collision.gameObject.tag == "Peace")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 12);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 36);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 31)
+        {
+            if (collision.gameObject.tag == "Killer")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 12);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 36);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 32)
+        {
+            if (collision.gameObject.tag == "RuMilk")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 36);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 36);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 33)
+        {
+            if (collision.gameObject.tag == "RoyalJelly")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 36);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 36);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 34)
+        {
+            if (collision.gameObject.tag == "RoyalOrange")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 36);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 36);
+                Invoke("Wanted", 2.0f);
+            }
+        }
+        else if (Order == 35)
+        {
+            if (collision.gameObject.tag == "KiKi")
+            {
+                SetTalk2();
+                Order = Random.Range(1, 36);
+                if (CurrentHP > OnDrag.Tip)
+                {
+                    CurrentHP -= OnDrag.Tip;
+                    CurrentEndu += OnDrag.Tip / 10;
+                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    Refill++;
+                    Invoke("Wanted", 2.0f);
+                }
+                else if (CurrentHP <= OnDrag.Tip)
+                {
+                    OnDrag.Tip = (int)CurrentHP;
+                    CurrentHP -= CurrentHP;
+                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    Talk.text = "감사해요";
+                    Invoke("Out", 1.0f);
+                    Invoke("In", 3.0f);
+                }
+            }
+            else
+            {
+                SetTalk();
+                Order = Random.Range(1, 36);
+                Invoke("Wanted", 2.0f);
+            }
+        }
     }
 }

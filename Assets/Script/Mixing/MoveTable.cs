@@ -23,9 +23,9 @@ public class MoveTable : MonoBehaviour
 
     public void Open()
     {
-        iTween.MoveTo(gameObject, iTween.Hash("x", 3.5, "time", 5));
-        iTween.MoveTo(Serving, iTween.Hash("x", -11, "time", 3));
-        iTween.MoveTo(Customer, iTween.Hash("x", -5, "time", 3));
+        iTween.MoveTo(gameObject, iTween.Hash("x", 3.5, "time", 4));
+        iTween.MoveTo(Serving, iTween.Hash("x", -11, "time", 2));
+        iTween.MoveTo(Customer, iTween.Hash("x", -5, "time", 2));
     }
     public void Close()
     {
@@ -74,65 +74,65 @@ public class MoveTable : MonoBehaviour
         iTween.MoveTo(Choco, iTween.Hash("y", 1.5, "time", Time));
         Choco.gameObject.SetActive(true);
         iTween.MoveTo(Cran, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Cra", 2f);
+        Invoke("Cra", 1f);
         iTween.MoveTo(Melon, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Mel", 2f);
+        Invoke("Mel", 1f);
         iTween.MoveTo(Orange, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Ora", 2f);
-        iTween.MoveTo(Honey, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Hon", 2f);
+        Invoke("Ora", 1f);
+        iTween.MoveTo(Honey, iTween.Hash("x", 8, "time", Time));
+        Invoke("Hon", 1f);
     }
     public void cran()
     {
         iTween.MoveTo(Choco, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Cho", 2f);
+        Invoke("Cho", 1f);
         iTween.MoveTo(Cran, iTween.Hash("y", 1.5, "time", Time));
         Cran.gameObject.SetActive(true);
         iTween.MoveTo(Melon, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Mel", 2f);
+        Invoke("Mel", 1f);
         iTween.MoveTo(Orange, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Ora", 2f);
-        iTween.MoveTo(Honey, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Hon", 2f);
+        Invoke("Ora", 1f);
+        iTween.MoveTo(Honey, iTween.Hash("x", 8, "time", Time));
+        Invoke("Hon", 1f);
     }
     public void melon()
     {
         iTween.MoveTo(Choco, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Cho", 2f);
+        Invoke("Cho", 1f);
         iTween.MoveTo(Cran, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Cra", 2f);
+        Invoke("Cra", 1f);
         iTween.MoveTo(Melon, iTween.Hash("y", 1.5, "time", Time));
         Melon.gameObject.SetActive(true);
         iTween.MoveTo(Orange, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Ora", 2f);
-        iTween.MoveTo(Honey, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Hon", 2f);
+        Invoke("Ora", 1f);
+        iTween.MoveTo(Honey, iTween.Hash("x", 8, "time", Time));
+        Invoke("Hon", 1f);
     }
 
     public void orange()
     {
         iTween.MoveTo(Choco, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Cho", 2f);
+        Invoke("Cho", 1f);
         iTween.MoveTo(Cran, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Cra", 2f);
+        Invoke("Cra", 1f);
         iTween.MoveTo(Melon, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Mel", 2f);
+        Invoke("Mel", 1f);
         iTween.MoveTo(Orange, iTween.Hash("y", 1.5, "time", Time));
         Orange.gameObject.SetActive(true);
-        iTween.MoveTo(Honey, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Hon", 2f);
+        iTween.MoveTo(Honey, iTween.Hash("x", 8, "time", Time));
+        Invoke("Hon", 1f);
     }
     public void honey()
     {
         iTween.MoveTo(Choco, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Cho", 2f);
+        Invoke("Cho", 1f);
         iTween.MoveTo(Cran, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Cra", 2f);
+        Invoke("Cra", 1f);
         iTween.MoveTo(Melon, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Mel", 2f);
+        Invoke("Mel", 1f);
         iTween.MoveTo(Orange, iTween.Hash("y", 3.5, "time", Time));
-        Invoke("Ora", 2f);
-        iTween.MoveTo(Honey, iTween.Hash("y", 1.5, "time", Time));
+        Invoke("Ora", 1f);
+        iTween.MoveTo(Honey, iTween.Hash("x", 6, "time", Time));
         Honey.gameObject.SetActive(true);
     }
     void Cho()
