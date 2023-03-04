@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MoveTable : MonoBehaviour
 {
-    public float Range;
     public float Time;
     public GameObject Serving;
     public GameObject Customer;
@@ -36,15 +35,39 @@ public class MoveTable : MonoBehaviour
     }
     public void mixer()
     {
-        iTween.MoveTo(Mixer, iTween.Hash("x", Range, "time", Time));
+        iTween.MoveTo(Mixer, iTween.Hash("x", 7, "time", Time));
+        iTween.MoveTo(Shaker, iTween.Hash("x", 12, "time", Time));
+        iTween.MoveTo(Stirring, iTween.Hash("x", 12, "time", Time));
+        if(Mixer.transform.position.x == 7)
+        {
+            iTween.MoveTo(Mixer, iTween.Hash("x", 12, "time", Time));
+            iTween.MoveTo(Shaker, iTween.Hash("x", 12, "time", Time));
+            iTween.MoveTo(Stirring, iTween.Hash("x", 12, "time", Time));
+        }
     }
     public void shaker()
     {
-        iTween.MoveTo(Shaker, iTween.Hash("x", Range, "time", Time));
+        iTween.MoveTo(Mixer, iTween.Hash("x", 12, "time", Time));
+        iTween.MoveTo(Shaker, iTween.Hash("x", 7, "time", Time));
+        iTween.MoveTo(Stirring, iTween.Hash("x", 12, "time", Time));
+        if (Shaker.transform.position.x == 7)
+        {
+            iTween.MoveTo(Mixer, iTween.Hash("x", 12, "time", Time));
+            iTween.MoveTo(Shaker, iTween.Hash("x", 12, "time", Time));
+            iTween.MoveTo(Stirring, iTween.Hash("x", 12, "time", Time));
+        }
     }
     public void stirring()
     {
-        iTween.MoveTo(Stirring, iTween.Hash("x", Range, "time", Time));
+        iTween.MoveTo(Mixer, iTween.Hash("x", 12, "time", Time));
+        iTween.MoveTo(Shaker, iTween.Hash("x", 12, "time", Time));
+        iTween.MoveTo(Stirring, iTween.Hash("x", 7, "time", Time));
+        if (Stirring.transform.position.x == 7)
+        {
+            iTween.MoveTo(Mixer, iTween.Hash("x", 12, "time", Time));
+            iTween.MoveTo(Shaker, iTween.Hash("x", 12, "time", Time));
+            iTween.MoveTo(Stirring, iTween.Hash("x", 12, "time", Time));
+        }
     }
     public void choco()
     {
