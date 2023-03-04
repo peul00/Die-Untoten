@@ -7,16 +7,36 @@ public class OnDrag : MonoBehaviour
     public string Tag;
     int Rank = Drag.MaxRank;
     int Plus = ItemMix.AlcoPlus;
-    public static int Average;
+    int Plus1 = ItemMIxer.AlcoPlus;
+    int Plus2 = ItemShaker.AlcoPlus;
     public static int Tip;
+    public int Average;
+
+    public void Awake()
+    {
+        if (Plus >= 1)
+        {
+            Average = Rank / Plus;
+        }
+        else if (Plus1 >= 1)
+        {
+            Average = Rank / Plus1;
+        }
+        else if (Plus2 >= 1)
+        {
+            Average = Rank / Plus2;
+        }
+        Debug.Log("Level: " + Average);
+    }
+
     public void Start()
     {
-        Average = Rank / Plus;
-        Debug.Log("Level: " + Average);
+        ItemMix.Plus1 = 0;
     }
 
     public void Update()
     {
+
     }
 
     private void OnMouseDrag()
@@ -85,7 +105,10 @@ public class OnDrag : MonoBehaviour
         {
             if (Input.GetMouseButton(0) == true)
             {
+                ItemMix.Plus1 += 1;
+                Drag.MaxRank += Average;
                 Destroy(gameObject);
+                Debug.Log("Rank: " + Drag.MaxRank);
             }
         }
     }

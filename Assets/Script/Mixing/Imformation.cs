@@ -148,37 +148,37 @@ public class Imformation : MonoBehaviour
     {
         Recipt.gameObject.SetActive(false);
         recipt.gameObject.SetActive(true);
-        Information.text = "비 로열" + "\n" + "\n" + "캬트3 브르기키2 소다1" + "\n" + "Shake" + "\n" + "소금" + "\n" + "build";
+        Information.text = "스콜칭 썬" + "\n" + "\n" + "캬트3 브르기키2 소다1" + "\n" + "Shake" + "\n" + "소금" + "\n" + "build";
     }
     public void HeatWave()
     {
         Recipt.gameObject.SetActive(false);
         recipt.gameObject.SetActive(true);
-        Information.text = "비 로열" + "\n" + "\n" + "캬트3 브르기키4 소다1" + "\n" + "Shake" + "\n" + "소금" + "\n" + "build";
+        Information.text = "폭염" + "\n" + "\n" + "캬트3 브르기키4 소다1" + "\n" + "Shake" + "\n" + "소금" + "\n" + "build";
     }
     public void EmeraldBeach()
     {
         Recipt.gameObject.SetActive(false);
         recipt.gameObject.SetActive(true);
-        Information.text = "비 로열" + "\n" + "\n" + "아이렌3 로열3 라임주스1 코코넛주스1 멜론시럽" + "\n" + "Shake";
+        Information.text = "에메랄드 비치" + "\n" + "\n" + "아이렌3 로열3 라임주스1 코코넛주스1 멜론시럽" + "\n" + "Shake";
     }
     public void Lost()
     {
         Recipt.gameObject.SetActive(false);
         recipt.gameObject.SetActive(true);
-        Information.text = "비 로열" + "\n" + "\n" + "브르기키3 아이렌1 아우룸4 얼음" + "\n" + "Shake";
+        Information.text = "로스트" + "\n" + "\n" + "브르기키3 아이렌1 아우룸4 얼음" + "\n" + "Shake";
     }
     public void Harmony()
     {
         Recipt.gameObject.SetActive(false);
         recipt.gameObject.SetActive(true);
-        Information.text = "비 로열" + "\n" + "\n" + "캬트3 아이렌2 아우룸1 체리주스" + "\n" + "Shake";
+        Information.text = "하모니" + "\n" + "\n" + "캬트3 아이렌2 아우룸1 체리주스" + "\n" + "Shake";
     }
     public void HerbBuble()
     {
         Recipt.gameObject.SetActive(false);
         recipt.gameObject.SetActive(true);
-        Information.text = "비 로열" + "\n" + "\n" + "캬트1 아이렌1 아우룸5" + "\n" + "Shake";
+        Information.text = "허브 버블" + "\n" + "\n" + "캬트1 아이렌1 아우룸5" + "\n" + "Shake";
     }
     public void Witch()
     {

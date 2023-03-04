@@ -39,6 +39,7 @@ public class ItemMix : MonoBehaviour
     public bool Sugar = false;
     public static int Plus;
     public static int AlcoPlus;
+    public static int Plus1;
     bool fruitBoobs = false;
     bool thePool = false;
     bool black = false;
@@ -55,6 +56,19 @@ public class ItemMix : MonoBehaviour
     bool lost = false;
     bool harmony = false;
     bool herbBuble = false;
+    public GameObject Tuto;
+
+    public void Tutorial(bool isOn)
+    {
+        if (isOn)
+        {
+            Tuto.gameObject.SetActive(true);
+        }
+        else
+        {
+            Tuto.gameObject.SetActive(false);
+        }
+    }
 
     int buff = 0; //버프 추가
     public void Update()
@@ -204,7 +218,7 @@ public class ItemMix : MonoBehaviour
         {
             ruby = true;
         }
-        else if (collision.gameObject.tag == "cantablie")
+        else if (collision.gameObject.tag == "cantabile")
         {
             cantabile = true;
         }
@@ -443,6 +457,7 @@ public class ItemMix : MonoBehaviour
                 if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
                 {
                     Instantiate(Witch, location1.position, location1.rotation);
+                    Rerecipt();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -450,6 +465,7 @@ public class ItemMix : MonoBehaviour
                     if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
                     {
                         Instantiate(Witch, location2.position, location2.rotation);
+                        Rerecipt();
                     }
                     else
                         Debug.Log("no");
@@ -460,6 +476,7 @@ public class ItemMix : MonoBehaviour
                 if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
                 {
                     Instantiate(Imoogi, location1.position, location1.rotation);
+                    Rerecipt();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -467,6 +484,7 @@ public class ItemMix : MonoBehaviour
                     if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
                     {
                         Instantiate(Imoogi, location2.position, location2.rotation);
+                        Rerecipt();
                     }
                     else
                         Debug.Log("no");
@@ -477,6 +495,7 @@ public class ItemMix : MonoBehaviour
                 if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
                 {
                     Instantiate(Peace, location1.position, location1.rotation);
+                    Rerecipt();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -484,6 +503,7 @@ public class ItemMix : MonoBehaviour
                     if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
                     {
                         Instantiate(Peace, location2.position, location2.rotation);
+                        Rerecipt();
                     }
                     else
                         Debug.Log("no");
@@ -494,6 +514,7 @@ public class ItemMix : MonoBehaviour
                 if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
                 {
                     Instantiate(Killer, location1.position, location1.rotation);
+                    Rerecipt();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -501,6 +522,7 @@ public class ItemMix : MonoBehaviour
                     if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
                     {
                         Instantiate(Killer, location2.position, location2.rotation);
+                        Rerecipt();
                     }
                     else
                         Debug.Log("no");
@@ -511,6 +533,7 @@ public class ItemMix : MonoBehaviour
                 if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
                 {
                     Instantiate(RuMilk, location1.position, location1.rotation);
+                    Rerecipt();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -518,6 +541,7 @@ public class ItemMix : MonoBehaviour
                     if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
                     {
                         Instantiate(RuMilk, location2.position, location2.rotation);
+                        Rerecipt();
                     }
                     else
                         Debug.Log("no");
@@ -528,6 +552,7 @@ public class ItemMix : MonoBehaviour
                 if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
                 {
                     Instantiate(RoyalJelly, location1.position, location1.rotation);
+                    Rerecipt();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -535,6 +560,7 @@ public class ItemMix : MonoBehaviour
                     if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
                     {
                         Instantiate(RoyalJelly, location2.position, location2.rotation);
+                        Rerecipt();
                     }
                     else
                         Debug.Log("no");
@@ -545,6 +571,7 @@ public class ItemMix : MonoBehaviour
                 if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
                 {
                     Instantiate(RoyalOrange, location1.position, location1.rotation);
+                    Rerecipt();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -552,6 +579,7 @@ public class ItemMix : MonoBehaviour
                     if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
                     {
                         Instantiate(RoyalOrange, location2.position, location2.rotation);
+                        Rerecipt();
                     }
                     else
                         Debug.Log("no");
@@ -562,6 +590,7 @@ public class ItemMix : MonoBehaviour
                 if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
                 {
                     Instantiate(KiKi, location1.position, location1.rotation);
+                    Rerecipt();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -569,6 +598,7 @@ public class ItemMix : MonoBehaviour
                     if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
                     {
                         Instantiate(KiKi, location2.position, location2.rotation);
+                        Rerecipt();
                     }
                     else
                         Debug.Log("no");
@@ -579,6 +609,7 @@ public class ItemMix : MonoBehaviour
                 if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
                 {
                     Instantiate(fail, location1.position, location1.rotation);
+                    Rerecipt();
 
                 }
                 else if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == true)
@@ -586,6 +617,7 @@ public class ItemMix : MonoBehaviour
                     if (GameObject.Find("Location2").GetComponent<Scanner>().scanner == false)
                     {
                         Instantiate(fail, location2.position, location2.rotation);
+                        Rerecipt();
                     }
                     else
                         Debug.Log("no");
@@ -593,10 +625,10 @@ public class ItemMix : MonoBehaviour
             }
         }
 
-        if (0 < Alcohol || 0 < Sweet || 0 < Spicy || 0 < Bitter || 0 < Sour || 0 < Soda || 0 < CherryJuice || 0 < LiemJuice || 0 < CoCoJuice || 0 < ChocoJuice || 0 < TomatoJuice)
+        if (0 < Alcohol || 0 < Sweet || 0 < Spicy || 0 < Bitter || 0 < Sour || 0 < Soda || 0 < CherryJuice || 0 < LiemJuice || 0 < CoCoJuice || 0 < ChocoJuice || 0 < TomatoJuice || 0 < Plus1)
         {
-            Plus = Alcohol + Spicy + Sweet + Bitter + Sour + Soda + CherryJuice + LiemJuice + CoCoJuice + ChocoJuice + TomatoJuice;
-            AlcoPlus = Alcohol + Spicy + Sweet + Bitter + Sour;
+            Plus = Alcohol + Spicy + Sweet + Bitter + Sour + Soda + CherryJuice + LiemJuice + CoCoJuice + ChocoJuice + TomatoJuice + Plus1;
+            AlcoPlus = Alcohol + Spicy + Sweet + Bitter + Sour + Plus1;
             Debug.Log("Total: " + Plus);
             Firstgauge.gameObject.SetActive(true);
         }
