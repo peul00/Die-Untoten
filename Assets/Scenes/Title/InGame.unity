@@ -1140,12 +1140,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62974297}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 91e9b066ed34d19439c1e26bb95eb93f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1373,6 +1373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: 3
+  Sound: {fileID: 8300000, guid: c41e9ad93d9828e4e9d86049c8ec8816, type: 3}
 --- !u!1 &95277096
 GameObject:
   m_ObjectHideFlags: 0
@@ -6838,6 +6839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: 3
+  Sound: {fileID: 8300000, guid: c41e9ad93d9828e4e9d86049c8ec8816, type: 3}
 --- !u!1 &596728448
 GameObject:
   m_ObjectHideFlags: 0
@@ -12777,6 +12779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: 3
+  Sound: {fileID: 8300000, guid: c41e9ad93d9828e4e9d86049c8ec8816, type: 3}
 --- !u!1 &1107122066
 GameObject:
   m_ObjectHideFlags: 0
@@ -14818,6 +14821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: 3
+  Sound: {fileID: 8300000, guid: c41e9ad93d9828e4e9d86049c8ec8816, type: 3}
 --- !u!1001 &1204653271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23751,6 +23755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: 3
+  Sound: {fileID: 8300000, guid: c41e9ad93d9828e4e9d86049c8ec8816, type: 3}
 --- !u!1 &1928938852
 GameObject:
   m_ObjectHideFlags: 0
@@ -25964,6 +25969,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9166683977606495985, guid: a729aea767d4d6748bc0c44c12c19308, type: 3}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: Sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 91cd7af2b81069645ad4389518fe9835, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: Witch
       value: 
       objectReference: {fileID: 1165358499754019940, guid: 9aa42005db37cd14dbd37a18d7e4ceac, type: 3}
@@ -26072,6 +26081,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2159442157765266437, guid: d3555850427683c49a0097b0e4ac877e, type: 3}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: WaterSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c41e9ad93d9828e4e9d86049c8ec8816, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: BrgikyFloat
       value: 
       objectReference: {fileID: 8309501237752506815, guid: dcdc9e466db735f418cd8d531ce121b1, type: 3}
@@ -26087,6 +26100,10 @@ PrefabInstance:
       propertyPath: RoyalOrange
       value: 
       objectReference: {fileID: 7130014756145425262, guid: bcc4261c8a9c4ef489e259b0ed0b8679, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: EmeraldBeach
       value: 
@@ -26190,7 +26207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 55, y: 9.871643}
+  m_AnchoredPosition: {x: 55, y: 9.871582}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4079008576296099141
@@ -26263,6 +26280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rank: 0
+  Sound: {fileID: 0}
 --- !u!212 &4740292642928763714
 SpriteRenderer:
   m_ObjectHideFlags: 0

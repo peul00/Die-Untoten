@@ -7,11 +7,16 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 {
     public int Rank;
     public static int MaxRank;
+    private AudioSource audioSource;
+    public AudioClip Sound;
     Transform root;
 
     void Start()
     {
         root = transform.root;
+        this.audioSource = this.gameObject.AddComponent<AudioSource>();
+        this.audioSource.clip = this.Sound;
+        this.audioSource.loop = false;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -38,6 +43,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
             {
                 MaxRank += Rank;
                 Debug.Log("Rank: " + MaxRank);
+                this.audioSource.Play();
             }
         }
     }

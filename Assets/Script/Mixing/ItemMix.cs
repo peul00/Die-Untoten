@@ -65,7 +65,15 @@ public class ItemMix : MonoBehaviour
     bool harmony = false;
     bool herbBuble = false;
     public GameObject Tuto;
+    private AudioSource audioSource;
+    public AudioClip Sound;
+    public AudioClip WaterSound;
 
+    public void Start()
+    {
+        this.audioSource = this.gameObject.AddComponent<AudioSource>();
+        this.audioSource.loop = false;
+    }
     public void Tutorial(bool isOn)
     {
         if (isOn)
@@ -209,66 +217,98 @@ public class ItemMix : MonoBehaviour
         else if(collision.gameObject.tag == "fruitBoobs")
         {
             fruitBoobs = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "thePool")
         {
             thePool = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "black")
         {
             black = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "sapphire")
         {
             sapphire = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "ruby")
         {
             ruby = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "cantabile")
         {
             cantabile = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "deepKatt")
         {
             deepKatt = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "alcohoRaid")
         {
             alcohoRaid = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "noDog")
         {
             noDog = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "freya")
         {
             freya = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "scorchingSun")
         {
             scorchingSun = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "heatWave")
         {
             heatWave = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "emeraldBeach")
         {
             emeraldBeach = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "lost")
         {
             lost = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "harmony")
         {
             harmony = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
         else if (collision.gameObject.tag == "herbBuble")
         {
             herbBuble = true;
+            this.audioSource.clip = this.WaterSound;
+            this.audioSource.Play();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -330,6 +370,8 @@ public class ItemMix : MonoBehaviour
                 if (Plus != 10)
                     Soda += 1;
                 Debug.Log("Soda: " + Soda);
+                this.audioSource.clip = this.WaterSound;
+                this.audioSource.Play();
             }
         }
 
@@ -340,6 +382,8 @@ public class ItemMix : MonoBehaviour
                 if (Plus != 10)
                     CherryJuice += 1;
                 Debug.Log("CherryJuice " + CherryJuice);
+                this.audioSource.clip = this.WaterSound;
+                this.audioSource.Play();
             }
         }
 
@@ -350,6 +394,8 @@ public class ItemMix : MonoBehaviour
                 if (Plus != 10)
                     LiemJuice += 1;
                 Debug.Log("LiemJuice: " + LiemJuice);
+                this.audioSource.clip = this.WaterSound;
+                this.audioSource.Play();
             }
         }
 
@@ -360,6 +406,8 @@ public class ItemMix : MonoBehaviour
                 if (Plus != 10)
                     CoCoJuice += 1;
                 Debug.Log("CoCoJuice: " + CoCoJuice);
+                this.audioSource.clip = this.WaterSound;
+                this.audioSource.Play();
             }
         }
 
@@ -370,6 +418,8 @@ public class ItemMix : MonoBehaviour
                 if (Plus != 10)
                     ChocoJuice += 1;
                 Debug.Log("ChocoJuice: " + ChocoJuice);
+                this.audioSource.clip = this.WaterSound;
+                this.audioSource.Play();
             }
         }
 
@@ -380,6 +430,8 @@ public class ItemMix : MonoBehaviour
                 if (Plus != 10)
                     TomatoJuice += 1;
                 Debug.Log("TomatoJuice: " + TomatoJuice);
+                this.audioSource.clip = this.WaterSound;
+                this.audioSource.Play();
             }
         }
 
@@ -845,6 +897,8 @@ public class ItemMix : MonoBehaviour
     // ¾ÆÀÌ·» = ´Ü¸À ¾Æ¿ì·ë = ¾´¸À
     public void Makingcocktail()
     {
+        this.audioSource.clip = this.Sound;
+        this.audioSource.Play();
         if (Alcohol == 0 && Spicy == 0 && Sweet == 3 && Bitter == 1 && Sour == 0 && 0 == Soda && CherryJuice == 0 && LiemJuice == 0 && CoCoJuice == 1 && ChocoJuice == 0 && TomatoJuice == 0 && Salt == false && Sugar == false && cool == false && Cranliqueur)
         {
             if (GameObject.Find("Location1").GetComponent<Scanner>().scanner == false)
