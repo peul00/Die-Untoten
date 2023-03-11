@@ -3044,6 +3044,73 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4827396768369662017, guid: ae6a18b2934bc8d438da44a8f3942c9f, type: 3}
   m_PrefabInstance: {fileID: 1694112785}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &285168393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285168394}
+  - component: {fileID: 285168395}
+  - component: {fileID: 285168396}
+  m_Layer: 5
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &285168394
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285168393}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.009256887, y: 0.009256887, z: 0.009256887}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &285168395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285168393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb863d3df1c46c4ab191b98f119f675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Money: 10000
+  itemDB: []
+  fieldItemPrefab: {fileID: 0}
+  pos: []
+--- !u!114 &285168396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285168393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc0471a5b8b57245a89dbee1ee04b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 285168393}
 --- !u!1 &287967218
 GameObject:
   m_ObjectHideFlags: 0
@@ -5351,7 +5418,6 @@ GameObject:
   - component: {fileID: 468903450}
   - component: {fileID: 468903455}
   - component: {fileID: 468903456}
-  - component: {fileID: 468903457}
   - component: {fileID: 468903458}
   m_Layer: 5
   m_Name: Canvas
@@ -5478,23 +5544,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invisibleCard: {fileID: 4079008576296099140}
---- !u!114 &468903457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468903449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cb863d3df1c46c4ab191b98f119f675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Money: 0
-  itemDB: []
-  fieldItemPrefab: {fileID: 0}
-  pos: []
-  Custom: {fileID: 1979922371}
 --- !u!114 &468903458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13731,8 +13780,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 468903456}
-        m_TargetAssemblyTypeName: Central, Assembly-CSharp
+      - m_Target: {fileID: 285168396}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: NextDay
         m_Mode: 1
         m_Arguments:
@@ -20779,7 +20828,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 468903457}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ItemDatabase, Assembly-CSharp
         m_MethodName: Cus
         m_Mode: 1
@@ -23755,6 +23804,7 @@ GameObject:
   - component: {fileID: 1928938853}
   - component: {fileID: 1928938855}
   - component: {fileID: 1928938856}
+  - component: {fileID: 1928938857}
   m_Layer: 5
   m_Name: Money
   m_TagString: Untagged
@@ -23824,6 +23874,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\uB3C8"
+--- !u!114 &1928938857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928938852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b824181418f90204c87aeffba5a5a57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Custom: {fileID: 1979922371}
 --- !u!1001 &1940893337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26085,6 +26148,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 648291287}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: OrangePrice
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: RoyalOrange
       value: 
       objectReference: {fileID: 7130014756145425262, guid: bcc4261c8a9c4ef489e259b0ed0b8679, type: 3}
@@ -26096,6 +26163,10 @@ PrefabInstance:
       propertyPath: EmeraldBeach
       value: 
       objectReference: {fileID: 3497843375190430398, guid: 961fd7cae588ee2418cdcd9c5184a44f, type: 3}
+    - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
+      propertyPath: LiqueurPrice
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2119425333397605906, guid: 76310b46d92026d4d81862b4b5618112, type: 3}
       propertyPath: RoyalMorning
       value: 

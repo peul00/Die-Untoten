@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Central : MonoBehaviour
 {
     public Transform invisibleCard;
-
     List<Arranger> arrangers;
 
     void Start()
@@ -90,10 +89,5 @@ public class Central : MonoBehaviour
         //1
 
         SwapCardsinHierarchy(invisibleCard, card);
-    }
-
-    public void NextDay()
-    {
-        SceneManager.LoadScene("Total");
     }
 }

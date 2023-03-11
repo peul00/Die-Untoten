@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 597276688}
   - component: {fileID: 597276690}
   - component: {fileID: 597276689}
+  - component: {fileID: 597276691}
   m_Layer: 5
   m_Name: Total
   m_TagString: Untagged
@@ -307,6 +308,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597276687}
   m_CullTransparentMesh: 1
+--- !u!114 &597276691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597276687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6793f6033f9824d870aaca2d058a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &609474398
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +485,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1029844185}
+      - m_Target: {fileID: 597276691}
         m_TargetAssemblyTypeName: TotalMoney, Assembly-CSharp
         m_MethodName: Rest
         m_Mode: 1
