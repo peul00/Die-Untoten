@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Central : MonoBehaviour
 {
@@ -89,5 +90,10 @@ public class Central : MonoBehaviour
         //1
 
         SwapCardsinHierarchy(invisibleCard, card);
+    }
+
+    public void NextDay()
+    {
+        SceneManager.LoadScene("Total");
     }
 }
