@@ -6,22 +6,17 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public GameObject cus;
+    public int Day;
+    public GameObject obj;
 
     private void Awake()
     {
         instance = this;
-    }
-    public GameObject obj;
-
-    public void NextDay()
-    {
-        SceneManager.LoadScene("Total");
-        DontDestroyOnLoad(obj);
+        DontDestroyOnLoad(gameObject);
     }
 
-    public void Custom()
+    public void DDay()
     {
-        cus.SetActive(true);
+        Day = Day +1;
     }
 }

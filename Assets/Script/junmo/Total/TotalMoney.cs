@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class TotalMoney : MonoBehaviour
 {
     private Text Totalmoney;
+    public GameObject Fade;
 
     public void Start()
     {
@@ -14,6 +15,11 @@ public class TotalMoney : MonoBehaviour
         Totalmoney.text = "ÇöÀç µ·" + ItemDatabase.instance.Money.ToString("N0");
     }
     public void Rest()
+    {
+        Fade.SetActive(true);
+        Invoke("Chan", 3f);
+    }
+    public void Chan()
     {
         SceneManager.LoadScene("Night");
     }
