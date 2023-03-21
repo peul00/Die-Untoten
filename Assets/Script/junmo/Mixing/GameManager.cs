@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public GameObject cus;
 
     private void Awake()
     {
@@ -17,5 +18,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Total");
         DontDestroyOnLoad(obj);
+    }
+
+    public void Custom()
+    {
+        cus.SetActive(true);
     }
 }
