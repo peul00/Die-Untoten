@@ -17298,7 +17298,7 @@ MonoBehaviour:
   Table: {fileID: 322500901}
   Customer: {fileID: 1979922371}
   Fade: {fileID: 1879144173}
-  DeTime: 2
+  DeTime: 60
 --- !u!114 &1389049343
 MonoBehaviour:
   m_ObjectHideFlags: 0
