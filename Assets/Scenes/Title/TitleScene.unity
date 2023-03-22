@@ -4623,7 +4623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb863d3df1c46c4ab191b98f119f675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: 10000
   itemDB: []
   fieldItemPrefab: {fileID: 0}
   pos: []
@@ -4639,5 +4638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc0471a5b8b57245a89dbee1ee04b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Day: 0
   obj: {fileID: 527875803455915225}
+  TotalMoney: 0
+  Money: 10000
+  RealMoney: 0
+  Day: 0

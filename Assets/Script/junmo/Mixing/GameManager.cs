@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public GameObject obj;
+    public int TotalMoney;
     public int Money;
+    public int RealMoney;
     public int Day;
 
     private void Awake()
@@ -16,8 +18,18 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void Update()
+    {
+        RealMoney = Money - TotalMoney;
+    }
+
     public void DDay()
     {
         Day = Day +1;
+    }
+
+    public void Totalmoney()
+    {
+        TotalMoney = Money;
     }
 }

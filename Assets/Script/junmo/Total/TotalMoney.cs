@@ -12,7 +12,12 @@ public class TotalMoney : MonoBehaviour
     public void Start()
     {
         Totalmoney = GameObject.Find("Total").GetComponent<Text>();
-        Totalmoney.text = "현재 돈" + GameManager.instance.Money.ToString("N0");
+        Totalmoney.text =
+            "처음 돈: " + GameManager.instance.TotalMoney.ToString("N0") + "\n" + "\n"
+            + "현재 돈: " + GameManager.instance.Money.ToString("N0") + "\n" + "\n" + "\n"
+            + "----------------------------"
+            + "수입: " + GameManager.instance.RealMoney.ToString("N0") + "\n" + "\n" + "\n"
+            + "손님수, 추가 비용 등 더 상세하게 제작될 예정";
     }
     public void Rest()
     {

@@ -22,6 +22,7 @@ public class CusTomer : MonoBehaviour
     {
         Talk = GameObject.Find("Talk").GetComponent<Text>();
         GameObject.Find("Time").GetComponent<GameTime>().RunTime();
+        GameObject.Find("GameManager").GetComponent<GameManager>().Totalmoney();
     }
     public void OnEnable()
     {

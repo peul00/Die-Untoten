@@ -288,19 +288,19 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC624\uB298 \uBC8C\uC5B4\uB4E4\uC778 \uC218\uC785\n\n\n\n\n\n\uC624\uB298
-    \uC628 \uC190\uB2D8 \uC218\n\n\n\n\n\n\uB4F1\uB4F1 \uB098\uC62C\uC608\uC815\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\uC5EC\uAE30\uAE4C\uC9C0"
+  m_Text: "\uC624\uB298 \uBC8C\uC5B4\uB4E4\uC778 \uC218\uC785\n\n\n\n\n\uC624\uB298
+    \uC628 \uC190\uB2D8 \uC218\n\n\n\n\n\n\uB4F1\uB4F1 \uB098\uC62C\uC608\uC815"
 --- !u!222 &597276690
 CanvasRenderer:
   m_ObjectHideFlags: 0
