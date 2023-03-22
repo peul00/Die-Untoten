@@ -12,7 +12,7 @@ public class TotalMoney : MonoBehaviour
     public void Start()
     {
         Totalmoney = GameObject.Find("Total").GetComponent<Text>();
-        Totalmoney.text = "ÇöÀç µ·" + ItemDatabase.instance.Money.ToString("N0");
+        Totalmoney.text = "ÇöÀç µ·" + GameManager.instance.Money.ToString("N0");
     }
     public void Rest()
     {

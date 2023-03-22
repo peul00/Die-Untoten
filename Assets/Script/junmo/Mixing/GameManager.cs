@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public int Day;
     public GameObject obj;
+    public int Money;
+    public int Day;
 
     private void Awake()
     {

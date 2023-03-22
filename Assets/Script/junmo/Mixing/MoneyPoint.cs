@@ -9,7 +9,7 @@ public class MoneyPoint : MonoBehaviour
 
     public void Start()
     {
-        string str_int = ItemDatabase.instance.Money.ToString();
+        string str_int = GameManager.instance.Money.ToString();
         Moneypoint = GameObject.Find("Money").GetComponent<Text>();
     }
 
@@ -20,7 +20,7 @@ public class MoneyPoint : MonoBehaviour
 
     void SetMoneyText()
     {
-        Moneypoint.text = ItemDatabase.instance.Money.ToString("c"); //N0 \Ç¥½Ã »ç¶óÁü
+        Moneypoint.text = GameManager.instance.Money.ToString("c"); //N0 \Ç¥½Ã »ç¶óÁü
     }
 
     public GameObject Custom; // ¼Õ´Ô¹Þ±â

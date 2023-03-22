@@ -47,7 +47,7 @@ public class Slot : MonoBehaviour, IPointerUpHandler
     {
         if (isSell)
         {
-            ItemDatabase.instance.Money += item.ItemCost;
+            GameManager.instance.Money += item.ItemCost;
             Inventory.instance.RemoveItem(slotnum);
             isSell = false;
             chkSell.SetActive(isSell);

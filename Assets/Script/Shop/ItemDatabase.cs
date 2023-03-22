@@ -8,8 +8,6 @@ public class ItemDatabase : MonoBehaviour
 {
     // Start is called before the first frame update
     public static ItemDatabase instance;
-
-    public int Money;
     private void Awake()
     {
         instance = this;

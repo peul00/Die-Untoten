@@ -8,11 +8,7 @@ public class Imformation : MonoBehaviour
     private Text Information;
     public GameObject Recipt;
     public GameObject recipt;
-    public GameObject cus;
-    public void Custom()
-    {
-        cus.SetActive(true);
-    }
+
     void Update()
     {
         Information = recipt.GetComponent<Text>();

@@ -108,7 +108,7 @@ public class ItemMix : MonoBehaviour
             Orange = true;
             Debug.Log("Orange true");
             OrangePoint.gameObject.SetActive(true);
-            ItemDatabase.instance.Money -= OrangePrice;
+            GameManager.instance.Money -= OrangePrice;
         }
         else
         {
@@ -125,7 +125,7 @@ public class ItemMix : MonoBehaviour
             Strewbarry = true;
             Debug.Log("Strewbarry true");
             OrangePoint.gameObject.SetActive(true);
-            ItemDatabase.instance.Money -= OrangePrice;
+            GameManager.instance.Money -= OrangePrice;
         }
         else
         {
@@ -142,7 +142,7 @@ public class ItemMix : MonoBehaviour
             Kiwi = true;
             Debug.Log("Kiwi true");
             OrangePoint.gameObject.SetActive(true);
-            ItemDatabase.instance.Money -= OrangePrice;
+            GameManager.instance.Money -= OrangePrice;
         }
         else
         {
@@ -159,7 +159,7 @@ public class ItemMix : MonoBehaviour
             Apple = true;
             Debug.Log("Apple true");
             OrangePoint.gameObject.SetActive(true);
-            ItemDatabase.instance.Money -= OrangePrice;
+            GameManager.instance.Money -= OrangePrice;
         }
         else
         {
@@ -176,7 +176,7 @@ public class ItemMix : MonoBehaviour
             Liem = true;
             Debug.Log("Liem true");
             OrangePoint.gameObject.SetActive(true);
-            ItemDatabase.instance.Money -= OrangePrice;
+            GameManager.instance.Money -= OrangePrice;
         }
         else
         {
@@ -193,7 +193,7 @@ public class ItemMix : MonoBehaviour
             Grape = true;
             Debug.Log("Grape true");
             OrangePoint.gameObject.SetActive(true);
-            ItemDatabase.instance.Money -= OrangePrice;
+            GameManager.instance.Money -= OrangePrice;
         }
         else
         {
@@ -441,7 +441,7 @@ public class ItemMix : MonoBehaviour
             {
                 Cocoliqueur = true;
                 liqueurPoint.gameObject.SetActive(true);
-                ItemDatabase.instance.Money -= LiqueurPrice;
+                GameManager.instance.Money -= LiqueurPrice;
                 Debug.Log("Choco: true");
             }
         }
@@ -452,7 +452,7 @@ public class ItemMix : MonoBehaviour
             {
                 Cranliqueur = true;
                 liqueurPoint.gameObject.SetActive(true);
-                ItemDatabase.instance.Money -= LiqueurPrice;
+                GameManager.instance.Money -= LiqueurPrice;
                 Debug.Log("Cran: true");
             }
         }
@@ -463,7 +463,7 @@ public class ItemMix : MonoBehaviour
             {
                 Melonliqueur = true;
                 liqueurPoint.gameObject.SetActive(true);
-                ItemDatabase.instance.Money -= LiqueurPrice;
+                GameManager.instance.Money -= LiqueurPrice;
                 Debug.Log("Melon: true");
             }
         }
@@ -474,7 +474,7 @@ public class ItemMix : MonoBehaviour
             {
                 Orangeliqueur = true;
                 liqueurPoint.gameObject.SetActive(true);
-                ItemDatabase.instance.Money -= LiqueurPrice;
+                GameManager.instance.Money -= LiqueurPrice;
                 Debug.Log("Orange: true");
             }
         }
@@ -485,7 +485,7 @@ public class ItemMix : MonoBehaviour
             {
                 Honey = true;
                 liqueurPoint.gameObject.SetActive(true);
-                ItemDatabase.instance.Money -= LiqueurPrice;
+                GameManager.instance.Money -= LiqueurPrice;
                 Debug.Log("Honey: true");
             }
         }

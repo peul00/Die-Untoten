@@ -178,7 +178,7 @@ public class ItemShaker : MonoBehaviour
             {
                 Cocoliqueur = true;
                 liqueurPoint.gameObject.SetActive(true);
-                ItemDatabase.instance.Money -= LiqueurPrice;
+                GameManager.instance.Money -= LiqueurPrice;
                 Debug.Log("Choco: true");
             }
         }
@@ -189,7 +189,7 @@ public class ItemShaker : MonoBehaviour
             {
                 Cranliqueur = true;
                 liqueurPoint.gameObject.SetActive(true);
-                ItemDatabase.instance.Money -= LiqueurPrice;
+                GameManager.instance.Money -= LiqueurPrice;
                 Debug.Log("Cran: true");
             }
         }
@@ -200,7 +200,7 @@ public class ItemShaker : MonoBehaviour
             {
                 Melonliqueur = true;
                 liqueurPoint.gameObject.SetActive(true);
-                ItemDatabase.instance.Money -= LiqueurPrice;
+                GameManager.instance.Money -= LiqueurPrice;
                 Debug.Log("Melon: true");
             }
         }
@@ -211,7 +211,7 @@ public class ItemShaker : MonoBehaviour
             {
                 Orangeliqueur = true;
                 liqueurPoint.gameObject.SetActive(true);
-                ItemDatabase.instance.Money -= LiqueurPrice;
+                GameManager.instance.Money -= LiqueurPrice;
                 Debug.Log("Orange: true");
             }
         }
@@ -222,7 +222,7 @@ public class ItemShaker : MonoBehaviour
             {
                 Honey = true;
                 liqueurPoint.gameObject.SetActive(true);
-                ItemDatabase.instance.Money -= LiqueurPrice;
+                GameManager.instance.Money -= LiqueurPrice;
                 Debug.Log("Honey: true");
             }
         }

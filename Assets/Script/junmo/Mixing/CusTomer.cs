@@ -21,6 +21,7 @@ public class CusTomer : MonoBehaviour
     public void Awake()
     {
         Talk = GameObject.Find("Talk").GetComponent<Text>();
+        GameObject.Find("Time").GetComponent<GameTime>().RunTime();
     }
     public void OnEnable()
     {
@@ -221,7 +222,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip + (100 * Refill);
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Price + OnDrag.Tip + (100*Refill);
+                    GameManager.instance.Money += Price + OnDrag.Tip + (100*Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -229,7 +230,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Price + (int)CurrentHP;
+                    GameManager.instance.Money += Price + (int)CurrentHP;
                     Talk.text = "좋아요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -252,7 +253,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -260,7 +261,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -283,7 +284,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -291,7 +292,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -314,7 +315,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -322,7 +323,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -345,7 +346,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -353,7 +354,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -376,7 +377,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -384,7 +385,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -407,7 +408,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -415,7 +416,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -438,7 +439,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -446,7 +447,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -469,7 +470,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -477,7 +478,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -500,7 +501,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -508,7 +509,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -531,7 +532,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -539,7 +540,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -562,7 +563,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -570,7 +571,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -593,7 +594,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -601,7 +602,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -624,7 +625,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -632,7 +633,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -655,7 +656,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -663,7 +664,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -686,7 +687,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -694,7 +695,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -717,7 +718,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -725,7 +726,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -748,7 +749,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -756,7 +757,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -779,7 +780,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -787,7 +788,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -810,7 +811,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -818,7 +819,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -841,7 +842,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -849,7 +850,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -872,7 +873,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -880,7 +881,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -903,7 +904,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -911,7 +912,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -934,7 +935,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -942,7 +943,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -965,7 +966,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -973,7 +974,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -996,7 +997,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -1004,7 +1005,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -1027,7 +1028,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -1035,7 +1036,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -1058,7 +1059,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -1066,7 +1067,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -1089,7 +1090,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -1097,7 +1098,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -1120,7 +1121,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -1128,7 +1129,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -1151,7 +1152,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -1159,7 +1160,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -1182,7 +1183,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -1190,7 +1191,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -1213,7 +1214,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -1221,7 +1222,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -1244,7 +1245,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -1252,7 +1253,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);
@@ -1275,7 +1276,7 @@ public class CusTomer : MonoBehaviour
                 {
                     CurrentHP -= OnDrag.Tip;
                     CurrentEndu += OnDrag.Tip / 10;
-                    ItemDatabase.instance.Money += Another + OnDrag.Tip + (100 * Refill);
+                    GameManager.instance.Money += Another + OnDrag.Tip + (100 * Refill);
                     Refill++;
                     Invoke("Wanted", 2.0f);
                 }
@@ -1283,7 +1284,7 @@ public class CusTomer : MonoBehaviour
                 {
                     OnDrag.Tip = (int)CurrentHP;
                     CurrentHP -= CurrentHP;
-                    ItemDatabase.instance.Money += Another + (int)CurrentHP;
+                    GameManager.instance.Money += Another + (int)CurrentHP;
                     Talk.text = "감사해요";
                     Invoke("Out", 1.0f);
                     Invoke("In", 3.0f);

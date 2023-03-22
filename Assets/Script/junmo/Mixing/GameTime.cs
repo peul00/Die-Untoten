@@ -18,33 +18,43 @@ public class GameTime : MonoBehaviour
     public void Start()
     {
         TimePoint = GameObject.Find("Time").GetComponent<Text>();
-        StartCoroutine("RTime");
     }
     public void Update()
     {
     }
 
+    public void RunTime()
+    {
+        StartCoroutine("RTime");
+    }
+
     IEnumerator RTime()
     {
         int Timer = 1;
-        while (true)
-        {
-            yield return new WaitForSeconds(DeTime);
-            Timer++;
-            TimePoint.text = (Timer.ToString() + "½Ã");
-            if(Timer == 5)
+            Debug.Log("aaaa");
+            while (true)
             {
-                Fade.SetActive(true);
-                Table.GetComponent<MoveTable>().Close();
-                Customer.GetComponent<CusTomer>().CusOut();
-                Fade.GetComponent<FadeOut>().Out();
-                Invoke("NextDay", 3f);
+                yield return new WaitForSeconds(DeTime);
+                Timer++;
+                TimePoint.text = (Timer.ToString() + "½Ã");
+                if (Timer == 5)
+                {
+                    Fade.SetActive(true);
+                    Table.GetComponent<MoveTable>().Close();
+                    Customer.GetComponent<CusTomer>().CusOut();
+                    Fade.GetComponent<FadeOut>().Out();
+                    Invoke("NextDay", 3f);
+                }
             }
-        }
     }
 
     void NextDay()
     {
         SceneManager.LoadScene("Total");
+    }
+
+    public void Custom()
+    {
+        Customer.SetActive(true);
     }
 }
