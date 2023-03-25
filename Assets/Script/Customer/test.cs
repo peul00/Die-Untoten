@@ -28,6 +28,18 @@ public class test : MonoBehaviour
 
     [SerializeField] private Dialogue[] dialogue;
 
+
+    void Start()
+    {
+        StartCoroutine(ShowDialogueAfterDelay(3.0f));
+    }
+
+    // 3초 후에 대화를 시작하는 코루틴을 추가합니다.
+    IEnumerator ShowDialogueAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ShowDialogue();
+    }
     public void ShowDialogue()
     {
         OnOff(true);
