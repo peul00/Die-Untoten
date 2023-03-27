@@ -1,3 +1,97 @@
+/*using JetBrains.Annotations;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+
+
+[System.Serializable]
+public class Dialogue
+{
+    [TextArea]
+    public string dialogue;
+    public Sprite npc;
+
+}
+public class test : MonoBehaviour
+{
+    public UnityEvent onInputSpace;
+    [SerializeField] private SpriteRenderer sprite_Npc1;
+    [SerializeField] private Image sprite_DialogueBox;
+    [SerializeField] private Text txt_Dialogue;
+
+    public void ShowDialogue()
+    {
+        OnOff(true);
+        count = 0;
+        NextDialogue();
+    }
+
+    public void OnClickExit() {
+        Application.Quit();
+        Debug.Log("Exit");
+    }
+
+
+    
+    private bool isDialogue = false;
+    
+    private int count = 0;
+
+    [SerializeField] private Dialogue[] dialogue;
+
+    
+    private void OnOff(bool _flag)
+    {
+        isDialogue = _flag;
+        sprite_DialogueBox.gameObject.SetActive(_flag);
+        sprite_Npc1.gameObject.SetActive(_flag);
+        txt_Dialogue.gameObject.SetActive(_flag);
+    }
+
+    void NextDialogue()
+    {
+        Debug.Log("count : " + count);
+        txt_Dialogue.text = dialogue[count].dialogue;
+        sprite_Npc1.sprite = dialogue[count].npc;
+        count += 1;
+    }
+    
+
+
+    
+
+    void Update()
+    {
+        Debug.Log("update");
+        if (isDialogue)
+        {
+            Debug.Log("1");
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Debug.Log("2");
+                onInputSpace.Invoke();
+                if (count < dialogue.Length)
+                {
+                    Debug.Log("3");
+                    NextDialogue();
+                    
+                }
+                else
+                {
+                    Debug.Log("4");
+                    OnOff(false);
+                    SceneManager.LoadScene("InGame");
+                    //isDialogue = false;
+                }
+            }
+        }
+        
+    }
+
+}*/
 using JetBrains.Annotations;
 using System;
 using System.Collections;
@@ -7,6 +101,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
+
 [System.Serializable]
 public class Dialogue
 {
@@ -14,6 +109,7 @@ public class Dialogue
     public string dialogue;
     public Sprite npc;
 }
+<<<<<<< HEAD
 
 [System.Serializable]
 public class DateDialogue
@@ -23,11 +119,15 @@ public class DateDialogue
 }
 
 public class Test : MonoBehaviour
+=======
+public class test : MonoBehaviour
+>>>>>>> parent of b4da776 (Customer System 1.2.1)
 {
     public UnityEvent onInputSpace;
     [SerializeField] private SpriteRenderer sprite_Npc1;
     [SerializeField] private Image sprite_DialogueBox;
     [SerializeField] private Text txt_Dialogue;
+<<<<<<< HEAD
     [SerializeField] private Dialogue[] dialogue;
     public DateDialogue[] dateDialogues;
     
@@ -39,6 +139,8 @@ public class Test : MonoBehaviour
     private int count = 0;
 
     [SerializeField] private DateDialogue[] dateDialogue;
+=======
+>>>>>>> parent of b4da776 (Customer System 1.2.1)
 
     public void ShowDialogue()
     {
@@ -53,6 +155,12 @@ public class Test : MonoBehaviour
         Debug.Log("Exit");
     }
 
+    private bool isDialogue = false;
+
+    private int count = 0;
+
+    [SerializeField] private Dialogue[] dialogue;
+
     private void OnOff(bool _flag)
     {
         isDialogue = _flag;
@@ -63,25 +171,24 @@ public class Test : MonoBehaviour
 
     IEnumerator _typing()
     {
+<<<<<<< HEAD
         isTyping = true;
         string _dialogue = dateDialogue[GetCurrentDateIndex()].dialogue[count].dialogue;
+=======
+        string _dialogue = dialogue[count].dialogue;
+>>>>>>> parent of b4da776 (Customer System 1.2.1)
         txt_Dialogue.text = "";
 
         for (int i = 0; i < _dialogue.Length; i++)
         {
-            if (isTyping)
-            {
-                txt_Dialogue.text += _dialogue[i];
-                yield return new WaitForSeconds(0.1f);
-            }
-            else
-            {
-                break;
-            }
+            txt_Dialogue.text += _dialogue[i];
+            yield return new WaitForSeconds(0.1f);
         }
 
-        if (isTyping)
+        // 다음 대화로 넘어가는 코드
+        if (count < dialogue.Length)
         {
+<<<<<<< HEAD
             // 대화창이 완전히 나온 상태로 만들기
             txt_Dialogue.text = dateDialogue[GetCurrentDateIndex()].dialogue[count].dialogue;
 
@@ -120,6 +227,16 @@ public class Test : MonoBehaviour
                 OnOff(false);
                 SceneManager.LoadScene("InGame");
             }
+=======
+            count += 1;
+            NextDialogue();
+            StartCoroutine(_typing());
+        }
+        else
+        {
+            OnOff(false);
+            SceneManager.LoadScene("InGame");
+>>>>>>> parent of b4da776 (Customer System 1.2.1)
         }
     }
 
@@ -135,10 +252,14 @@ public class Test : MonoBehaviour
         // 대화창이 열려있는 동안에만 입력을 받음
         if (isDialogue)
         {
+<<<<<<< HEAD
             // Space bar 또는 좌클릭으로 대화 진행
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+=======
+            if (Input.GetKeyDown(KeyCode.Space))
+>>>>>>> parent of b4da776 (Customer System 1.2.1)
             {
-                OnDialogueAdvance();
+                onInputSpace.Invoke();
             }
         }
 
@@ -153,6 +274,7 @@ public class Test : MonoBehaviour
             }
         }
     }
+<<<<<<< HEAD
     private int GetCurrentDateIndex()
     {
         int index = -1;
@@ -194,3 +316,7 @@ public class Test : MonoBehaviour
         dateDialogues = FindObjectOfType<DateDialogueManager>().DateDialogue;
     }
 }
+=======
+
+}
+>>>>>>> parent of b4da776 (Customer System 1.2.1)
