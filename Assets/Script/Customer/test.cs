@@ -120,6 +120,7 @@ public class test : MonoBehaviour
         OnOff(true);
         count = 0;
         StartCoroutine(_typing());
+        count += 1;
     }
 
     public void OnClickExit()
@@ -130,7 +131,7 @@ public class test : MonoBehaviour
 
     private bool isDialogue = false;
 
-    private int count = 0;
+    private int count;
 
     [SerializeField] private Dialogue[] dialogue;
 
@@ -156,11 +157,11 @@ public class test : MonoBehaviour
         // 다음 대화로 넘어가는 코드
         if (count < dialogue.Length)
         {
-            count += 1;
             NextDialogue();
             StartCoroutine(_typing());
+            count += 1;
         }
-        else
+        else if (count == dialogue.Length)
         {
             OnOff(false);
             SceneManager.LoadScene("InGame");
