@@ -31,7 +31,6 @@ public class GameTime : MonoBehaviour
     IEnumerator RTime()
     {
         int Timer = 1;
-            Debug.Log("aaaa");
             while (true)
             {
                 yield return new WaitForSeconds(DeTime);

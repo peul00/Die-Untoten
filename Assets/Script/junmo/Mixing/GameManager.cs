@@ -10,17 +10,25 @@ public class GameManager : MonoBehaviour
     public int TotalMoney;
     public int Money;
     public int RealMoney;
+    public int TMoney;
     public int Day;
+    public List<int> Sell = new List<int>();
 
     private void Awake()
     {
         instance = this;
         DontDestroyOnLoad(gameObject);
+        TMoney = RealMoney;
     }
 
     public void Update()
     {
         RealMoney = Money - TotalMoney;
+        if(RealMoney != TMoney)
+        {
+            Sell.Add(RealMoney - TMoney);
+            TMoney = RealMoney;
+        }
     }
 
     public void DDay()

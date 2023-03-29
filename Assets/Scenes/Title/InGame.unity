@@ -6402,7 +6402,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1305089652}
   m_Direction: 2
   m_Value: 1.0000004
-  m_Size: 0.15674734
+  m_Size: 0.15674736
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -17298,7 +17298,7 @@ MonoBehaviour:
   Table: {fileID: 322500901}
   Customer: {fileID: 1979922371}
   Fade: {fileID: 1879144173}
-  DeTime: 60
+  DeTime: 30
 --- !u!114 &1389049343
 MonoBehaviour:
   m_ObjectHideFlags: 0
