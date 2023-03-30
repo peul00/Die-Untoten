@@ -15,11 +15,16 @@ public class TotalMoney : MonoBehaviour
     public void Start()
     {
         Totalmoney = GameObject.Find("Total").GetComponent<Text>();
-        for (i = 2; i < Sell.Count; i++)
+        for (i = 1; i < Sell.Count; i++)
         {
             Sell2.Add(Sell[i]);
         }
-        Totalmoney.text = string.Join("\n", Sell2) + "\n" +"\n" + GameManager.instance.RealMoney;
+        Totalmoney.text =
+            GameManager.instance.TotalMoney + "\n"
+            + string.Join("\n", Sell2) + "\n"
+            + "\n"
+            + GameManager.instance.RealMoney + "\n"
+            + GameManager.instance.Money + "\n";
     }
     public void Rest()
     {

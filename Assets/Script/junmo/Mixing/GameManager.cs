@@ -39,5 +39,6 @@ public class GameManager : MonoBehaviour
     public void Totalmoney()
     {
         TotalMoney = Money;
-    }
+        Sell.RemoveRange(0, Sell.Count);
+;   }
 }
