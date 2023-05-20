@@ -5,9 +5,7 @@ using UnityEngine;
 public class MoveTable : MonoBehaviour
 {
     public float Time;
-    public GameObject Serving;
     public GameObject Customer;
-    public GameObject NPC;
     public GameObject Mixer;
     public GameObject Shaker;
     public GameObject Stirring;
@@ -24,16 +22,11 @@ public class MoveTable : MonoBehaviour
 
     public void Open()
     {
-        iTween.MoveTo(gameObject, iTween.Hash("x", 3.5, "time", 4));
-        iTween.MoveTo(Serving, iTween.Hash("x", -11, "time", 2));
-        iTween.MoveTo(Customer, iTween.Hash("x", -5, "time", 2));
-        iTween.MoveTo(NPC, iTween.Hash("x", -5, "time", 2));
+        iTween.MoveTo(Customer, iTween.Hash("x", -6, "time", 2));
     }
     public void Close()
     {
-        iTween.MoveTo(gameObject, iTween.Hash("x", 18, "time", 4));
-        iTween.MoveTo(Serving, iTween.Hash("x", 0, "time", 2));
-        iTween.MoveTo(Customer, iTween.Hash("x", 0, "time", 2));
+        iTween.MoveTo(Customer, iTween.Hash("x", -5, "time", 2));
     }
     public void mixer()
     {
