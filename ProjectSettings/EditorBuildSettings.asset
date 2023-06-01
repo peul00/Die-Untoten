@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Customer/Customer.unity
     guid: 6926b27afc1049f45ad76530726d8a37
+  - enabled: 1
+    path: Assets/Scenes/Title/Total.unity
+    guid: bc59ef2fe33af1943b1d50c344d33fb5
+  - enabled: 1
+    path: Assets/Scenes/Title/Night.unity
+    guid: 5125e5a2bb8f69c4bb48d57c60aa9fde
   m_configObjects: {}
