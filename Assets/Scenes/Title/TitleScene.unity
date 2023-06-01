@@ -4642,4 +4642,6 @@ MonoBehaviour:
   TotalMoney: 0
   Money: 10000
   RealMoney: 0
+  TMoney: 0
   Day: 0
+  Sell: 
