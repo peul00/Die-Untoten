@@ -10,6 +10,7 @@ public class GameTime : MonoBehaviour
     private Text TimePoint;
     public GameObject Table;
     public GameObject Customer;
+    public GameObject NPC;
     public GameObject Fade;
     [SerializeField]
     [Range(0.01f, 60f)]
@@ -31,7 +32,6 @@ public class GameTime : MonoBehaviour
     IEnumerator RTime()
     {
         int Timer = 1;
-            Debug.Log("aaaa");
             while (true)
             {
                 yield return new WaitForSeconds(DeTime);
@@ -55,6 +55,9 @@ public class GameTime : MonoBehaviour
 
     public void Custom()
     {
-        Customer.SetActive(true);
+        if(NPC == false)
+        {
+            Customer.SetActive(true);
+        }
     }
 }
