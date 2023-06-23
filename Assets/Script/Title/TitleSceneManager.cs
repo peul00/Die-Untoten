@@ -23,5 +23,4 @@ public class TitleSceneManager : MonoBehaviour
         Debug.Log("Exit");
         Application.Quit();
     }
-
 }

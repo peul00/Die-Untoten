@@ -33,7 +33,7 @@ public class SlotManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Slot(int number)
