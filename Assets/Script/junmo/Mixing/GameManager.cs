@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public GameObject menuSet;
+    public GameObject menuSet2;
+    public GameObject Settingset;
     public GameObject obj;
     public int TotalMoney;
     public int Money;
@@ -29,6 +32,33 @@ public class GameManager : MonoBehaviour
             Sell.Add(RealMoney - TMoney);
             TMoney = RealMoney;
         }
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (menuSet.activeSelf)
+            {
+                menuSet.SetActive(false);
+            }
+            else
+            {
+                menuSet.SetActive(true);
+            }
+        }
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (menuSet2.activeSelf)
+            {
+                menuSet2.SetActive(false);
+            }
+            else
+            {
+                menuSet2.SetActive(true);
+            }
+        }
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (Settingset.activeSelf)
+                Settingset.SetActive(false);
+        }
     }
 
     public void DDay()
@@ -41,4 +71,9 @@ public class GameManager : MonoBehaviour
         TotalMoney = Money;
         Sell.RemoveRange(0, Sell.Count);
 ;   }
+    public void OnExitBtn()
+    {
+        Debug.Log("Exit");
+        Application.Quit();
+    }
 }
