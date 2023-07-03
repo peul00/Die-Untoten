@@ -544,7 +544,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 63
 --- !u!114 &1643868608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,8 +651,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 6d7d81436269c2441b9ef278e61c583e, type: 3}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -689,7 +689,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -163.1, y: -464}
+  m_AnchoredPosition: {x: -163.1, y: -441.96}
   m_SizeDelta: {x: 727.1, y: 117.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1763619948
