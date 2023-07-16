@@ -152,7 +152,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -183,7 +183,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -214,7 +214,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -245,7 +245,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -276,7 +276,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -307,7 +307,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -338,7 +338,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -369,7 +369,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -493,7 +493,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -927,7 +927,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -958,7 +958,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -989,7 +989,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 Invoke("Wanted", 2.0f);
             }
         }
@@ -1144,7 +1144,7 @@ public class CusTomer : MonoBehaviour
             else
             {
                 SetTalk();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 Invoke("Wanted", 2.0f);
             }
         }
