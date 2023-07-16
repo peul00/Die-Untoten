@@ -130,7 +130,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "Seogyang")
             {
                 SetTalk2();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip + (100 * Refill);
@@ -161,7 +161,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "RoyalMoring")
             {
                 SetTalk2();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -192,7 +192,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "KattCock")
             {
                 SetTalk2();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -223,7 +223,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "AurumCock")
             {
                 SetTalk2();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -254,7 +254,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "RoyalCock")
             {
                 SetTalk2();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -285,7 +285,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "AirenCock")
             {
                 SetTalk2();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -316,7 +316,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "BrgikyCock")
             {
                 SetTalk2();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -347,7 +347,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "K2C")
             {
                 SetTalk2();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -471,7 +471,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "FruiteBoobs")
             {
                 SetTalk2();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -905,7 +905,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "Harmony")
             {
                 SetTalk2();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -936,7 +936,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "HerbBuble")
             {
                 SetTalk2();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -967,7 +967,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "Witch")
             {
                 SetTalk2();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
@@ -1122,7 +1122,7 @@ public class CusTomer : MonoBehaviour
             if (collision.gameObject.tag == "RoyalJelly")
             {
                 SetTalk2();
-                Order = Random.Range(1, 36);
+                Order = Random.Range(1, 13);
                 if (CurrentHP > OnDrag.Tip)
                 {
                     CurrentHP -= OnDrag.Tip;
