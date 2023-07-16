@@ -27,7 +27,7 @@ public class CusTomer : MonoBehaviour
     public void OnEnable()
     {
         Talk.text = "안녕하세요";
-        Order = Random.Range(1, 36);
+        Order = Random.Range(1, 13);
         Invoke("Wanted", 2.0f);
         HP = Random.Range(200, 501);
         CurrentHP = HP;
@@ -104,112 +104,24 @@ public class CusTomer : MonoBehaviour
         }
         else if (Order == 9)
         {
-            Talk.text = "샤워렌 주세요";
+            Talk.text = "후르츠 밤 주세요";
         }
         else if (Order == 10)
         {
-            Talk.text = "브르기키 플룻 주세요";
+            Talk.text = "하모니 주세요";
         }
         else if (Order == 11)
         {
-            Talk.text = "비 로열 주세요";
+            Talk.text = "허브버블 주세요";
         }
         else if (Order == 12)
         {
-            Talk.text = "후르츠 밤 주세요";
+            Talk.text = "위치 주세요";
         }
         else if (Order == 13)
         {
-            Talk.text = "더 풀 주세요";
-        }
-        else if (Order == 14)
-        {
-            Talk.text = "흑 주세요";
-        }
-        else if (Order == 15)
-        {
-            Talk.text = "사파이어 블라스트 주세요";
-        }
-        else if (Order == 16)
-        {
-            Talk.text = "루비 블라스트 주세요";
-        }
-        else if (Order == 17)
-        {
-            Talk.text = "칸타빌레 주세요";
-        }
-        else if (Order == 18)
-        {
-            Talk.text = "딥 캬트 주세요";
-        }
-        else if (Order == 19)
-        {
-            Talk.text = "알콜레이드 주세요";
-        }
-        else if (Order == 20)
-        {
-            Talk.text = "노도그 주세요";
-        }
-        else if (Order == 21)
-        {
-            Talk.text = "프레이야 주세요";
-        }
-        else if (Order == 22)
-        {
-            Talk.text = "스콜칭 썬 주세요";
-        }
-        else if (Order == 23)
-        {
-            Talk.text = "폭염 주세요";
-        }
-        else if (Order == 24)
-        {
-            Talk.text = "에메랄드 비치 주세요";
-        }
-        else if (Order == 25)
-        {
-            Talk.text = "로스트 주세요";
-        }
-        else if (Order == 26)
-        {
-            Talk.text = "하모니 주세요";
-        }
-        else if (Order == 27)
-        {
-            Talk.text = "허브버블 주세요";
-        }
-        else if (Order == 28)
-        {
-            Talk.text = "위치 주세요";
-        }
-        else if (Order == 29)
-        {
-            Talk.text = "이무기 주세요";
-        }
-        else if (Order == 30)
-        {
-            Talk.text = "피스 주세요";
-        }
-        else if (Order == 31)
-        {
-            Talk.text = "킬러 주세요";
-        }
-        else if (Order == 32)
-        {
-            Talk.text = "루밀크 주세요";
-        }
-        else if (Order == 33)
-        {
             Talk.text = "로열젤리 주세요";
-        }
-        else if (Order == 34)
-        {
-            Talk.text = "로열 오렌지 주세요";
-        }
-        else if (Order == 35)
-        {
-            Talk.text = "키키 주세요";
-        }
+        }    
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
@@ -461,7 +373,7 @@ public class CusTomer : MonoBehaviour
                 Invoke("Wanted", 2.0f);
             }
         }
-        else if (Order == 9)
+        /*else if (Order == 9)
         {
             if (collision.gameObject.tag == "Souren")
             {
@@ -492,7 +404,7 @@ public class CusTomer : MonoBehaviour
                 Invoke("Wanted", 2.0f);
             }
         }
-        else if (Order == 10)
+        //else if (Order == 10)
         {
             if (collision.gameObject.tag == "BrgikyFloat")
             {
@@ -523,7 +435,7 @@ public class CusTomer : MonoBehaviour
                 Invoke("Wanted", 2.0f);
             }
         }
-        else if (Order == 11)
+        //else if (Order == 11)
         {
             if (collision.gameObject.tag == "BeeRoyal")
             {
@@ -553,8 +465,8 @@ public class CusTomer : MonoBehaviour
                 Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
-        }
-        else if (Order == 12)
+        }*/
+        else if (Order == 9)
         {
             if (collision.gameObject.tag == "FruiteBoobs")
             {
@@ -585,7 +497,7 @@ public class CusTomer : MonoBehaviour
                 Invoke("Wanted", 2.0f);
             }
         }
-        else if (Order == 13)
+        /*else if (Order == 13)
         {
             if (collision.gameObject.tag == "ThePool")
             {
@@ -987,8 +899,8 @@ public class CusTomer : MonoBehaviour
                 Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
-        }
-        else if (Order == 26)
+        }*/
+        else if (Order == 10)
         {
             if (collision.gameObject.tag == "Harmony")
             {
@@ -1019,7 +931,7 @@ public class CusTomer : MonoBehaviour
                 Invoke("Wanted", 2.0f);
             }
         }
-        else if (Order == 27)
+        else if (Order == 11)
         {
             if (collision.gameObject.tag == "HerbBuble")
             {
@@ -1050,7 +962,7 @@ public class CusTomer : MonoBehaviour
                 Invoke("Wanted", 2.0f);
             }
         }
-        else if (Order == 28)
+        else if (Order == 12)
         {
             if (collision.gameObject.tag == "Witch")
             {
@@ -1081,7 +993,7 @@ public class CusTomer : MonoBehaviour
                 Invoke("Wanted", 2.0f);
             }
         }
-        else if (Order == 29)
+        /*else if (Order == 29)
         {
             if (collision.gameObject.tag == "Imoogi")
             {
@@ -1204,8 +1116,8 @@ public class CusTomer : MonoBehaviour
                 Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
             }
-        }
-        else if (Order == 33)
+        }*/
+        else if (Order == 13)
         {
             if (collision.gameObject.tag == "RoyalJelly")
             {
@@ -1236,7 +1148,7 @@ public class CusTomer : MonoBehaviour
                 Invoke("Wanted", 2.0f);
             }
         }
-        else if (Order == 34)
+        /*else if (Order == 34)
         {
             if (collision.gameObject.tag == "RoyalOrange")
             {
@@ -1296,7 +1208,6 @@ public class CusTomer : MonoBehaviour
                 SetTalk();
                 Order = Random.Range(1, 36);
                 Invoke("Wanted", 2.0f);
-            }
-        }
+            }*/ 
     }
 }
